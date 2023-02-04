@@ -87,7 +87,7 @@ console.log(fullName(clients[0]));
 /*
 2. Создайте функцию getBirthday, которая на основе даты рождения клиента выдает строку в нужном формате: «1 мая» или «1 мая (сегодня)».
 Описание функции:
-    - Принимает строку (не объект) с датой рождения в формате мм-дд-гггг
+- Принимает строку (не объект) с датой рождения в формате мм-дд-гггг
 - Преобразует полученную строку в объект типа new Date, и с помощью функции toLocaleString этого объекта формирует строку в формате «число месяц» (к примеру: «14 января», «23 марта»).
 - Проверяет, сегодня ли день рождения у клиента, если да, то добавляет в итоговую строку « (сегодня)». Для этого можно сравнить дни и месяцы в имеющихся объектах дат.
 - Возвращает из функции созданную строку
@@ -95,11 +95,27 @@ console.log(fullName(clients[0]));
     В функцию попадает строка “07-01-2000”. Если сегодня 1 июля, то функция вернет строку «1 июля (сегодня)». Если же сегодня не 1 июля - функция вернет «1 июля».
 Проверить функцию можно вызвав ее для свойства даты первого объекта и получив отформатированную дату.
  */
+// let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+// console.log(date.toLocaleString('de-DE', options));
 
 function getBirthday(string) {
-  let date = new Date();
-  console.log(date);
-  console.log(date.toLocaleString('ru', {day: '2-digit'}, {month: 'long'}));
+  let month = parseInt(string.slice(0, 2));   // возьмем две цифры месяца из строки
+  month = month - 1;            // месяцы начинаются с 0, поэтому май это 5-1=4
+  let day = parseInt(string.slice(3, 5));      // возьмем две цифры дня из строки
+
+  let newDate = new Date();              // передаем в newDate текущую дату
+  let todayMonth = newDate.getMonth();  // берем текущий месяц
+  let todayDay = newDate.getDate();     // берем текущий день
+  let consoleDate = newDate.toLocaleString('ru-RU', {day: '2-digit', month: 'long'});
+
+  if (month === todayMonth && day === todayDay) {
+    return consoleDate + ' (сегодня)';
+  }
+  newDate.setMonth(month, day);     // передаем в newDate месяц и дату из string
+  return newDate.toLocaleString('ru-RU', {day: '2-digit', month: 'long'});
 }
 
-getBirthday();
+
+
+console.log(getBirthday(clients[0].date));
+console.log(getBirthday('02-05-1980')); // контроль
