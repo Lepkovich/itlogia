@@ -39,7 +39,7 @@ let clients = [
 ]
 
 //1. Создайте пустой объект newClient.
-/*
+
 let newClient = {};
 
 // 2. Запросите у пользователя по порядку все данные о клиенте - имя, фамилию, дату рождения, телефон.
@@ -65,14 +65,14 @@ newClient.amounts = [];
 while (confirm('Добавить покупку для клиента ' + newClient.firstName + '?')) {
   let amount = parseInt(prompt('Введите сумму покупки'));
   newClient.amounts.push(amount);
-  console.log(newClient.amounts);
+  // console.log(newClient.amounts);
 }
 
 // 5. Добавьте получившийся объект newClient в массив clients
 
 clients.push(newClient);
-console.log(clients);
-*/
+// console.log(clients);
+
 
 // Часть 2
 // 1. Создайте функцию fullName, которая принимает объект и возвращает имя и фамилию в одной строке – «Иван Иванов».
@@ -140,7 +140,7 @@ function getAllAmount(array) {
 // Проверить функцию можно вызвав ее для свойства суммы покупок первого объекта и получив число – их среднее арифметическое.
 
 function getAverageAmount(array) {
-    return getAllAmount(array) / array.length.toFixed(1);
+    return (getAllAmount(array) / array.length).toFixed(1);
 }
 
 // console.log('Средняя сумма покупок у ' + fullName(clients[0]) + ': ' + getAverageAmount(clients[0].amounts));
@@ -154,9 +154,86 @@ function getAverageAmount(array) {
 // а для каждого отдельного вызова других функций в цикле передавать соответствующее значение, используя конкретный объект по индексу.
 
 let showClients = (array) => {
+    if (!array) {  // обрабатываем ошибку при вызове функции без параметров
+    throw new Error ('Вызвана функция без параметров');
+    }
     for (let i = 0; i < array.length; i++) {
-        console.log('Клиент ' + fullName(clients[i]) + ' имеет среднюю сумму чека ' + getAverageAmount(clients[i].amounts) + '. День рождения клиента: ' + getBirthday(clients[i].date) + '.');
+        console.log('Клиент ' + fullName(array[i]) + ' имеет среднюю сумму чека ' + getAverageAmount(array[i].amounts) + '. День рождения клиента: ' + getBirthday(array[i].date) + '.');
     }
 }
 
 showClients(clients);
+
+// 8. Далее вызовите функцию showClients без параметров.
+// Оберните этот вызов в обработчик ошибок.
+// Результатом вызова без параметров должно стать сообщение “Вызвана функция без параметров” в консоли вместо ошибки.
+// Вторым сообщением при обработке ошибки выведите текст ошибки из свойства message объекта ошибки.
+
+try {
+    showClients();
+} catch (e) {
+    console.log(e.message); // выведет сообщение из Error в обработке ошибки
+    console.log(e.name + ' : ' + e.text);
+}
+
+// 9. Создайте новый массив bestClients, заполните его 2-3 новыми клиентами и
+// вызовите функцию showClients с этим массивом. Проверьте вывод информации о новых клиентах в консоль.
+
+let bestClients = [
+    {
+        firstName: 'Александр',
+        lastName: 'Великий',
+        date: '12-25-1990',
+        phone: '8 (929) 911-11-11',
+        amounts: [12546, 12098, 1764, 17266]
+    },
+    {
+        firstName: 'Анатолий',
+        lastName: 'Лучший',
+        date: '01-07-1987',
+        phone: '8 (899) 511-11-11',
+        amounts: [1563, 18287, 1889]
+    },
+    {
+        firstName: 'Марина',
+        lastName: 'Превосходная',
+        date: '03-08-1997',
+        phone: '8 (899) 500-00-00',
+        amounts: [16525, 1837, 11283, 3192]
+    }
+]
+showClients(bestClients);
+
+// 10. Сделайте так, чтобы этот вызов функции был не сразу, а спустя 3 секунды.
+
+setTimeout('showClients(bestClients)', 3000);
+
+// 11. Создайте функцию whoSpentMore, которая определит, кто из переданных клиентов потратил больше всех.
+//     Описание функции:
+//     - Принимает массив объектов клиентов
+// - Перебирает каждого клиента и проверяет, больше ли его сумма покупок
+// (с помощью функции getAllAmount), чем у другого клиента.
+// - В конце функция должна вывести в консоль строку: «Больше всех потратил N. Сумма покупок: X.»,
+// где N - полное имя клиента (на основе функции fullName), а X - сумма покупок max.
+// - В реализации функции используйте 2 дополнительные переменные, в которых будете
+// сохранять самую большую сумму и найденный объект клиента с максимальной суммой.
+// Если в цикле находите сумму больше, чем уже была сохранена вами в переменную максимальной суммы –
+// обновляйте переменную суммы и объект, на основе которого по итогу вернете строку из функции.
+
+function whoSpentMore(array) {
+    let maxAmount = 0;
+    let id = 0;
+    for (let i=0; i < array.length; i++) {
+        if (maxAmount < getAllAmount(array[i].amounts)) {
+            maxAmount = getAllAmount(array[i].amounts);
+            id = i;
+        }
+    }
+    console.log('Больше всех потратил ' + fullName(array[id]) + '. Сумма покупок: ' + maxAmount);
+}
+// 12. Вызовите функцию whoSpentMore для одного и второго набора клиентов и проанализируйте результат.
+// Поменяйте данные в объектах и перепроверьте, верно ли работает ваша функция.
+
+setTimeout('whoSpentMore(clients)', 4000);
+setTimeout('whoSpentMore(bestClients)', 5000);
+
