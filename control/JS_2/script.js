@@ -1,35 +1,35 @@
 //Создайте массив clients для хранения информации о клиентах интернет-магазина:
 
 let clients = [
-      {
+    {
         firstName: 'Александр',
         lastName: 'Иванчук',
         date: '11-29-1990',
         phone: '8 (929) 988-90-09',
-        amounts: [2546,2098,764,7266]
+        amounts: [2546, 2098, 764, 7266]
     },
-      {
+    {
         firstName: 'Анатолий',
         lastName: 'Стаценко',
         date: '02-12-1987',
         phone: null,
         amounts: [563, 8287, 889]
     },
-      {
+    {
         firstName: 'Марина',
         lastName: 'Петрова',
         date: '07-26-1997',
         phone: '8 (899) 546-09-08',
         amounts: [6525, 837, 1283, 392]
     },
-      {
+    {
         firstName: 'Иван',
         lastName: 'Караванов',
         date: '09-12-1999',
         phone: null,
         amounts: [7634, 283, 9823, 3902]
     },
-      {
+    {
         firstName: 'Оксана',
         lastName: 'Абрамова',
         date: '01-24-2002',
@@ -79,10 +79,10 @@ console.log(clients);
 // Проверить функцию можно вызвав ее для первого объекта и получив имя и фамилию первого клиента.
 
 function fullName(obj) {
-  return obj.firstName +' '+ obj.lastName;
+    return obj.firstName + ' ' + obj.lastName;
 }
 
-console.log(fullName(clients[0]));
+// console.log(fullName(clients[0]));
 
 /*
 2. Создайте функцию getBirthday, которая на основе даты рождения клиента выдает строку в нужном формате: «1 мая» или «1 мая (сегодня)».
@@ -99,23 +99,64 @@ console.log(fullName(clients[0]));
 // console.log(date.toLocaleString('de-DE', options));
 
 function getBirthday(string) {
-  let month = parseInt(string.slice(0, 2));   // возьмем две цифры месяца из строки
-  month = month - 1;            // месяцы начинаются с 0, поэтому май это 5-1=4
-  let day = parseInt(string.slice(3, 5));      // возьмем две цифры дня из строки
+    let month = parseInt(string.slice(0, 2));   // возьмем две цифры месяца из строки
+    month = month - 1;            // месяцы начинаются с 0, поэтому май это 5-1=4
+    let day = parseInt(string.slice(3, 5));      // возьмем две цифры дня из строки
 
-  let newDate = new Date();              // передаем в newDate текущую дату
-  let todayMonth = newDate.getMonth();  // берем текущий месяц
-  let todayDay = newDate.getDate();     // берем текущий день
-  let consoleDate = newDate.toLocaleString('ru-RU', {day: '2-digit', month: 'long'});
+    let newDate = new Date();              // передаем в newDate текущую дату
+    let todayMonth = newDate.getMonth();  // берем текущий месяц
+    let todayDay = newDate.getDate();     // берем текущий день
+    let consoleDate = newDate.toLocaleString('ru-RU', {day: '2-digit', month: 'long'});
 
-  if (month === todayMonth && day === todayDay) {
-    return consoleDate + ' (сегодня)';
-  }
-  newDate.setMonth(month, day);     // передаем в newDate месяц и дату из string
-  return newDate.toLocaleString('ru-RU', {day: '2-digit', month: 'long'});
+    if (month === todayMonth && day === todayDay) {
+        return consoleDate + ' (сегодня)';
+    }
+    newDate.setMonth(month, day);     // передаем в newDate месяц и дату из string
+    return newDate.toLocaleString('ru-RU', {day: '2-digit', month: 'long'});
 }
 
+// console.log(getBirthday(clients[0].date));
+// console.log(getBirthday('02-05-1980')); // контроль
 
+// 3. Создайте функцию getAllAmount, которая принимает один параметр: массив чисел (суммы покупок),
+// считает сумму всех покупок клиента и возвращает её в виде числа.
+// Проверить функцию можно вызвав ее для свойства суммы покупок первого объекта и получив число – их сумму.
 
-console.log(getBirthday(clients[0].date));
-console.log(getBirthday('02-05-1980')); // контроль
+function getAllAmount(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i];
+    }
+    return sum;
+}
+
+// console.log('У ' + fullName(clients[0]) + ' покупки: ' + clients[0].amounts + ' на сумму ' + getAllAmount(clients[0].amounts));
+
+// 4. Создайте функцию getAverageAmount, которая принимает один параметр: массив чисел (суммы покупок).
+// Функция должна посчитать среднее арифметическое всех значений.
+// Помните про последовательность действий: сначала считаем сумму чисел, а после – делим на количество.
+// Возвращаемое число должно быть округлено до 1 числа после запятой с помощью конструкции number.toFixed(1),
+// где number - ваша переменная с итоговым числом.
+// Проверить функцию можно вызвав ее для свойства суммы покупок первого объекта и получив число – их среднее арифметическое.
+
+function getAverageAmount(array) {
+    return getAllAmount(array) / array.length.toFixed(1);
+}
+
+// console.log('Средняя сумма покупок у ' + fullName(clients[0]) + ': ' + getAverageAmount(clients[0].amounts));
+
+// 6. Создайте стрелочную функцию в новую переменную - showClients.
+// Функция должна принимать один параметр - главный массив клиентов clients и для каждого клиента (в цикле) выводить сообщение
+// “Клиент X имеет среднюю сумму чека Y. День рождения клиента: D”, где X - значение результата функции fullName для текущего объекта клиента в цикле,
+// Y - средний чек клиента на основе его покупок в массиве amounts из функции getAverageAmount,
+// а D - дата рождения клиента из функции getBirthday.
+// Помните о том, что внутри функции вам надо работать с переданным в неё массивом,
+// а для каждого отдельного вызова других функций в цикле передавать соответствующее значение, используя конкретный объект по индексу.
+
+let showClients = (array) => {
+    for (let i = 0; i < array.length; i++) {
+        console.log('Клиент ' + fullName(clients[i]) + ' имеет среднюю сумму чека ' + getAverageAmount(clients[i].amounts) + '. День рождения клиента: ' + getBirthday(clients[i].date) + '.');
+    }
+}
+
+showClients(clients);
