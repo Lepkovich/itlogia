@@ -1,0 +1,25 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.menu-items {
+    list-style-type: none;
+
+}
+.menu-item a {
+    text-decoration: none;
+
+}
+
+.catalog-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-item {
+    width: 150px;
+    height: 100px;
+    border: solid 1px red;
+    text-align: center;
+}
