@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("../fonts/Nunitobold.woff");
+    font-weight: 700;
+}
+body {
+    font-family: Nunito, sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.logo {
+    margin: 27px;
+}
+
+main .container {
+    justify-content: space-between;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+
+}
+h1 {
+    margin-top: 85px;
+    padding-left: 63px;
+    font-size: 36px;
+    line-height: 49px;
+    color: #000000;
+}
+p {
+    margin-top: 7px;
+    margin-bottom: 53px;
+    padding-left: 63px;
+    max-width: 496px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #636363;
+}
+.rocket {
+    width: 50%;
+    margin-top: 145px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-top: 20px;
+    padding-left: 63px;
+    width: 452px;
+    font-size: 16px;
+    line-height: 27px;
+    color: #C6C6C4;
+}
+.form-field {
+    margin-left: 63px;
+    width: 452px;
+    font-family: Nunito, sans-serif;
+    font-size: 20px;
+    line-height: 27px;
+    color: #323232;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #C6C6C4;
+}
+.agreement-block {
+    display: flex;
+    margin: 30px 0 40px 63px;
+    font-size: 16px;
+    line-height: 27px;
+    color: #636363;
+}
+.agreement-text {
+    margin-left: 10px;
+}
+.button {
+    cursor: pointer;
+    width: 210px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 40px;
+    border: 0;
+    background-color: #DD3142;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.form a {
+    margin: 44px auto 191px auto;
+    font-size: 16px;
+    line-height: 27px;
+    color: #636363;
+    text-decoration: none;
+}
+
