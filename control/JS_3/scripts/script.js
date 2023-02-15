@@ -40,7 +40,10 @@ window.onload = function () { // сначала дождемся когда вс
 // Если какое-то поле не заполнено, выведите сообщение об ошибке, используя alert.
 // Сообщение должно быть следующего вида: "Заполните поле E-mail".
 
+
     let button = document.getElementById('button');
+    let repeatPassword = document.getElementById('repeat-password');
+    let password = document.getElementById('password');
 
     button.addEventListener('click', (e) => {
         e.preventDefault();
@@ -51,10 +54,36 @@ window.onload = function () { // сначала дождемся когда вс
             if (inputs[i].value ==='') {
                 alert('Заполните поле ' + labels[i].textContent);
                 isValid = false;
-            } else {
-                console.log(inputs[i].value); // контроль
             }
         }
+// • Проверьте совпадают ли пароли из двух текстовых полей. Если пароли не совпадают, выведите сообщение об ошибке, используя alert.
+        if (repeatPassword.value !== '' && repeatPassword.value !== password.value) {
+            alert('Пароли не совпадают, повторите ввод');
+            repeatPassword.value = '';
+        }
+// • Проверьте выбран ли чекбокс. Если чекбокс не выбран, выведите сообщение об ошибке, используя alert.
+        if (!checkBox.checked && isValid) {
+            alert('Вы не поставили галочку на согласие обработки данных');
+            isValid = false;
+        }
+// • Если код прошёл все проверки успешно - должен появиться попап с текстом «На вашу почту выслана ссылка, перейдите по ней,
+// чтобы завершить регистрацию» и кнопкой «ОК».
+// При нажатии на кнопку «ОК» окно закрывается, форма очищается и пользователя перебрасывает на страницу логина (см. п.6).
+// Модального окна в макете нет, его нужно создать самостоятельно, соблюдая общую стилистику макета.
+
+        if (isValid) {
+            alert('Здесь выскочит PopUp');
+        }
     })
+
+// • Пароль должен содержать не менее 8 символов. Если пароль короче, то выведите сообщение об ошибке через alert.
+
+    password.addEventListener("focusout", (e) => {
+        if (password.value !== '' && password.value.length < 8) {
+            alert('Пароль должен содержать не менее 8 символов');
+            password.value = '';
+        }
+    })
+
 
 }
