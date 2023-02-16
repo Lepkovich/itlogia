@@ -44,8 +44,9 @@ window.onload = function () { // сначала дождемся когда вс
     let button = document.getElementById('button');
     let repeatPassword = document.getElementById('repeat-password');
     let password = document.getElementById('password');
+    button.addEventListener('click', fn);
 
-    button.addEventListener('click', (e) => {
+    function fn(e) {
         e.preventDefault();
         let inputs = document.querySelectorAll('input');
         let labels = document.querySelectorAll('label');
@@ -72,9 +73,15 @@ window.onload = function () { // сначала дождемся когда вс
 // Модального окна в макете нет, его нужно создать самостоятельно, соблюдая общую стилистику макета.
 
         if (isValid) {
-            alert('Здесь выскочит PopUp');
+            // window.alert('Здесь выскочит PopUp');
+            let popup = document.getElementById('popup'),
+                closePopup = document.getElementById('close-popup');
+            popup.style.display='flex';
+            closePopup.onclick = function () {
+                popup.style.display='none';
+            }
         }
-    })
+    }
 
 // • Пароль должен содержать не менее 8 символов. Если пароль короче, то выведите сообщение об ошибке через alert.
 
@@ -84,6 +91,40 @@ window.onload = function () { // сначала дождемся когда вс
             password.value = '';
         }
     })
+// 6. При нажатии на ссылку «Already have an account?», а также на кнопку «ОК» в попапе реализовать имитацию перехода на страницу логина.
+// Для этого с исходной страницей с помощью JS нужно произвести следующие действия:
+// • Текст "Get your free account" заменить на "Log in to the system".
+// • Блоки с полями "Full Name", "E-mail", "Repeat Password" удалить.
+// • Блок с чекбоксом также удалить.
+// • Текст в кнопке заменить на «Sign In».
+// • Ссылку "Already have an account?" удалить.
+// • Заменить слушатель события для кнопки «Sign In»: нужно проверить только то, что оба поля (Username и Password) заполнены.
+// Если какое-то из полей не заполнено - вывести ошибку.
+// Если оба заполнены - вывести через alert сообщение "Добро пожаловать, username!", где username - значение из соответствующего поля.
 
+    let haveAccount = document.getElementById('have-account');
+    haveAccount.addEventListener("click", (e) =>{
+        document.getElementById('title').innerText='Log in to the system';
+        let labels = document.querySelectorAll('label');
+        labels.forEach((item)=>{
+            if (item.className === 'form-label sign-up') {
+                return;
+            }
+            item.remove();
+        })
+        let inputs = document.querySelectorAll('input');
+        inputs.forEach((item)=>{
+            if (item.id === 'user-name' || item.id === 'password' || item.id === 'button') {
+                return;
+            }
+            item.remove();
+        })
+        document.getElementById('button').innerText='Sign In';
+        document.getElementById('have-account').remove();
+        button.removeEventListener('click', fn); // не работает
+
+
+
+    })
 
 }
