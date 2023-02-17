@@ -44,9 +44,9 @@ window.onload = function () { // сначала дождемся когда вс
     let button = document.getElementById('button');
     let repeatPassword = document.getElementById('repeat-password');
     let password = document.getElementById('password');
-    button.addEventListener('click', fn);
+    button.addEventListener('click', SingOut);
 
-    function fn(e) {
+    function SingOut(e) {
         e.preventDefault();
         let inputs = document.querySelectorAll('input');
         let labels = document.querySelectorAll('label');
@@ -78,6 +78,7 @@ window.onload = function () { // сначала дождемся когда вс
             let popup = document.getElementById('popup'),
                 closePopup = document.getElementById('close-popup');
             popup.style.display='flex';
+            closePopup.addEventListener("click", signIn);
             closePopup.onclick = function () {
                 popup.style.display='none';
             }
@@ -104,7 +105,9 @@ window.onload = function () { // сначала дождемся когда вс
 // Если оба заполнены - вывести через alert сообщение "Добро пожаловать, username!", где username - значение из соответствующего поля.
 
     let haveAccount = document.getElementById('have-account');
-    haveAccount.addEventListener("click", (e) =>{
+
+    haveAccount.addEventListener("click", signIn);
+    function signIn(e) {
         document.getElementById('title').innerText='Log in to the system';
         let labels = document.querySelectorAll('label');
         labels.forEach((item)=>{
@@ -122,10 +125,26 @@ window.onload = function () { // сначала дождемся когда вс
         })
         document.getElementById('button').innerText='Sign In';
         document.getElementById('have-account').remove();
-        button.removeEventListener('click', fn); // не работает
+        document.getElementById('button').id = 'signInBtn';
 
+    }
 
+// • Заменить слушатель события для кнопки «Sign In»: нужно проверить только то, что оба поля (Username и Password) заполнены.
+// Если какое-то из полей не заполнено - вывести ошибку. Если оба заполнены - вывести через alert сообщение "Добро пожаловать, username!",
+// где username - значение из соответствующего поля.
 
+    // button.removeEventListener('click', SingOut);
+    let signInButton=document.getElementById('signInBtn');
+    signInButton.addEventListener("click", (e)=>{
+        e.preventDefault();
+        let userName=document.getElementById('user-name');
+        let password=document.getElementById('password');
+        if (userName.value === '' || password.value === '') {
+            alert('Поля не заполнены!');
+        } else {
+            alert('Добро пожаловать, ' + userName.value + '!');
+        }
     })
+
 
 }
