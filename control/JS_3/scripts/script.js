@@ -61,6 +61,7 @@ window.onload = function () { // сначала дождемся когда вс
         if (repeatPassword.value !== '' && repeatPassword.value !== password.value) {
             alert('Пароли не совпадают, повторите ввод');
             repeatPassword.value = '';
+            isValid = false;
         }
 // • Проверьте выбран ли чекбокс. Если чекбокс не выбран, выведите сообщение об ошибке, используя alert.
         if (!checkBox.checked && isValid) {
