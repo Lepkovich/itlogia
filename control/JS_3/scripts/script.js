@@ -42,12 +42,25 @@ window.onload = function () { // сначала дождемся когда вс
 
 
     let button = document.getElementById('button');
-    let repeatPassword = document.getElementById('repeat-password');
-    let password = document.getElementById('password');
-    button.addEventListener('click', SingOut);
 
-    function SingOut(e) {
+    button.addEventListener('click', SingUp);
+
+    function SingUp(e) {
         e.preventDefault();
+// • Заменить слушатель события для кнопки «Sign In»: нужно проверить только то, что оба поля (Username и Password) заполнены.
+// Если какое-то из полей не заполнено - вывести ошибку. Если оба заполнены - вывести через alert сообщение "Добро пожаловать, username!",
+// где username - значение из соответствующего поля.
+        if (button.value === 'Sign In') {  // Если кнопка уже Sign In
+                let userName=document.getElementById('user-name');
+                let password=document.getElementById('password');
+                if (userName.value === '' || password.value === '') {
+                    alert('Поля не заполнены!');
+                    return;
+                } else {
+                    alert('Добро пожаловать, ' + userName.value + '!');
+                    return;
+                }
+        }
         let inputs = document.querySelectorAll('input');
         let labels = document.querySelectorAll('label');
         let isValid = true;
@@ -58,6 +71,8 @@ window.onload = function () { // сначала дождемся когда вс
             }
         }
 // • Проверьте совпадают ли пароли из двух текстовых полей. Если пароли не совпадают, выведите сообщение об ошибке, используя alert.
+        let repeatPassword = document.getElementById('repeat-password');
+        let password = document.getElementById('password');
         if (repeatPassword.value !== '' && repeatPassword.value !== password.value) {
             alert('Пароли не совпадают, повторите ввод');
             repeatPassword.value = '';
@@ -74,12 +89,11 @@ window.onload = function () { // сначала дождемся когда вс
 // Модального окна в макете нет, его нужно создать самостоятельно, соблюдая общую стилистику макета.
 
         if (isValid) {
-            // window.alert('Здесь выскочит PopUp');
             let popup = document.getElementById('popup'),
                 closePopup = document.getElementById('close-popup');
             popup.style.display='flex';
-            closePopup.addEventListener("click", signIn);
-            closePopup.onclick = function () {
+            closePopup.addEventListener("click", signIn); // по клику на ОК с ID 'close-popup' запустим SignIn
+            closePopup.onclick = function () { // и спрячем popup
                 popup.style.display='none';
             }
         }
@@ -93,6 +107,7 @@ window.onload = function () { // сначала дождемся когда вс
             password.value = '';
         }
     })
+
 // 6. При нажатии на ссылку «Already have an account?», а также на кнопку «ОК» в попапе реализовать имитацию перехода на страницу логина.
 // Для этого с исходной страницей с помощью JS нужно произвести следующие действия:
 // • Текст "Get your free account" заменить на "Log in to the system".
@@ -106,45 +121,29 @@ window.onload = function () { // сначала дождемся когда вс
 
     let haveAccount = document.getElementById('have-account');
 
-    haveAccount.addEventListener("click", signIn);
+    haveAccount.addEventListener("click", signIn); // по клику на 'Already have an account?' запускаем функцию SignIn
     function signIn(e) {
-        document.getElementById('title').innerText='Log in to the system';
+        document.getElementById('title').innerText='Log in to the system'; // меняем заголовок
         let labels = document.querySelectorAll('label');
         labels.forEach((item)=>{
             if (item.className === 'form-label sign-up') {
                 return;
             }
-            item.remove();
+            item.remove(); // удаляем все label, кроме тех, у кого в class есть sign-up
         })
         let inputs = document.querySelectorAll('input');
         inputs.forEach((item)=>{
-            if (item.id === 'user-name' || item.id === 'password' || item.id === 'button') {
+            if (item.id === 'user-name' || item.id === 'password') {
+                item.value = '';
+                return;
+            } else if (item.id === 'button') {
                 return;
             }
-            item.remove();
+            item.remove(); // удаляем ненужные нам input
         })
-        document.getElementById('button').innerText='Sign In';
-        document.getElementById('have-account').remove();
-        document.getElementById('button').id = 'signInBtn';
+        document.getElementById('button').value='Sign In'; // Поменяли кнопку на Sign In
+        document.getElementById('have-account').remove(); // Удалили ссылку 'Already have an account?'
 
     }
-
-// • Заменить слушатель события для кнопки «Sign In»: нужно проверить только то, что оба поля (Username и Password) заполнены.
-// Если какое-то из полей не заполнено - вывести ошибку. Если оба заполнены - вывести через alert сообщение "Добро пожаловать, username!",
-// где username - значение из соответствующего поля.
-
-    // button.removeEventListener('click', SingOut);
-    let signInButton=document.getElementById('signInBtn');
-    signInButton.addEventListener("click", (e)=>{
-        e.preventDefault();
-        let userName=document.getElementById('user-name');
-        let password=document.getElementById('password');
-        if (userName.value === '' || password.value === '') {
-            alert('Поля не заполнены!');
-        } else {
-            alert('Добро пожаловать, ' + userName.value + '!');
-        }
-    })
-
 
 }
