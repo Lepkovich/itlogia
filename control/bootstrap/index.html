@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контрольное задание 9</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg " style="background-color: #F8F9FA;">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+                    type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Преимущества</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input aria-label="Search" class="form-control me-2" placeholder="Поиск чая" type="search">
+                    <button class="btn btn-outline-primary" type="submit">Найти</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="container-xl">
+        <div class="carousel slide my-5" id="carouselExample">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img alt="banner1" class="d-block w-100" src="images/banner1.png">
+                </div>
+                <div class="carousel-item">
+                    <img alt="banner2" class="d-block w-100" src="images/banner2.png">
+                </div>
+                <div class="carousel-item">
+                    <img alt="banner3" class="d-block w-100" src="images/banner3.png">
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExample" type="button">
+                <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExample" type="button">
+                <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <h2 class="text-center mb-5">Наши чайные коллекции</h2>
+        <div class="container-xl">
+            <div class="row g-3 justify-content-xl-center mb-5">
+                <div class="col-lg-4 border rounded">
+                    <a href="#"><img alt="catalog-1" class="img-fluid" src="images/catalog-1.png"></a>
+                    <div class="p-4">
+                        <h3>Детокс чай лайм</h3>
+                        <p>Великолепный чай внесет в вашу жизнь яркие краски и вкус расслабления</p>
+                        <button class="btn btn-primary">Подробнее</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 border rounded">
+                    <a href="#"><img alt="catalog-2" class="img-fluid" src="images/catalog-2.png"></a>
+                    <div class="p-4">
+                        <h3>Ягодный чай</h3>
+                        <p>Нотки ягод позволят вам расслабиться и насладиться великолепием этого чая</p>
+                        <button class="btn btn-primary">Подробнее</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 border rounded">
+                    <a href="#"><img alt="catalog-3" class="img-fluid" src="images/catalog-3.png"></a>
+                    <div class="p-4">
+                        <h3>Цветочный чай</h3>
+                        <p>Душистые цветы создают невероятный аромат и наполняют вас энергией</p>
+                        <button class="btn btn-primary">Подробнее</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 border rounded">
+                    <a href="#"><img alt="catalog-4" class="img-fluid" src="images/catalog-4.png"></a>
+                    <div class="p-4">
+                        <h3>Очищающий чай</h3>
+                        <p>Бесподобный чай для получения утреннего заряда бодрости</p>
+                        <button class="btn btn-primary">Подробнее</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 border rounded">
+                    <a href="#"><img alt="catalog-5" class="img-fluid" src="images/catalog-5.png"></a>
+                    <div class="p-4">
+                        <h3>Кислый чай</h3>
+                        <p>Кислый чай для настоящих ценителей кислинки во время чаепития</p>
+                        <button class="btn btn-primary">Подробнее</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 border rounded">
+                    <a href="#"><img alt="catalog-6" class="img-fluid" src="images/catalog-6.png"></a>
+                    <div class="p-4">
+                        <h3>Лимонная мята</h3>
+                        <p>Смесь лимона с мятой сделает ваш день самым лучшим</p>
+                        <button class="btn btn-primary">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center mb-5">Ответы на часто задаваемые вопросы</h2>
+
+            <div class="container cont-accord">
+                <div class="accordion mb-5" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button aria-controls="collapseOne" aria-expanded="true" class="accordion-button"
+                                    data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
+                                Собираете ли вы подарочные боксы?
+                            </button>
+                        </h2>
+                        <div aria-labelledby="headingOne" class="accordion-collapse collapse show"
+                             data-bs-parent="#accordionExample" id="collapseOne">
+                            <div class="accordion-body">
+                                Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и
+                                стоимость!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button aria-controls="collapseTwo" aria-expanded="false" class="accordion-button collapsed"
+                                    data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button">
+                                Сколько у вас разновидностей чая?
+                            </button>
+                        </h2>
+                        <div aria-labelledby="headingTwo" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample" id="collapseTwo">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores esse est ipsa
+                                molestiae natus nemo officia omnis sapiente tempore voluptatem. Commodi dolorem earum
+                                harum impedit incidunt labore quod veritatis voluptatem.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button aria-controls="collapseThree" aria-expanded="false"
+                                    class="accordion-button collapsed" data-bs-target="#collapseThree"
+                                    data-bs-toggle="collapse" type="button">
+                                В какой срок осуществляется доставка?
+                            </button>
+                        </h2>
+                        <div aria-labelledby="headingThree" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample" id="collapseThree">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores esse est ipsa
+                                molestiae natus nemo officia omnis sapiente tempore voluptatem. Commodi dolorem earum
+                                harum impedit incidunt labore quod veritatis voluptatem.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button aria-controls="collapseFour" aria-expanded="false"
+                                    class="accordion-button collapsed" data-bs-target="#collapseFour"
+                                    data-bs-toggle="collapse" type="button">
+                                У вас обновляется ассортимент?
+                            </button>
+                        </h2>
+                        <div aria-labelledby="headingFour" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample" id="collapseFour">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores esse est ipsa
+                                molestiae natus nemo officia omnis sapiente tempore voluptatem. Commodi dolorem earum
+                                harum impedit incidunt labore quod veritatis voluptatem.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button aria-controls="collapseFive" aria-expanded="false"
+                                    class="accordion-button collapsed" data-bs-target="#collapseFive"
+                                    data-bs-toggle="collapse" type="button">
+                                Какого объема у вас пачки чая?
+                            </button>
+                        </h2>
+                        <div aria-labelledby="headingFive" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample" id="collapseFive">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores esse est ipsa
+                                molestiae natus nemo officia omnis sapiente tempore voluptatem. Commodi dolorem earum
+                                harum impedit incidunt labore quod veritatis voluptatem.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center mb-5">Сделать заказ</h2>
+            <div class="container cont-form">
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label" for="inputName">Имя</label>
+                        <input class="form-control" id="inputName" type="text">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="inputSurname">Фамилия</label>
+                        <input class="form-control" id="inputSurname" type="text">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="inputPhone">Телефон</label>
+                        <input class="form-control" id="inputPhone" type="tel">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="inputCountry">Страна</label>
+                        <input class="form-control" id="inputCountry" type="text">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="inputZip">Индекс</label>
+                        <input class="form-control" id="inputZip" type="text">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label class="form-label" for="inputAddress">Адрес</label>
+                        <input class="form-control" id="inputAddress" type="text">
+                    </div>
+                    <div class="col-12 mb-5">
+                        <button class="btn btn-primary" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg " style="background-color: #F8F9FA; color: rgba(0, 0, 0, 0.6);">
+            Все права защищены
+        </nav>
+    </div>
+</footer>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>
