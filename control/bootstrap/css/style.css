@@ -7,6 +7,10 @@
 .carousel-control-next, .carousel-control-prev {
     width: 5%;
 }
+.navbar {
+    background-color: #F8F9FA;
+    color: rgba(0, 0, 0, 0.6);
+}
 h2 {
     font-size: 32px;
 }
@@ -70,3 +74,4 @@ p {
 .accordion-button:not(.collapsed)::after {
     background-image: url("../images/button-down.png");
 }
+
