@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контрольное задание 9</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.min.css">
@@ -12,7 +13,7 @@
 <body>
 <header>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg " style="background-color: #F8F9FA;">
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="#">Logo</a>
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
@@ -206,8 +207,8 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-center mb-5">Сделать заказ</h2>
-            <div class="container cont-form wow animate__zoomIn">
+            <div id="makeOrder" class="container cont-form wow animate__zoomIn">
+                <h2 class="text-center mb-5">Сделать заказ</h2>
                 <form class="row g-3">
                     <div class="col-md-4">
                         <label class="form-label" for="inputName">Имя</label>
@@ -238,12 +239,16 @@
                     </div>
                 </form>
             </div>
+            <div id="thankYou" class="container cont-form hideElement">
+                <h2 class="text-center mb-5">Спасибо за заказ!</h2>
+                <p class="text-center">Мы свяжемся с Вами в ближайшее время.</p>
+            </div>
         </div>
     </div>
 </main>
 <footer>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg">
             Все права защищены
         </nav>
     </div>

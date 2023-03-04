@@ -28,10 +28,6 @@ p {
     padding-right: 0;
 }
 
-/*.row>* {*/
-/*    padding-left: 0;*/
-/*    padding-right: 0;*/
-/*}*/
 
 .cont-accord {
     max-width: 856px;
@@ -73,5 +69,9 @@ p {
 }
 .accordion-button:not(.collapsed)::after {
     background-image: url("../images/button-down.png");
+}
+
+.hideElement {
+    display: none;
 }
 
