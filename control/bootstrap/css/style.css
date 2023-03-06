@@ -11,6 +11,9 @@
     background-color: #F8F9FA;
     color: rgba(0, 0, 0, 0.6);
 }
+.img-fluid {
+    width: 100%;
+}
 h2 {
     font-size: 32px;
 }
