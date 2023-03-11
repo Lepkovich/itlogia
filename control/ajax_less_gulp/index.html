@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Macaroons</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="dist/styles.min.css">
+<!--    <link rel="stylesheet/less" type="text/css" href="src/css/styles.less">-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/less" ></script>-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -167,15 +168,20 @@
             <h3>Закажите макарун!</h3>
             <p>Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!</p>
             <form action="" method="get" class="order-info-form">
-                <label for="macaroon" class="order-info-form-label-choose">Ваш выбор</label>
-                <input type="text" name="macaroon" id="macaroon" placeholder="Напишите, что хотите заказать...">
+                <label for="product" class="order-info-form-label-choose">Ваш выбор</label>
+                <input type="text" name="macaroon" id="product" placeholder="Напишите, что хотите заказать...">
+                <div class="error-input">Необходимо ввести заказ</div>
                 <label for="name" class="order-info-form-label-data">Заполните данные для заказа: </label>
-                <input class="order-info-form-input-name" type="text" name="name" id="name" placeholder="Ваше имя"
-                       required>
-                <input class="order-info-form-input-tel" type="tel" name="phone" id="phone"
-                       placeholder="+375 (__) ___ - __ - __" required>
-                <input class="button" type="submit" value="Оформить заказ">
+                <input type="text" name="name" id="name" placeholder="Ваше имя">
+                <div class="error-input">Необходимо ввести имя</div>
+                <input type="tel" name="phone" id="phone"
+                       placeholder="+375 (__) ___ - __ - __">
+                <div class="error-input">Необходимо ввести номер телефона</div>
+                <input class="button" type="button" id="submit" value="Оформить заказ">
             </form>
+            <div class="order-done">
+                <h3>Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!</h3>
+            </div>
             <div class="strawberry-2"><img src="images/strawberry-2.png" alt="strawberry"></div>
         </div>
     </div>
@@ -201,16 +207,11 @@
         </div>
     </div>
 </footer>
+<div class="loader">
+<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="script/script.js"></script>
 
-<script>
-    document.getElementById('burger').onclick = function () {
-        document.getElementById('menu').classList.add('open');
-    }
-    document.querySelectorAll('#menu *').forEach((item) => {
-        item.onclick = () => {
-            document.getElementById('menu').classList.remove('open');
-        }
-    })
-</script>
 </body>
 </html>

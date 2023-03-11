@@ -7,38 +7,37 @@
     .main {
         padding-top: 46px;
         padding-bottom: 62px;
-        overflow: unset;
-    }
-    .main .container {
-        grid-template-columns: 1fr;
-    }
-    .main .container p {
-        margin-top: 74px;
-        margin-bottom: 41px;
+        .container {
+            grid-template-columns: 1fr;
+            p {
+                margin-top: 74px;
+                margin-bottom: 41px;
+            }
+        }
     }
     .main-image {
         grid-column: 1;
         grid-row: 4;
         justify-self: end;
-
-    }
-    .main-image img {
-        margin-top: -80px;
+        img {
+            margin-top: -80px;
+        }
     }
     .adv .container {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 30px;
         grid-auto-flow: row;
+        h2 {
+            width: 475px;
+            margin: 0 auto;
+            text-align: center;
+        }
     }
     .adv-image {
         grid-column: 1 / 3;
         grid-row: 3;
-    }
-    .adv .container h2 {
-        width: 475px;
-        margin: 0 auto;
-        text-align: center;
-
+        justify-self: center;
+        padding-top: 40px;
     }
     .adv-info {
         width: 100%;
@@ -46,16 +45,13 @@
         margin-top: 61px;
         text-align: center;
     }
-    .adv-image {
-        justify-self: center;
-        padding-top: 40px;
-    }
+
     .advantage {
         justify-self: center;
         margin-top: 88px;
-    }
-    .advantage .advantage-num {
-        margin: 0 auto;
+        .advantage-num {
+            margin: 0 auto;
+        }
     }
     .advantage-title,
     .advantage-text {
@@ -75,8 +71,8 @@
     .order .container {
         gap: 0;
     }
-    .order-info h3 {
-        width: 406px;
+    .order-info p {
+        width: 100%;
     }
 
     .order-img {
@@ -131,6 +127,29 @@
         margin-top: 38px;
         max-width: 100%;
     }
+    .adv-image img {
+        max-width: 100%;
+    }
+    .order .container {
+        grid-template-columns: 1fr;
+    }
+    .strawberry-1 {
+        left: 300px;
+        top:-300px;
+    }
+    @keyframes move-1 {
+        0% {
+            top: -300px;
+        }
+        50% {
+            top: -275px;
+        }
+
+        100% {
+            top: -300px;
+        }
+    }
+
     .strawberry-2 {
         display: none;
     }
@@ -174,15 +193,23 @@
         top: 0;
         left: 0;
         background: #000000c4;
-    }
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 0 auto;
-    }
-    .menu li {
-        padding: 20px 0;
+        ul {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0 auto;
+            li {
+                padding: 20px 0;
+            }
+            a {
+                margin-right: 0;
+                padding: 20px;
+                font-size: 18px;
+                color: #ffefef;
+
+            }
+        }
+
     }
     .burger svg {
         width: 36px;
@@ -194,13 +221,6 @@
         display: flex;
         align-items: center;
     }
-    .menu ul a {
-        margin-right: 0;
-        padding: 20px;
-        font-size: 18px;
-        color: #ffefef;
-
-    }
     .menu .close {
         display: block;
         width: 24px;
@@ -211,15 +231,20 @@
         left: 20px;
     }
 
-    .main .container h1 {
-        font-size: 32px;
-        line-height: 1.25;
-        text-align: center;
-    }
-    .main .container p {
-        margin: 40px 0;
-    }
+    .main .container {
+        h1 {
+            font-size: 32px;
+            line-height: 1.25;
+            text-align: center;
+        }
 
+        p {
+            margin: 40px 0;
+        }
+        a {
+            margin: 0 auto;
+        }
+    }
     .main-info {
         font-size: 16px;
         color: rgb(255, 255, 255);
@@ -230,35 +255,31 @@
     .main-image {
         width: 250px;
         justify-self: center;
-    }
-    .main-image img {
-        margin-top: 38px;
-        max-width: 100%;
-    }
-    .main .container a {
-        margin: 0 auto;
+        img {
+            margin-top: 38px;
+            max-width: 100%;
+        }
     }
     .adv {
         padding: 100px 0;
-    }
-    .adv .container {
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 15px;
-
-    }
-    .adv .container h2 {
-        font-size: 30px;
-        width: 100%;
+        .container {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 15px;
+            h2 {
+                font-size: 30px;
+                width: 100%;
+            }
+        }
     }
     .adv-info {
         font-size: 16px;
     }
     .adv-image {
         width: 302px;
-    }
-    .adv-image img {
-        max-width: 100%;
-        margin-bottom: 24px;
+        img {
+            max-width: 100%;
+            margin-bottom: 24px;
+        }
     }
     .advantage {
         margin-top: 36px;
@@ -273,31 +294,31 @@
 
     .catalog {
         padding: 100px 0;
-    }
-    .catalog .container h2 {
-        font-size: 30px;
-    }
-    .catalog-item:first-child {
-        margin-top: 125px;
+        .container h2 {
+            font-size: 30px;
+        }
     }
     .catalog-item {
         margin-top: 140px;
+        &:first-child {
+            margin-top: 125px;
+        }
     }
     .order {
         padding-top: 100px;
         padding-bottom: 77px;
+        .container {
+            position: relative;
+        }
     }
-    .order .container {
-        grid-template-columns: 1fr;
-        position: relative;
-    }
-    .order-info h3 {
-        width: 100%;
-        font-size: 30px;
-    }
-    .order-info p {
-        width: 100%;
-        font-size: 16px;
+    .order-info {
+        h3 {
+            width: 100%;
+            font-size: 30px;
+        }
+        p {
+            font-size: 16px;
+        }
     }
     .order-img {
         padding: 0;
@@ -328,12 +349,12 @@
     }
     footer {
         padding: 50px 0 92px;
-    }
-    footer .container {
-        text-align: center;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
+        .container {
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
     }
     .social {
         order: 3;
@@ -348,9 +369,9 @@
 @media screen and (max-width: 320px ) {
     .adv .container {
         grid-template-columns: 1fr;
-    }
-    .adv .container h2 {
-        grid-column: 1;
+        h2 {
+            grid-column: 1;
+        }
     }
     .adv-info {
         grid-column: 1;
