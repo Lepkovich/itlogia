@@ -6,6 +6,7 @@
 
 @back-color: rgb(37, 37, 45);
 @main-color: rgb(236, 198, 107);
+@second-color:rgb(186, 186, 186);
 
 @import "fonts";
 
@@ -59,7 +60,9 @@ header {
   }
 }
 .main-section {
-  position: relative;
+  .container {
+    position: relative;
+  }
 }
 .main-info {
   max-width: 590px;
@@ -75,7 +78,6 @@ header {
   p {
     margin-top: 25px;
     font-size: 18px;
-    font-family: Museo Sans Cyrl;
     color: rgb(255, 255, 255);
     text-align: center;
   }
@@ -83,7 +85,6 @@ header {
     display: block;
     margin: 40px auto;
     font-size: 18px;
-    font-family: Museo Sans Cyrl;
     color: rgb(37, 37, 45);
     font-weight: bold;
   }
@@ -97,11 +98,32 @@ button {
   text-align: center;
   border: 0;
   border-radius: 30px;
-
 }
 .arrow-down {
   position: absolute;
+  left: 0;
+  top: 240px;
+  a {
+    text-decoration: none;
+  }
   .arrow-down-text{
     writing-mode: vertical-lr;
+    font-size: 18px;
+    font-weight: normal;
+    color: @second-color;
+    margin-bottom: 31px;
+    top: 190px;
   }
+}
+.social {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  .social-item {
+    margin-bottom: 30px;
+  }
+
+}
+.spacer {
+  height: 300px;
 }
