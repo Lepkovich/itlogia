@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../src/fonts/Museo Sans Cyrl 700.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../src/fonts/Museo Sans Cyrl 300.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../src/fonts/Museo Sans Cyrl 500.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Neumann";
+  src: url("../src/fonts/neumann.otf");
+}
+body {
+  background-color: #25252d;
+  font-family: Museo Sans Cyrl;
+}
+.main {
+  background-image: url("../src/images/main-house.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  border-bottom: 1px solid #363d51;
+}
+header .header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+header .header .burger {
+  padding-right: 140px;
+}
+.phone-no {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 0.833;
+  margin-top: 23px;
+  text-align: end;
+}
+.phone-order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.phone-order .phone-order-text a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ecc66b;
+}
+.main-section {
+  position: relative;
+}
+.main-info {
+  max-width: 590px;
+  margin: 162px auto;
+}
+.main-info h1 {
+  font-size: 50px;
+  font-family: Neumann;
+  color: #ecc66b;
+  line-height: 1.2;
+  text-align: center;
+}
+.main-info p {
+  margin-top: 25px;
+  font-size: 18px;
+  font-family: Museo Sans Cyrl;
+  color: #ffffff;
+  text-align: center;
+}
+.main-info button {
+  display: block;
+  margin: 40px auto;
+  font-size: 18px;
+  font-family: Museo Sans Cyrl;
+  color: #25252d;
+  font-weight: bold;
+}
+button {
+  background-image: -moz-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -webkit-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -ms-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+}
+.arrow-down {
+  position: absolute;
+}
+.arrow-down .arrow-down-text {
+  writing-mode: vertical-lr;
+}
