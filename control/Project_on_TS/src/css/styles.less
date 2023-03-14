@@ -84,9 +84,6 @@ header {
   button {
     display: block;
     margin: 40px auto;
-    font-size: 18px;
-    color: rgb(37, 37, 45);
-    font-weight: bold;
   }
 }
 button {
@@ -98,6 +95,9 @@ button {
   text-align: center;
   border: 0;
   border-radius: 30px;
+  font-size: 18px;
+  color: rgb(37, 37, 45);
+  font-weight: bold;
 }
 .arrow-down {
   position: absolute;
@@ -113,6 +113,7 @@ button {
     color: @second-color;
     margin-bottom: 31px;
     top: 190px;
+    transform: rotate(180deg);
   }
 }
 .social {
@@ -127,3 +128,93 @@ button {
 .spacer {
   height: 300px;
 }
+
+h2 {
+  text-align: center;
+  color: @main-color;
+  font-size: 40px;
+  font-family: Neumann;
+}
+
+.projects {
+  h2 {
+    margin-bottom: 40px;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 126px;
+  }
+}
+.projects-img-big {
+  margin-bottom: 24px;
+}
+.projects-img-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+}
+.projects-info {
+  margin-bottom: 113px;
+  h3 {
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    line-height: 1.278;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  button {
+    width: 365px;
+    margin-bottom: 20px;
+  }
+  .save-pdf {
+    background: transparent;
+    margin-bottom: 0;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    line-height: 3.333;
+  }
+  .projects-info-bullets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .projects-info-bullet {
+      display: flex;
+      width: 110px;
+      height: 110px;
+      border: 1px solid @main-color;
+      border-radius: 50%;
+      color: @main-color;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: normal;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.Скачать_PDF_план_проекта__2_5_мб_ {
+  font-size: 18px;
+  font-family: "Museo Sans Cyrl";
+  color: rgb(255, 255, 255);
+  line-height: 3.333;
+  text-align: center;
+  position: absolute;
+  left: 1104.187px;
+  top: 1554.957px;
+  z-index: 373;
+}
+
