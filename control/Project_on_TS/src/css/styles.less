@@ -6,7 +6,7 @@
 
 @back-color: rgb(37, 37, 45);
 @main-color: rgb(236, 198, 107);
-@second-color:rgb(186, 186, 186);
+@second-color: rgb(186, 186, 186);
 
 @import "fonts";
 
@@ -29,11 +29,13 @@ body {
 
 header {
   border-bottom: 1px solid rgb(54, 61, 81);
+
   .header {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+
     .burger {
       padding-right: 140px;
     }
@@ -41,29 +43,33 @@ header {
 }
 
 .phone-no {
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    line-height: 0.833;
-    margin-top: 23px;
-    text-align: end;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  line-height: 0.833;
+  margin-top: 23px;
+  text-align: end;
 }
+
 .phone-order {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
   .phone-order-text a {
-      font-size: 16px;
-      font-weight: bold;
-      color: @main-color;
+    font-size: 16px;
+    font-weight: bold;
+    color: @main-color;
   }
 }
+
 .main-section {
   .container {
     position: relative;
   }
 }
+
 .main-info {
   max-width: 590px;
   margin: 162px auto;
@@ -75,21 +81,24 @@ header {
     line-height: 1.2;
     text-align: center;
   }
+
   p {
     margin-top: 25px;
     font-size: 18px;
     color: rgb(255, 255, 255);
     text-align: center;
   }
+
   button {
     display: block;
     margin: 40px auto;
   }
 }
+
 button {
-  background-image: -moz-linear-gradient( 0deg, rgb(252,195,114) 0%, rgb(240,219,188) 100%);
-  background-image: -webkit-linear-gradient( 0deg, rgb(252,195,114) 0%, rgb(240,219,188) 100%);
-  background-image: -ms-linear-gradient( 0deg, rgb(252,195,114) 0%, rgb(240,219,188) 100%);
+  background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
   width: 300px;
   height: 60px;
   text-align: center;
@@ -98,15 +107,19 @@ button {
   font-size: 18px;
   color: rgb(37, 37, 45);
   font-weight: bold;
+  cursor: pointer;
 }
+
 .arrow-down {
   position: absolute;
   left: 0;
   top: 240px;
+
   a {
     text-decoration: none;
   }
-  .arrow-down-text{
+
+  .arrow-down-text {
     writing-mode: vertical-lr;
     font-size: 18px;
     font-weight: normal;
@@ -116,15 +129,18 @@ button {
     transform: rotate(180deg);
   }
 }
+
 .social {
   position: absolute;
   right: 0;
   top: 50px;
+
   .social-item {
     margin-bottom: 30px;
   }
 
 }
+
 .spacer {
   height: 300px;
 }
@@ -140,33 +156,40 @@ h2 {
   h2 {
     margin-bottom: 40px;
   }
+
   .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 126px;
+
   }
+
   .projects-more {
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    margin-bottom: 121px;
+
     a {
       display: flex;
       flex-direction: row;
       text-decoration: none;
     }
-    .arrow-more-text{
+
+    .arrow-more-text {
       font-size: 18px;
       font-weight: normal;
       color: rgb(137, 137, 138);
       margin-right: 11px;
-      //line-height: 1.389;
     }
   }
 }
+
 .projects-img-big {
   margin-bottom: 24px;
 }
+
 .projects-img-gallery {
   display: flex;
   flex-direction: row;
@@ -178,11 +201,14 @@ h3 {
   font-weight: normal;
   color: rgb(255, 255, 255);
 }
+
 .projects-info {
   margin-bottom: 113px;
+
   h3 {
     margin-bottom: 40px;
   }
+
   p {
     font-size: 18px;
     font-weight: 300;
@@ -191,10 +217,12 @@ h3 {
     text-align: left;
     margin-bottom: 50px;
   }
+
   button {
     width: 365px;
     margin-bottom: 20px;
   }
+
   .save-pdf {
     background: transparent;
     margin-bottom: 0;
@@ -202,10 +230,12 @@ h3 {
     color: rgb(255, 255, 255);
     line-height: 3.333;
   }
+
   .projects-info-bullets {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     .projects-info-bullet {
       display: flex;
       width: 110px;
@@ -223,3 +253,104 @@ h3 {
     }
   }
 }
+
+.tech {
+  color: rgb(255, 255, 255);
+
+  h2 {
+    margin-bottom: 83px;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.313;
+    font-weight: 100;
+  }
+
+  .tech-img {
+    position: relative;
+    margin-bottom: 224px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .tech-1 {
+    position: absolute;
+    width: 270px;
+    left: 10px;
+    top: 95px;
+  }
+  .tech-2 {
+    position: absolute;
+    width: 270px;
+    left: 60px;
+    top: 340px;
+  }
+  .tech-3 {
+    position: absolute;
+    width: 242px;
+    right: 0;
+    top: 120px;
+  }
+  .tech-4 {
+    position: absolute;
+    width: 242px;
+    right: 15px;
+    top: 320px;
+  }
+  .tech-5 {
+    position: absolute;
+    width: 230px;
+    right: 305px;
+    top: 490px;
+  }
+}
+.steps {
+  margin-top: 121px;
+  margin-left: 102px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 150px;
+  .step {
+    display: flex;
+    position: relative;
+    .step-no {
+      position: absolute;
+      top: -50px;
+      left: 0;
+      font-size: 70px;
+      font-family: Neumann;
+      color: rgb(57, 57, 67);
+      line-height: 0.857;
+      z-index: -5;
+    }
+    .step-icon {
+      margin-left: 6px;
+      margin-right: 18px;
+    }
+    .step-text {
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+      .step-text-h {
+        font-weight: normal;
+        margin-bottom: 10px;
+      }
+      .step-text-p {
+        font-weight: 100;
+        line-height: 1.278;
+      }
+    }
+  }
+}
+
+
+

@@ -102,6 +102,7 @@ button {
   font-size: 18px;
   color: #25252d;
   font-weight: bold;
+  cursor: pointer;
 }
 .arrow-down {
   position: absolute;
@@ -150,6 +151,7 @@ h2 {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  margin-bottom: 121px;
 }
 .projects .projects-more a {
   display: flex;
@@ -219,4 +221,95 @@ h3 {
   line-height: 1.25;
   font-weight: normal;
   margin-bottom: 50px;
+}
+.tech {
+  color: #ffffff;
+}
+.tech h2 {
+  margin-bottom: 83px;
+}
+.tech h4 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.tech p {
+  font-size: 16px;
+  line-height: 1.313;
+  font-weight: 100;
+}
+.tech .tech-img {
+  position: relative;
+  margin-bottom: 224px;
+}
+.tech .tech-img img {
+  display: block;
+  margin: 0 auto;
+}
+.tech .tech-1 {
+  position: absolute;
+  width: 270px;
+  left: 10px;
+  top: 95px;
+}
+.tech .tech-2 {
+  position: absolute;
+  width: 270px;
+  left: 60px;
+  top: 340px;
+}
+.tech .tech-3 {
+  position: absolute;
+  width: 242px;
+  right: 0;
+  top: 120px;
+}
+.tech .tech-4 {
+  position: absolute;
+  width: 242px;
+  right: 15px;
+  top: 320px;
+}
+.tech .tech-5 {
+  position: absolute;
+  width: 230px;
+  right: 305px;
+  top: 490px;
+}
+.steps {
+  margin-top: 121px;
+  margin-left: 102px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 150px;
+}
+.steps .step {
+  display: flex;
+  position: relative;
+}
+.steps .step .step-no {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  font-size: 70px;
+  font-family: Neumann;
+  color: #393943;
+  line-height: 0.857;
+  z-index: -5;
+}
+.steps .step .step-icon {
+  margin-left: 6px;
+  margin-right: 18px;
+}
+.steps .step .step-text {
+  color: #ffffff;
+  font-size: 18px;
+}
+.steps .step .step-text .step-text-h {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.steps .step .step-text .step-text-p {
+  font-weight: 100;
+  line-height: 1.278;
 }
