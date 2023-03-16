@@ -195,13 +195,6 @@ h3 {
   width: 365px;
   margin-bottom: 20px;
 }
-.projects-info .save-pdf {
-  background: transparent;
-  margin-bottom: 0;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  line-height: 3.333;
-}
 .projects-info .projects-info-bullets {
   display: flex;
   flex-direction: row;
@@ -221,6 +214,13 @@ h3 {
   line-height: 1.25;
   font-weight: normal;
   margin-bottom: 50px;
+}
+.save-pdf {
+  background: transparent;
+  margin-bottom: 0;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  line-height: 3.333;
 }
 .tech {
   color: #ffffff;
@@ -277,6 +277,7 @@ h3 {
 }
 .steps {
   margin-top: 121px;
+  margin-bottom: 120px;
   margin-left: 102px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -312,4 +313,98 @@ h3 {
 .steps .step .step-text .step-text-p {
   font-weight: 100;
   line-height: 1.278;
+}
+.steps .step .step-text .step-text-p a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ffffff;
+}
+.carousel {
+  margin-bottom: 120px;
+}
+.carousel h2 {
+  margin-bottom: 90px;
+}
+.carousel .carousel-items img {
+  display: block;
+  margin: 0 auto;
+}
+.warranty {
+  margin-bottom: 121px;
+}
+.warranty button {
+  display: block;
+  margin: 0 auto;
+  width: 384px;
+}
+.warranty h2 {
+  margin-bottom: 80px;
+}
+.warranty .warranty-blocks {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+}
+.warranty .warranty-block {
+  background-color: #313139;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding-right: 50px;
+  margin-bottom: 60px;
+}
+.warranty .warranty-block .warranty-block-icon {
+  margin: 40px;
+}
+.warranty .warranty-block .warranty-block-text {
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.warranty .warranty-block .warranty-block-text .warranty-block-text-h {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.warranty .warranty-block .warranty-block-text .warranty-block-text-p {
+  font-weight: 100;
+}
+.warranty .warranty-medals {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.warranty .warranty-medals .warranty-medal {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+.warranty .warranty-medals .warranty-medal .warranty-medal-icon {
+  width: 140px;
+  height: 140px;
+  border: 1px solid #ecc66b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.warranty .warranty-medals .warranty-medal .warranty-medal-h {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.warranty .warranty-medals .warranty-medal .warranty-medal-p {
+  font-weight: 100;
+  text-align: center;
+  max-width: 285px;
+}
+.consult .container {
+  display: flex;
+  flex-direction: row;
 }
