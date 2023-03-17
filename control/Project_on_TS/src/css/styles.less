@@ -150,6 +150,7 @@ h2 {
   color: @main-color;
   font-size: 40px;
   font-family: Neumann;
+  line-height: 1.35;
 }
 
 .projects {
@@ -245,6 +246,7 @@ h3 {
     }
   }
 }
+
 .save-pdf {
   background: transparent;
   margin-bottom: 0;
@@ -252,6 +254,7 @@ h3 {
   color: rgb(255, 255, 255);
   line-height: 3.333;
 }
+
 .tech {
   color: rgb(255, 255, 255);
 
@@ -286,24 +289,28 @@ h3 {
     left: 10px;
     top: 95px;
   }
+
   .tech-2 {
     position: absolute;
     width: 270px;
     left: 60px;
     top: 340px;
   }
+
   .tech-3 {
     position: absolute;
     width: 242px;
     right: 0;
     top: 120px;
   }
+
   .tech-4 {
     position: absolute;
     width: 242px;
     right: 15px;
     top: 320px;
   }
+
   .tech-5 {
     position: absolute;
     width: 230px;
@@ -311,6 +318,7 @@ h3 {
     top: 490px;
   }
 }
+
 .steps {
   margin-top: 121px;
   margin-bottom: 120px;
@@ -319,9 +327,11 @@ h3 {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 60px;
   row-gap: 150px;
+
   .step {
     display: flex;
     position: relative;
+
     .step-no {
       position: absolute;
       top: -50px;
@@ -332,20 +342,25 @@ h3 {
       line-height: 0.857;
       z-index: -5;
     }
+
     .step-icon {
       margin-left: 6px;
       margin-right: 18px;
     }
+
     .step-text {
       color: rgb(255, 255, 255);
       font-size: 18px;
+
       .step-text-h {
         font-weight: normal;
         margin-bottom: 10px;
       }
+
       .step-text-p {
         font-weight: 100;
         line-height: 1.278;
+
         a {
           font-weight: bold;
           text-decoration: underline;
@@ -355,11 +370,14 @@ h3 {
     }
   }
 }
+
 .carousel {
   margin-bottom: 120px;
+
   h2 {
     margin-bottom: 90px;
   }
+
   .carousel-items {
     img {
       display: block;
@@ -367,21 +385,26 @@ h3 {
     }
   }
 }
+
 .warranty {
   margin-bottom: 121px;
+
   button {
     display: block;
     margin: 0 auto;
     width: 384px;
   }
+
   h2 {
     margin-bottom: 80px;
   }
+
   .warranty-blocks {
     display: flex;
     flex-direction: row;
     column-gap: 24px;
   }
+
   .warranty-block {
     background-color: #313139;
     display: flex;
@@ -389,28 +412,34 @@ h3 {
     flex: 1;
     padding-right: 50px;
     margin-bottom: 60px;
+
     .warranty-block-icon {
       margin: 40px;
     }
+
     .warranty-block-text {
       color: rgb(255, 255, 255);
       font-size: 18px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       .warranty-block-text-h {
         font-weight: normal;
         margin-bottom: 15px;
       }
+
       .warranty-block-text-p {
         font-weight: 100;
       }
     }
   }
+
   .warranty-medals {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     .warranty-medal {
       display: flex;
       flex: 1;
@@ -420,6 +449,7 @@ h3 {
       font-size: 18px;
       color: rgb(255, 255, 255);
       margin-bottom: 60px;
+
       .warranty-medal-icon {
         width: 140px;
         height: 140px;
@@ -430,10 +460,12 @@ h3 {
         justify-content: center;
         margin-bottom: 30px;
       }
+
       .warranty-medal-h {
         font-weight: normal;
         margin-bottom: 15px;
       }
+
       .warranty-medal-p {
         font-weight: 100;
         text-align: center;
@@ -447,8 +479,92 @@ h3 {
   .container {
     display: flex;
     flex-direction: row;
+    gap: 75px;
   }
 
-}
+  h2 {
+    margin-bottom: 40px;
+  }
 
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      width: 409px;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      background: transparent;
+      border: 1px solid rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 300;
+      padding-left: 30px;
+      width: 409px;
+      height: 58px;
+      outline: none;
+      margin-bottom: 20px;
+
+      &::placeholder {
+        color: rgb(255, 255, 255);
+        font-weight: 300;
+      }
+    }
+
+    .error-input {
+      margin-top: 5px;
+      color: @second-color;
+      padding-left: 30px;
+      display: none;
+    }
+
+    .agreement {
+      width: 409px;
+      label {
+        display: flex;
+        justify-content: left;
+        font-size: 14px;
+        font-weight: 100;
+        color: rgb(255, 255, 255);
+        line-height: 1.286;
+        a{
+          font-weight: 300;
+          color: rgb(255, 255, 255);
+        }
+
+        input {
+          display: none;
+        }
+        .custom-checkbox-text {
+          width: 310px;
+        }
+
+        .custom-checkbox {
+          display: inline-block;
+          content: "\00A0";
+          margin-right: 27px;
+          box-sizing: border-box;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          border: 1px solid white;
+          position: relative;
+          flex-shrink: 0;
+          flex-grow: 0;
+
+          .custom-checkbox-tick {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+}
 

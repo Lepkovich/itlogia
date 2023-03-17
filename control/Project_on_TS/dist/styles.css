@@ -10,6 +10,11 @@
 }
 @font-face {
   font-family: "Museo Sans Cyrl";
+  src: url("../src/fonts/MuseoSansCyrl-100.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl";
   src: url("../src/fonts/Museo Sans Cyrl 300.ttf");
   font-weight: 300;
 }
@@ -137,6 +142,7 @@ h2 {
   color: #ecc66b;
   font-size: 40px;
   font-family: Neumann;
+  line-height: 1.35;
 }
 .projects h2 {
   margin-bottom: 40px;
@@ -407,4 +413,80 @@ h3 {
 .consult .container {
   display: flex;
   flex-direction: row;
+  gap: 75px;
+}
+.consult h2 {
+  margin-bottom: 40px;
+}
+.consult form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.consult form button {
+  width: 409px;
+  height: 58px;
+  margin-bottom: 20px;
+}
+.consult form input {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 30px;
+  width: 409px;
+  height: 58px;
+  outline: none;
+  margin-bottom: 20px;
+}
+.consult form input::placeholder {
+  color: #ffffff;
+  font-weight: 300;
+}
+.consult form .error-input {
+  margin-top: 5px;
+  color: #bababa;
+  padding-left: 30px;
+  display: none;
+}
+.consult form .agreement {
+  width: 409px;
+}
+.consult form .agreement label {
+  display: flex;
+  justify-content: left;
+  font-size: 14px;
+  font-weight: 100;
+  color: #ffffff;
+  line-height: 1.286;
+}
+.consult form .agreement label a {
+  font-weight: 300;
+  color: #ffffff;
+}
+.consult form .agreement label input {
+  display: none;
+}
+.consult form .agreement label .custom-checkbox-text {
+  width: 310px;
+}
+.consult form .agreement label .custom-checkbox {
+  display: inline-block;
+  content: "\00A0";
+  margin-right: 27px;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.consult form .agreement label .custom-checkbox .custom-checkbox-tick {
+  position: absolute;
+  top: -5px;
+  right: -10px;
 }
