@@ -52,21 +52,27 @@ header .header {
 header .header .burger {
   padding-right: 140px;
 }
-.phone-no {
+header .header .logo {
+  margin: 20px auto;
+}
+.phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.phone .phone-no {
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
-  line-height: 0.833;
-  margin-top: 23px;
   text-align: end;
+  margin-top: 4px;
 }
-.phone-order {
+.phone .phone-order {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
 }
-.phone-order .phone-order-text a {
+.phone .phone-order a {
   font-size: 16px;
   font-weight: bold;
   color: #ecc66b;
@@ -152,6 +158,9 @@ h2 {
   grid-template-columns: 1fr 1fr;
   grid-gap: 126px;
 }
+.projects .project .projects-img h3.hidden {
+  display: none;
+}
 .projects .projects-more {
   text-align: center;
   display: flex;
@@ -205,6 +214,7 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 .projects-info .projects-info-bullets .projects-info-bullet {
   display: flex;
@@ -219,7 +229,6 @@ h3 {
   font-size: 20px;
   line-height: 1.25;
   font-weight: normal;
-  margin-bottom: 50px;
 }
 .save-pdf {
   background: transparent;
@@ -349,7 +358,8 @@ h3 {
 .warranty .warranty-blocks {
   display: flex;
   flex-direction: row;
-  column-gap: 24px;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 .warranty .warranty-block {
   background-color: #313139;
@@ -380,6 +390,7 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
 }
 .warranty .warranty-medals .warranty-medal {
   display: flex;
@@ -390,6 +401,7 @@ h3 {
   font-size: 18px;
   color: #ffffff;
   margin-bottom: 60px;
+  text-align: center;
 }
 .warranty .warranty-medals .warranty-medal .warranty-medal-icon {
   width: 140px;
@@ -407,8 +419,10 @@ h3 {
 }
 .warranty .warranty-medals .warranty-medal .warranty-medal-p {
   font-weight: 100;
-  text-align: center;
   max-width: 285px;
+}
+.consult {
+  margin-bottom: 80px;
 }
 .consult .container {
   display: flex;
@@ -470,7 +484,7 @@ h3 {
   display: none;
 }
 .consult form .agreement label .custom-checkbox-text {
-  width: 310px;
+  max-width: 310px;
 }
 .consult form .agreement label .custom-checkbox {
   display: inline-block;
@@ -490,3 +504,412 @@ h3 {
   top: -5px;
   right: -10px;
 }
+.map {
+  background-image: url("../src/images/map.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.map .spacer {
+  height: 250px;
+}
+.map .spacer-bottom {
+  height: 160px;
+}
+.map .map-items {
+  max-width: 486px;
+  margin: 0 auto;
+  text-align: center;
+}
+.map .map-items h2 {
+  max-width: 384px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.map .map-items p {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.278;
+  margin-bottom: 40px;
+}
+.map .map-items button {
+  width: 306px;
+}
+footer {
+  border-top: 1px solid #363d51;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 115px;
+}
+footer .footer .footer-address {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .footer .footer-address p {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 30px;
+}
+footer .footer .footer-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer .footer .footer-logo .logo {
+  margin-bottom: 56px;
+}
+footer .footer .footer-logo .footer-socials {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+footer .phone {
+  padding-left: 90px;
+}
+/*1024 - 1999*/
+@media screen and (max-width: 1199px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .social {
+    right: 20px;
+  }
+  .arrow-down {
+    left: 20px;
+  }
+  .projects .project {
+    grid-gap: 40px;
+  }
+  .projects .project .projects-info h3 {
+    margin-bottom: 25px;
+  }
+  .projects .project .projects-info p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .projects .project .projects-info .projects-info-bullets {
+    margin-bottom: 35px;
+  }
+  .consult .container {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  .consult .container .consult-img {
+    width: 580px;
+  }
+  .consult .container .consult-img img {
+    max-width: 100%;
+  }
+  .consult .container .consult-form {
+    max-width: 360px;
+  }
+  .consult form input {
+    max-width: 360px;
+  }
+  .consult form button {
+    max-width: 360px;
+  }
+  .consult form .agreement {
+    width: 360px;
+  }
+  .map {
+    background-size: auto;
+  }
+}
+/*768 - 1023*/
+@media screen and (max-width: 1023px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .social {
+    top: 240px;
+  }
+  .projects .container .project:nth-child(2n+1) .projects-img {
+    order: 1;
+  }
+  .projects .container .project:nth-child(2n+1) .projects-info {
+    order: 2;
+  }
+  .projects .project {
+    grid-template-columns: 1fr;
+  }
+  .projects .project .projects-img {
+    margin: 0 auto;
+  }
+  .projects .project .projects-img h3.hidden {
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .projects .project .projects-info {
+    text-align: center;
+  }
+  .projects .project .projects-info h3 {
+    display: none;
+  }
+  .projects .project .projects-info p {
+    text-align: center;
+    max-width: 588px;
+    margin: 0 auto 30px auto;
+  }
+  .projects .project .projects-info .projects-info-bullets {
+    justify-content: space-around;
+  }
+  .steps {
+    margin-left: 0;
+    column-gap: 30px;
+    row-gap: 90px;
+  }
+  .warranty .warranty-blocks {
+    gap: 20px;
+  }
+  .warranty .warranty-blocks .warranty-block {
+    padding-right: 10px;
+    min-width: 340px;
+  }
+  .warranty .warranty-blocks .warranty-block .warranty-block-icon {
+    margin: 20px;
+  }
+  .warranty .warranty-blocks .warranty-block .warranty-block-text {
+    margin: 20px 0;
+  }
+  .consult {
+    margin-bottom: 90px;
+  }
+  .consult .container .consult-img {
+    margin: 0 auto;
+  }
+  .consult .container .consult-form {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .consult form input {
+    max-width: 390px;
+  }
+  .consult form button {
+    max-width: 390px;
+  }
+  .consult form .agreement {
+    width: 390px;
+  }
+  .map {
+    background-size: contain;
+  }
+  .map .spacer {
+    display: none;
+  }
+  .map .map-items {
+    max-width: 600px;
+  }
+  .map .map-items h2 {
+    max-width: 600px;
+  }
+  .map .map-items p {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .footer .footer-address p {
+    font-size: 14px;
+  }
+  footer .footer .footer-logo .logo {
+    margin-bottom: 20px;
+  }
+  footer .footer .phone {
+    padding-left: 30px;
+  }
+  footer .footer .phone .phone-no {
+    font-size: 16px;
+  }
+}
+/*425 - 767*/
+@media screen and (max-width: 767px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  header .header .burger {
+    padding-right: 0;
+  }
+  header .header .phone {
+    display: none;
+  }
+  header .header .logo {
+    padding-right: 40px;
+  }
+  .arrow-down {
+    display: none;
+  }
+  .social {
+    display: none;
+  }
+  .main-info h1 {
+    font-size: 32px;
+  }
+  .main-info p {
+    padding: 0 40px;
+    font-size: 16px;
+  }
+  .main-info .spacer {
+    height: 130px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .projects-img-big {
+    max-width: 425px;
+  }
+  .projects-img-big img {
+    max-width: 100%;
+  }
+  .projects-img-gallery {
+    max-width: 425px;
+  }
+  .projects-img-gallery .projects-img-gallery-item {
+    max-width: 125px;
+  }
+  .projects-img-gallery .projects-img-gallery-item a img {
+    max-width: 100%;
+  }
+  .tech .tech-img {
+    max-width: 425px;
+    margin-bottom: 100px;
+  }
+  .tech .tech-img img {
+    max-width: 100%;
+  }
+  .tech-1 {
+    display: none;
+  }
+  .tech-2 {
+    display: none;
+  }
+  .tech-3 {
+    display: none;
+  }
+  .tech-4 {
+    display: none;
+  }
+  .tech-5 {
+    display: none;
+  }
+  .carousel-items {
+    max-width: 425px;
+  }
+  .carousel-items img {
+    max-width: 100%;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    margin-top: 70px;
+  }
+  .warranty {
+    margin-bottom: 100px;
+  }
+  .warranty h2 {
+    margin-bottom: 40px;
+  }
+  .warranty .warranty-blocks .warranty-block:first-child {
+    margin-bottom: 0;
+  }
+  .warranty .warranty-medals {
+    flex-direction: column;
+    align-items: center;
+  }
+  .warranty .warranty-medals .warranty-medal {
+    margin-bottom: 50px;
+  }
+  .consult .consult-img {
+    display: none;
+  }
+  .map {
+    background: none;
+  }
+  .map .map-items p {
+    margin-bottom: 30px;
+  }
+  .map .spacer-bottom {
+    height: 90px;
+  }
+  footer .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 47px;
+    text-align: center;
+    padding-bottom: 85px;
+  }
+  footer .footer .footer-logo .logo {
+    padding-bottom: 47px;
+  }
+  footer .footer .footer-address {
+    align-items: center;
+    order: 1;
+  }
+  footer .footer .phone {
+    padding-left: 0;
+    order: 2;
+  }
+  footer .footer .phone .phone-no {
+    text-align: center;
+  }
+}
+/*375 - 424*/
+@media screen and (max-width: 424px) {
+  button {
+    max-width: 345px;
+  }
+  .warranty button {
+    max-width: 345px;
+  }
+  .consult .container .consult-form {
+    max-width: 345px;
+  }
+  .consult form button {
+    max-width: 345px;
+  }
+  .consult form input {
+    max-width: 345px;
+  }
+  .consult form .agreement {
+    width: 345px;
+  }
+}
+/*320 - 374*/
+@media screen and (max-width: 374px) {
+  .warranty .warranty-blocks .warranty-block {
+    min-width: 290px;
+    padding-right: 0;
+  }
+  .warranty .warranty-blocks .warranty-block .warranty-block-text .warranty-block-text-h {
+    font-size: 16px;
+  }
+  .warranty .warranty-blocks .warranty-block .warranty-block-text .warranty-block-text-p {
+    font-size: 14px;
+  }
+  .warranty .warranty .warranty-block .warranty-block-text .warranty-block-text-p button {
+    max-width: 290px;
+    height: 50px;
+    font-size: 14px;
+  }
+  .consult .container .consult-form {
+    max-width: 290px;
+  }
+  .consult form button {
+    max-width: 290px;
+  }
+  .consult form input {
+    max-width: 290px;
+  }
+  .consult form .agreement {
+    width: 290px;
+  }
+}
+/*320*/

@@ -1,0 +1,507 @@
+/*1024 - 1999*/
+@media screen and (max-width: 1199px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .social {
+    right: 20px;
+  }
+
+  .arrow-down {
+    left: 20px;
+  }
+
+  .projects {
+    .project {
+      grid-gap: 40px;
+
+      .projects-info {
+        h3 {
+          margin-bottom: 25px;
+        }
+
+        p {
+          font-size: 16px;
+          margin-bottom: 30px;
+        }
+
+        .projects-info-bullets {
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+
+  .consult {
+
+    .container {
+      gap: 25px;
+      flex-wrap: wrap;
+
+      .consult-img {
+        width: 580px;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .consult-form {
+        max-width: 360px;
+      }
+    }
+
+    form {
+      input {
+        max-width: 360px;
+      }
+
+      button {
+        max-width: 360px;
+      }
+      .agreement {
+        width: 360px;
+      }
+
+    }
+  }
+
+  .map {
+    background-size: auto;
+  }
+}
+
+/*768 - 1023*/
+@media screen and (max-width: 1023px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .social {
+    top: 240px;
+  }
+
+
+  .projects {
+    .container {
+      .project:nth-child(2n+1) {
+        .projects-img {
+          order: 1;
+        }
+
+        .projects-info {
+          order: 2;
+        }
+      }
+    }
+
+    .project {
+      grid-template-columns: 1fr;
+
+      .projects-img {
+        margin: 0 auto;
+
+        h3.hidden {
+          display: block;
+          margin-bottom: 25px;
+          text-align: center;
+        }
+      }
+
+      .projects-info {
+        text-align: center;
+
+        h3 {
+          display: none;
+        }
+
+        p {
+          text-align: center;
+          max-width: 588px;
+          margin: 0 auto 30px auto;
+        }
+
+        .projects-info-bullets {
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+
+  .steps {
+    margin-left: 0;
+    column-gap: 30px;
+    row-gap: 90px;
+  }
+
+  .warranty {
+    .warranty-blocks {
+      gap: 20px;
+
+      .warranty-block {
+        padding-right: 10px;
+        min-width: 340px;
+
+        .warranty-block-icon {
+          margin: 20px;
+        }
+
+        .warranty-block-text {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+
+  .consult {
+    margin-bottom: 90px;
+
+    .container {
+      .consult-img {
+        margin: 0 auto;
+      }
+
+      .consult-form {
+        margin: 0 auto;
+        max-width: 600px;
+      }
+    }
+
+    form {
+      input {
+        max-width: 390px;
+      }
+
+      button {
+        max-width: 390px;
+      }
+      .agreement {
+        width: 390px;
+      }
+
+    }
+  }
+
+  .map {
+    background-size: contain;
+
+    .spacer {
+      display: none;
+    }
+
+    .map-items {
+      max-width: 600px;
+
+      h2 {
+        max-width: 600px;
+      }
+
+      p {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  footer {
+    .footer {
+      .footer-address {
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .footer-logo {
+        .logo {
+          margin-bottom: 20px;
+        }
+      }
+
+      .phone {
+        padding-left: 30px;
+
+        .phone-no {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+/*425 - 767*/
+@media screen and (max-width: 767px ) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  header {
+    .header {
+      .burger {
+        padding-right: 0;
+      }
+
+      .phone {
+        display: none;
+      }
+
+      .logo {
+        padding-right: 40px;
+      }
+    }
+  }
+
+  .arrow-down {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .main-info {
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      padding: 0 40px;
+      font-size: 16px;
+    }
+
+    .spacer {
+      height: 130px;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+
+  .projects-img-big {
+    max-width: 425px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .projects-img-gallery {
+    max-width: 425px;
+
+    .projects-img-gallery-item {
+      max-width: 125px;
+
+      a img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .tech {
+    .tech-img {
+      max-width: 425px;
+      margin-bottom: 100px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .tech-1 {
+    display: none;
+  }
+
+  .tech-2 {
+    display: none;
+  }
+
+  .tech-3 {
+    display: none;
+  }
+
+  .tech-4 {
+    display: none;
+  }
+
+  .tech-5 {
+    display: none;
+  }
+
+
+  .carousel-items {
+    max-width: 425px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    margin-top: 70px;
+  }
+
+  .warranty {
+    margin-bottom: 100px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .warranty-blocks {
+      .warranty-block {
+        &:first-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .warranty-medals {
+      flex-direction: column;
+      align-items: center;
+
+      .warranty-medal {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .consult {
+    .consult-img {
+      display: none;
+    }
+  }
+
+  .map {
+    background: none;
+
+    .map-items {
+      p {
+        margin-bottom: 30px;
+      }
+    }
+
+    .spacer-bottom {
+      height: 90px;
+    }
+  }
+
+  footer {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 47px;
+      text-align: center;
+      padding-bottom: 85px;
+
+      .footer-logo {
+        .logo {
+          padding-bottom: 47px;
+        }
+      }
+
+      .footer-address {
+        align-items: center;
+        order: 1;
+      }
+
+      .phone {
+        padding-left: 0;
+        order: 2;
+
+        .phone-no {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/*375 - 424*/
+@media screen and (max-width: 424px ) {
+  button {
+    max-width: 345px;
+  }
+  .warranty {
+    button {
+      max-width: 345px;
+    }
+  }
+  .consult {
+    .container {
+      .consult-form {
+        max-width: 345px;
+      }
+    }
+    form {
+      button {
+        max-width: 345px;
+      }
+      input {
+        max-width: 345px;
+      }
+      .agreement {
+        width: 345px;
+      }
+    }
+  }
+}
+
+/*320 - 374*/
+@media screen and (max-width: 374px ) {
+  .warranty {
+    .warranty-blocks {
+      .warranty-block {
+        min-width: 290px;
+        padding-right: 0;
+        .warranty-block-text {
+          .warranty-block-text-h {
+            font-size: 16px;
+          }
+          .warranty-block-text-p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .warranty .warranty-block .warranty-block-text .warranty-block-text-p
+    button {
+      max-width: 290px;
+      height: 50px;
+      font-size: 14px;
+    }
+  }
+
+  .consult {
+    .container {
+      .consult-form {
+        max-width: 290px;
+      }
+    }
+    form {
+      button {
+        max-width: 290px;
+      }
+      input {
+        max-width: 290px;
+      }
+      .agreement {
+        width: 290px;
+      }
+    }
+  }
+}
+
+/*320*/
+@media screen and (max-width: 320px ) {
+
+}

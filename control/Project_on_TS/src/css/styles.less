@@ -39,30 +39,36 @@ header {
     .burger {
       padding-right: 140px;
     }
+    .logo {
+      margin: 20px auto;
+    }
   }
 }
-
-.phone-no {
-  font-size: 18px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  line-height: 0.833;
-  margin-top: 23px;
-  text-align: end;
-}
-
-.phone-order {
+.phone {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  .phone-order-text a {
-    font-size: 16px;
+  flex-direction: column;
+  justify-content: center;
+  .phone-no {
+    font-size: 18px;
     font-weight: bold;
-    color: @main-color;
+    color: rgb(255, 255, 255);
+    text-align: end;
+    margin-top: 4px;
+  }
+  .phone-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+      font-size: 16px;
+      font-weight: bold;
+      color: @main-color;
+    }
   }
 }
+
+
 
 .main-section {
   .container {
@@ -162,6 +168,11 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 126px;
+    .projects-img {
+      h3.hidden{
+          display: none;
+      }
+    }
 
   }
 
@@ -228,6 +239,7 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 50px;
 
     .projects-info-bullet {
       display: flex;
@@ -242,7 +254,6 @@ h3 {
       font-size: 20px;
       line-height: 1.25;
       font-weight: normal;
-      margin-bottom: 50px;
     }
   }
 }
@@ -402,7 +413,8 @@ h3 {
   .warranty-blocks {
     display: flex;
     flex-direction: row;
-    column-gap: 24px;
+    gap: 24px;
+    flex-wrap: wrap;
   }
 
   .warranty-block {
@@ -439,6 +451,7 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
 
     .warranty-medal {
       display: flex;
@@ -449,6 +462,7 @@ h3 {
       font-size: 18px;
       color: rgb(255, 255, 255);
       margin-bottom: 60px;
+      text-align: center;
 
       .warranty-medal-icon {
         width: 140px;
@@ -468,7 +482,6 @@ h3 {
 
       .warranty-medal-p {
         font-weight: 100;
-        text-align: center;
         max-width: 285px;
       }
     }
@@ -476,6 +489,7 @@ h3 {
 }
 
 .consult {
+  margin-bottom: 80px;
   .container {
     display: flex;
     flex-direction: row;
@@ -541,7 +555,7 @@ h3 {
           display: none;
         }
         .custom-checkbox-text {
-          width: 310px;
+          max-width: 310px;
         }
 
         .custom-checkbox {
@@ -568,3 +582,74 @@ h3 {
   }
 }
 
+.map {
+  background-image: url("../src/images/map.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .spacer {
+    height: 250px;
+  }
+  .spacer-bottom {
+    height: 160px;
+  }
+  .map-items {
+    max-width: 486px;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      max-width: 384px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+    }
+    p {
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      line-height: 1.278;
+      margin-bottom: 40px;
+    }
+    button {
+      width: 306px;
+    }
+  }
+}
+footer {
+  border-top: 1px solid rgb(54, 61, 81);
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 115px;
+    .footer-address {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      p {
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        font-weight: normal;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .logo {
+        margin-bottom: 56px;
+      }
+      .footer-socials {
+        display: flex;
+        justify-content: space-between;
+
+        column-gap: 30px;
+      }
+    }
+  }
+  .phone {
+    padding-left: 90px;
+  }
+}
+
+@import "adaptive";
