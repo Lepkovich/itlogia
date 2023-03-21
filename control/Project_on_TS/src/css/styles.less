@@ -35,9 +35,57 @@ header {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    position: relative;
 
     .burger {
       padding-right: 140px;
+    }
+    .menu {
+      position: fixed;
+      width: 252px;
+      background-color: #25252d;
+      display: flex;
+      flex-direction: column;
+      color: rgb(255, 255, 255);
+      top: 0;
+      left: 0;
+      z-index: 99;
+
+      .menu-close {
+        img {
+          margin: 35px auto 55px 0;
+        }
+      }
+      .menu-h {
+        font-family: Neumann;
+        font-size: 40px;
+        margin-bottom: 60px;
+      }
+      .menu-items {
+        ul {
+          li {
+            list-style-type: none;
+            margin-bottom: 30px;
+            a {
+              font-size: 18px;
+              font-weight: 300;
+              color: rgb(255, 255, 255);
+              text-decoration: none;
+              &:hover {
+                color: @main-color;
+              }
+            }
+          }
+        }
+
+        .menu-items-social {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 162px;
+          padding: 40px 0;
+        }
+      }
     }
     .logo {
       margin: 20px auto;
@@ -54,17 +102,25 @@ header {
     color: rgb(255, 255, 255);
     text-align: end;
     margin-top: 4px;
+    margin-bottom: 13px;
   }
   .phone-order {
     display: flex;
     flex-direction: row;
     align-items: center;
+    svg {
+      margin-right: 8px;
+      &:hover {
+        shadow: 0 0 15px 0 rgba(236, 198, 107, 0.5);
+      }
+    }
 
     a {
       font-size: 16px;
       font-weight: bold;
       color: @main-color;
     }
+
   }
 }
 

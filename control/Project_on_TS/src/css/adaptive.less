@@ -22,15 +22,17 @@
           margin-bottom: 25px;
         }
 
-        p {
-          font-size: 16px;
-          margin-bottom: 30px;
-        }
-
         .projects-info-bullets {
           margin-bottom: 35px;
         }
       }
+    }
+  }
+
+  .projects-info {
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
     }
   }
 
@@ -61,6 +63,7 @@
       button {
         max-width: 360px;
       }
+
       .agreement {
         width: 360px;
       }
@@ -118,17 +121,23 @@
           display: none;
         }
 
-        p {
-          text-align: center;
-          max-width: 588px;
-          margin: 0 auto 30px auto;
-        }
-
         .projects-info-bullets {
           justify-content: space-around;
         }
       }
     }
+  }
+
+  .projects-info {
+    p {
+      text-align: center;
+      max-width: 588px;
+      margin: 0 auto 30px auto;
+    }
+  }
+
+  .projects-info button {
+    width: 385px;
   }
 
   .steps {
@@ -179,6 +188,7 @@
       button {
         max-width: 390px;
       }
+
       .agreement {
         width: 390px;
       }
@@ -246,6 +256,24 @@
         padding-right: 0;
       }
 
+      .menu {
+        width: 192px;
+        position: absolute;
+        margin-left: -15px;
+        padding-left: 15px;
+
+        .menu-items {
+          ul {
+            li:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          .menu-items-social {
+            padding: 50px 0;
+          }
+        }
+      }
       .phone {
         display: none;
       }
@@ -348,6 +376,7 @@
   .steps {
     grid-template-columns: 1fr;
     margin-top: 70px;
+    row-gap: 100px;
   }
 
   .warranty {
@@ -431,24 +460,29 @@
   button {
     max-width: 345px;
   }
+
   .warranty {
     button {
       max-width: 345px;
     }
   }
+
   .consult {
     .container {
       .consult-form {
         max-width: 345px;
       }
     }
+
     form {
       button {
         max-width: 345px;
       }
+
       input {
         max-width: 345px;
       }
+
       .agreement {
         width: 345px;
       }
@@ -458,27 +492,134 @@
 
 /*320 - 374*/
 @media screen and (max-width: 374px ) {
+  .main-info {
+    margin-top: 147px;
+
+    h1 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 15px;
+      padding: 0;
+    }
+
+    button {
+      width: 226px;
+      height: 50px;
+      margin: 30px auto;
+    }
+  }
+
+
+  .projects {
+    h2 {
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .project {
+      .projects-img {
+        margin: unset;
+
+        h3.hidden {
+          text-align: left;
+        }
+      }
+    }
+
+    .projects-more {
+      font-size: 15px;
+      margin-bottom: 90px;
+    }
+  }
+
+  .projects-img-big {
+    max-width: 290px;
+  }
+
+  .projects-img-gallery {
+    max-width: 290px;
+
+    .projects-img-gallery-item {
+      max-width: 90px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .projects-info {
+    p {
+      text-align: left;
+    }
+
+    margin-bottom: 90px;
+
+    .projects-info-bullets {
+      .projects-info-bullet {
+        width: 85px;
+        height: 85px;
+        font-size: 15px;
+        line-height: 1.333;
+      }
+    }
+
+    button {
+      width: 290px;
+      height: 50px;
+      font-size: 16px;
+    }
+
+    button.save-pdf {
+      font-size: 15px;
+    }
+  }
+
+  .tech {
+    h2 {
+      margin-bottom: 42px;
+    }
+
+    .tech-img {
+      max-width: 290px;
+    }
+  }
+
   .warranty {
+    button {
+      max-width: 290px;
+      font-size: 14px;
+    }
+
     .warranty-blocks {
       .warranty-block {
         min-width: 290px;
         padding-right: 0;
+
         .warranty-block-text {
           .warranty-block-text-h {
             font-size: 16px;
           }
+
           .warranty-block-text-p {
             font-size: 14px;
           }
         }
       }
     }
-    .warranty .warranty-block .warranty-block-text .warranty-block-text-p
+
     button {
       max-width: 290px;
       height: 50px;
       font-size: 14px;
     }
+  }
+
+  .carousel h2 {
+    word-spacing: -1px;
   }
 
   .consult {
@@ -487,13 +628,16 @@
         max-width: 290px;
       }
     }
+
     form {
       button {
         max-width: 290px;
       }
+
       input {
         max-width: 290px;
       }
+
       .agreement {
         width: 290px;
       }

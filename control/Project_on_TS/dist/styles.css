@@ -48,9 +48,49 @@ header .header {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 header .header .burger {
   padding-right: 140px;
+}
+header .header .menu {
+  position: fixed;
+  width: 252px;
+  background-color: #25252d;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+header .header .menu .menu-close img {
+  margin: 35px auto 55px 0;
+}
+header .header .menu .menu-h {
+  font-family: Neumann;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+header .header .menu .menu-items ul li {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+header .header .menu .menu-items ul li a {
+  font-size: 18px;
+  font-weight: 300;
+  color: #ffffff;
+  text-decoration: none;
+}
+header .header .menu .menu-items ul li a:hover {
+  color: #ecc66b;
+}
+header .header .menu .menu-items .menu-items-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 162px;
+  padding: 40px 0;
 }
 header .header .logo {
   margin: 20px auto;
@@ -66,11 +106,18 @@ header .header .logo {
   color: #ffffff;
   text-align: end;
   margin-top: 4px;
+  margin-bottom: 13px;
 }
 .phone .phone-order {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.phone .phone-order svg {
+  margin-right: 8px;
+}
+.phone .phone-order svg:hover {
+  shadow: 0 0 15px 0 rgba(236, 198, 107, 0.5);
 }
 .phone .phone-order a {
   font-size: 16px;
@@ -590,12 +637,12 @@ footer .phone {
   .projects .project .projects-info h3 {
     margin-bottom: 25px;
   }
-  .projects .project .projects-info p {
-    font-size: 16px;
-    margin-bottom: 30px;
-  }
   .projects .project .projects-info .projects-info-bullets {
     margin-bottom: 35px;
+  }
+  .projects-info p {
+    font-size: 16px;
+    margin-bottom: 30px;
   }
   .consult .container {
     gap: 25px;
@@ -655,13 +702,16 @@ footer .phone {
   .projects .project .projects-info h3 {
     display: none;
   }
-  .projects .project .projects-info p {
+  .projects .project .projects-info .projects-info-bullets {
+    justify-content: space-around;
+  }
+  .projects-info p {
     text-align: center;
     max-width: 588px;
     margin: 0 auto 30px auto;
   }
-  .projects .project .projects-info .projects-info-bullets {
-    justify-content: space-around;
+  .projects-info button {
+    width: 385px;
   }
   .steps {
     margin-left: 0;
@@ -739,6 +789,18 @@ footer .phone {
   header .header .burger {
     padding-right: 0;
   }
+  header .header .menu {
+    width: 192px;
+    position: absolute;
+    margin-left: -15px;
+    padding-left: 15px;
+  }
+  header .header .menu .menu-items ul li:last-child {
+    margin-bottom: 0;
+  }
+  header .header .menu .menu-items .menu-items-social {
+    padding: 50px 0;
+  }
   header .header .phone {
     display: none;
   }
@@ -810,6 +872,7 @@ footer .phone {
   .steps {
     grid-template-columns: 1fr;
     margin-top: 70px;
+    row-gap: 100px;
   }
   .warranty {
     margin-bottom: 100px;
@@ -884,6 +947,78 @@ footer .phone {
 }
 /*320 - 374*/
 @media screen and (max-width: 374px) {
+  .main-info {
+    margin-top: 147px;
+  }
+  .main-info h1 {
+    font-size: 26px;
+  }
+  .main-info p {
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 0;
+  }
+  .main-info button {
+    width: 226px;
+    height: 50px;
+    margin: 30px auto;
+  }
+  .projects h2 {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .projects .project .projects-img {
+    margin: unset;
+  }
+  .projects .project .projects-img h3.hidden {
+    text-align: left;
+  }
+  .projects .projects-more {
+    font-size: 15px;
+    margin-bottom: 90px;
+  }
+  .projects-img-big {
+    max-width: 290px;
+  }
+  .projects-img-gallery {
+    max-width: 290px;
+  }
+  .projects-img-gallery .projects-img-gallery-item {
+    max-width: 90px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .projects-info {
+    margin-bottom: 90px;
+  }
+  .projects-info p {
+    text-align: left;
+  }
+  .projects-info .projects-info-bullets .projects-info-bullet {
+    width: 85px;
+    height: 85px;
+    font-size: 15px;
+    line-height: 1.333;
+  }
+  .projects-info button {
+    width: 290px;
+    height: 50px;
+    font-size: 16px;
+  }
+  .projects-info button.save-pdf {
+    font-size: 15px;
+  }
+  .tech h2 {
+    margin-bottom: 42px;
+  }
+  .tech .tech-img {
+    max-width: 290px;
+  }
+  .warranty button {
+    max-width: 290px;
+    font-size: 14px;
+  }
   .warranty .warranty-blocks .warranty-block {
     min-width: 290px;
     padding-right: 0;
@@ -894,10 +1029,13 @@ footer .phone {
   .warranty .warranty-blocks .warranty-block .warranty-block-text .warranty-block-text-p {
     font-size: 14px;
   }
-  .warranty .warranty .warranty-block .warranty-block-text .warranty-block-text-p button {
+  .warranty button {
     max-width: 290px;
     height: 50px;
     font-size: 14px;
+  }
+  .carousel h2 {
+    word-spacing: -1px;
   }
   .consult .container .consult-form {
     max-width: 290px;
