@@ -44,7 +44,7 @@ header {
       position: fixed;
       width: 252px;
       background-color: #25252d;
-      display: flex;
+      display: none;
       flex-direction: column;
       color: rgb(255, 255, 255);
       top: 0;
@@ -84,6 +84,16 @@ header {
           justify-content: space-between;
           width: 162px;
           padding: 40px 0;
+          .menu-items-social-link {
+            a {
+              &:hover {
+                filter: drop-shadow(0 0 1px rgb(255, 255, 255))
+              }
+            }
+          }
+        }
+        .menu-phone {
+          display: none;
         }
       }
     }
@@ -102,30 +112,49 @@ header {
     color: rgb(255, 255, 255);
     text-align: end;
     margin-top: 4px;
-    margin-bottom: 13px;
   }
   .phone-order {
     display: flex;
     flex-direction: row;
     align-items: center;
-    svg {
+    img {
       margin-right: 8px;
-      &:hover {
-        shadow: 0 0 15px 0 rgba(236, 198, 107, 0.5);
-      }
     }
 
     a {
       font-size: 16px;
       font-weight: bold;
       color: @main-color;
+      text-decoration: none;
     }
-
+    &:hover {
+      img {
+      filter: drop-shadow(0 0 15px rgb(236, 198, 107));
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
-
-
+.social {
+  .social-item {
+    &:hover {
+      filter: drop-shadow(0 0 15px rgb(255, 255, 255))
+    }
+  }
+}
+button {
+  &:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
+  }
+}
+.save-pdf {
+  &:hover {
+    box-shadow: 0 5px 9px 1px rgba(255, 255, 255, 0.5);
+  }
+}
 .main-section {
   .container {
     position: relative;
@@ -150,7 +179,9 @@ header {
     color: rgb(255, 255, 255);
     text-align: center;
   }
-
+  a {
+    text-decoration: none;
+  }
   button {
     display: block;
     margin: 40px auto;
@@ -176,10 +207,22 @@ button {
   position: absolute;
   left: 0;
   top: 240px;
+  animation: move-arrow 2s infinite;
+  @keyframes move-arrow {
+    0% {
+      top: 240px;
+    }
+    50% {
+      top: 260px;
+    }
 
+    100% {
+      top: 240px;
+    }
+  }
   a {
     text-decoration: none;
-  }
+     }
 
   .arrow-down-text {
     writing-mode: vertical-lr;
@@ -199,6 +242,9 @@ button {
 
   .social-item {
     margin-bottom: 30px;
+    &:hover {
+      filter: drop-shadow(0 0 1px rgb(255, 255, 255))
+    }
   }
 
 }
@@ -262,6 +308,12 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  .projects-img-gallery-item {
+    &:hover {
+      transform: scale(1.1) ;
+      transition: all .2s ease;
+    }
+  }
 }
 
 h3 {
@@ -310,6 +362,10 @@ h3 {
       font-size: 20px;
       line-height: 1.25;
       font-weight: normal;
+      &:hover {
+        transform: scale(1.1) ;
+        transition: all .2s ease;
+      }
     }
   }
 }
@@ -398,6 +454,16 @@ h3 {
   .step {
     display: flex;
     position: relative;
+    &:hover {
+      .step-no {
+        color: rgb(104, 104, 122);
+        transform: scale(1.2) ;
+        transition: all .2s ease;
+      }
+      .step-icon {
+        transform: rotate(5deg);
+      }
+    }
 
     .step-no {
       position: absolute;
@@ -480,6 +546,9 @@ h3 {
     flex: 1;
     padding-right: 50px;
     margin-bottom: 60px;
+    &:hover {
+      box-shadow: 1px 1px rgb(119, 119, 119);
+    }
 
     .warranty-block-icon {
       margin: 40px;
@@ -519,6 +588,10 @@ h3 {
       color: rgb(255, 255, 255);
       margin-bottom: 60px;
       text-align: center;
+      &:hover {
+        transform: scale(1.2);
+        transition: all .2s ease;
+      }
 
       .warranty-medal-icon {
         width: 140px;
@@ -698,8 +771,12 @@ footer {
       .footer-socials {
         display: flex;
         justify-content: space-between;
-
         column-gap: 30px;
+        .footer-social {
+          &:hover {
+            filter: drop-shadow(0 0 1px rgb(255, 255, 255));
+          }
+        }
       }
     }
   }

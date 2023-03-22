@@ -272,7 +272,36 @@
           .menu-items-social {
             padding: 50px 0;
           }
+          .menu-phone {
+            display: block;
+            .phone-order {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: start;
+
+              img {
+                margin-left:-8px;
+              }
+
+              a {
+                font-size: 14px;
+                font-weight: bold;
+                color: @main-color;
+                text-decoration: none;
+              }
+              &:hover {
+                img {
+                  filter: drop-shadow(0 0 15px rgb(236, 198, 107));
+                }
+                a {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
         }
+
       }
       .phone {
         display: none;
@@ -283,6 +312,7 @@
       }
     }
   }
+
 
   .arrow-down {
     display: none;

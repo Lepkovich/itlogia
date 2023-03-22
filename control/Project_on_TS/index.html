@@ -21,10 +21,10 @@
                         <ul>
                             <li class="active"><a href="#">Каталог</a></li>
                             <li><a href="#">Технологии</a></li>
-                            <li><a href="#">Наши проекты</a></li>
-                            <li><a href="#">Производство</a></li>
-                            <li><a href="#">Гарантия</a></li>
-                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#projects">Наши проекты</a></li>
+                            <li><a href="#tech">Производство</a></li>
+                            <li><a href="#warranty">Гарантия</a></li>
+                            <li><a href="#review">Отзывы</a></li>
                         </ul>
                         <div class="menu-items-social">
                             <div class="menu-items-social-link"><a href="#"><img src="src/images/instagram-logo.png"
@@ -38,7 +38,7 @@
                         <div class="menu-phone">
                             <div class="phone-no">+380 (96) 73-67-281</div>
                             <div class="phone-order">
-                                <img src="src/images/phone-order.svg" alt="Заказать звонок">
+                                <img src="src/images/phone-order-1.png" alt="Заказать звонок">
                                 <a href="#">Заказать звонок</a>
                             </div>
                         </div>
@@ -50,13 +50,7 @@
                 <div class="phone">
                     <div class="phone-no">+380 (96) 73-67-281</div>
                     <div class="phone-order">
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="30px" height="30px">
-                            <image x="0px" y="0px" width="30px" height="30px"
-                                   xlink:href="data:img/png;base64,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"/>
-                        </svg>
+                        <img src="src/images/phone-order-1.png" alt="Заказать звонок">
                         <a href="#">Заказать звонок</a>
                     </div>
                 </div>
@@ -66,7 +60,7 @@
     <section class="main-section">
         <div class="container">
             <div class="arrow-down">
-                <a href="#">
+                <a href="#projects">
                     <div class="arrow-down-text">Листайте вниз</div>
                     <div class="arrow"><img src="src/images/down-arrow.png" alt="стрелка"></div>
                 </a>
@@ -79,14 +73,14 @@
             <div class="main-info">
                 <h1>Строительство домов и коттеджей под ключ</h1>
                 <p>Сможете переехать в готовый дом уже через 3 месяца</p>
-                <button>Узнать подробнее</button>
+                <a href="#consult"><button>Узнать подробнее</button></a>
                 <div class="spacer"></div>
             </div>
         </div>
     </section>
 </div>
 <section>
-    <div class="projects">
+    <div class="projects" id="projects">
         <div class="container">
             <h2>Наши проекты</h2>
             <div class="project">
@@ -112,8 +106,8 @@
                         <div class="projects-info-bullet">4 <br> спальни</div>
                         <div class="projects-info-bullet">2 <br> санузла</div>
                     </div>
-                    <button>Получить консультацию</button>
-                    <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                    <a href="#consult"><button>Получить консультацию</button></a>
+                    <a href="#"><button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button></a>
                 </div>
             </div>
             <div class="project">
@@ -127,8 +121,8 @@
                         <div class="projects-info-bullet">3 спальни</div>
                         <div class="projects-info-bullet">2 санузла</div>
                     </div>
-                    <button>Получить консультацию</button>
-                    <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                    <a href="#consult"><button>Получить консультацию</button></a>
+                    <a href="#"><button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button></a>
                 </div>
                 <div class="projects-img">
                     <h3 class="hidden">Modern house 004</h3>
@@ -149,6 +143,7 @@
                     <div class="arrow-more"><img src="src/images/next-arrow.png" alt="Посмотреть ещё"></div>
                 </a>
             </div>
+<!--            заново скопировать проекты, т.к. были внесены изменения-->
             <div class="project" style="display: none">
                 <div class="projects-img">
                     <h3 class="hidden">Modern house 005</h3>
@@ -233,7 +228,7 @@
         </div>
     </div>
 </section>
-<section class="tech">
+<section class="tech" id="tech">
     <div class="container">
         <h2>Технологии строительства</h2>
         <div class="tech-img">
@@ -321,7 +316,7 @@
         </div>
     </div>
 </section>
-<section class="carousel">
+<section class="carousel" id="review">
     <div class="container">
         <h2>Построили более 200 домов за 10 лет</h2>
         <div class="carousel-items">
@@ -330,7 +325,7 @@
         </div>
     </div>
 </section>
-<section class="warranty">
+<section class="warranty" id="warranty">
     <div class="container">
         <h2>Гарантии и условия оплаты</h2>
         <div class="warranty-blocks">
@@ -375,7 +370,7 @@
         <button class="save-pdf">Скачать PDF-пример договора (1,3 мб)</button>
     </div>
 </section>
-<section class="consult">
+<section class="consult" id="consult">
     <div class="container">
         <div class="consult-img"><img src="src/images/consult-house.jpg" alt="Получить консультацию"></div>
         <div class="consult-form">
@@ -438,7 +433,7 @@
             <div class="phone">
                 <div class="phone-no">+380 (96) 73-67-281</div>
                 <div class="phone-order">
-                    <img src="src/images/phone-order.png" alt="Заказать звонок">
+                    <img src="src/images/phone-order-1.png" alt="Заказать звонок">
                     <a href="#">Заказать звонок</a>
                 </div>
             </div>

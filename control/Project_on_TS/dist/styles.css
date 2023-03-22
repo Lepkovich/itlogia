@@ -57,7 +57,7 @@ header .header .menu {
   position: fixed;
   width: 252px;
   background-color: #25252d;
-  display: flex;
+  display: none;
   flex-direction: column;
   color: #ffffff;
   top: 0;
@@ -92,6 +92,12 @@ header .header .menu .menu-items .menu-items-social {
   width: 162px;
   padding: 40px 0;
 }
+header .header .menu .menu-items .menu-items-social .menu-items-social-link a:hover {
+  filter: drop-shadow(0 0 1px #ffffff);
+}
+header .header .menu .menu-items .menu-phone {
+  display: none;
+}
 header .header .logo {
   margin: 20px auto;
 }
@@ -106,23 +112,35 @@ header .header .logo {
   color: #ffffff;
   text-align: end;
   margin-top: 4px;
-  margin-bottom: 13px;
 }
 .phone .phone-order {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.phone .phone-order svg {
+.phone .phone-order img {
   margin-right: 8px;
-}
-.phone .phone-order svg:hover {
-  shadow: 0 0 15px 0 rgba(236, 198, 107, 0.5);
 }
 .phone .phone-order a {
   font-size: 16px;
   font-weight: bold;
   color: #ecc66b;
+  text-decoration: none;
+}
+.phone .phone-order:hover img {
+  filter: drop-shadow(0 0 15px #ecc66b);
+}
+.phone .phone-order:hover a {
+  text-decoration: underline;
+}
+.social .social-item:hover {
+  filter: drop-shadow(0 0 15px #ffffff);
+}
+button:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
+}
+.save-pdf:hover {
+  box-shadow: 0 5px 9px 1px rgba(255, 255, 255, 0.5);
 }
 .main-section .container {
   position: relative;
@@ -143,6 +161,9 @@ header .header .logo {
   font-size: 18px;
   color: #ffffff;
   text-align: center;
+}
+.main-info a {
+  text-decoration: none;
 }
 .main-info button {
   display: block;
@@ -166,6 +187,18 @@ button {
   position: absolute;
   left: 0;
   top: 240px;
+  animation: move-arrow 2s infinite;
+}
+@keyframes move-arrow {
+  0% {
+    top: 240px;
+  }
+  50% {
+    top: 260px;
+  }
+  100% {
+    top: 240px;
+  }
 }
 .arrow-down a {
   text-decoration: none;
@@ -186,6 +219,9 @@ button {
 }
 .social .social-item {
   margin-bottom: 30px;
+}
+.social .social-item:hover {
+  filter: drop-shadow(0 0 1px #ffffff);
 }
 .spacer {
   height: 300px;
@@ -234,6 +270,10 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
 }
+.projects-img-gallery .projects-img-gallery-item:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
 h3 {
   font-size: 30px;
   font-weight: normal;
@@ -276,6 +316,10 @@ h3 {
   font-size: 20px;
   line-height: 1.25;
   font-weight: normal;
+}
+.projects-info .projects-info-bullets .projects-info-bullet:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }
 .save-pdf {
   background: transparent;
@@ -350,6 +394,14 @@ h3 {
   display: flex;
   position: relative;
 }
+.steps .step:hover .step-no {
+  color: #68687a;
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}
+.steps .step:hover .step-icon {
+  transform: rotate(5deg);
+}
 .steps .step .step-no {
   position: absolute;
   top: -50px;
@@ -416,6 +468,9 @@ h3 {
   padding-right: 50px;
   margin-bottom: 60px;
 }
+.warranty .warranty-block:hover {
+  box-shadow: 1px 1px #777777;
+}
 .warranty .warranty-block .warranty-block-icon {
   margin: 40px;
 }
@@ -449,6 +504,10 @@ h3 {
   color: #ffffff;
   margin-bottom: 60px;
   text-align: center;
+}
+.warranty .warranty-medals .warranty-medal:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease;
 }
 .warranty .warranty-medals .warranty-medal .warranty-medal-icon {
   width: 140px;
@@ -615,6 +674,9 @@ footer .footer .footer-logo .footer-socials {
   display: flex;
   justify-content: space-between;
   column-gap: 30px;
+}
+footer .footer .footer-logo .footer-socials .footer-social:hover {
+  filter: drop-shadow(0 0 1px #ffffff);
 }
 footer .phone {
   padding-left: 90px;
@@ -800,6 +862,30 @@ footer .phone {
   }
   header .header .menu .menu-items .menu-items-social {
     padding: 50px 0;
+  }
+  header .header .menu .menu-items .menu-phone {
+    display: block;
+  }
+  header .header .menu .menu-items .menu-phone .phone-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+  header .header .menu .menu-items .menu-phone .phone-order img {
+    margin-left: -8px;
+  }
+  header .header .menu .menu-items .menu-phone .phone-order a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ecc66b;
+    text-decoration: none;
+  }
+  header .header .menu .menu-items .menu-phone .phone-order:hover img {
+    filter: drop-shadow(0 0 15px #ecc66b);
+  }
+  header .header .menu .menu-items .menu-phone .phone-order:hover a {
+    text-decoration: underline;
   }
   header .header .phone {
     display: none;
