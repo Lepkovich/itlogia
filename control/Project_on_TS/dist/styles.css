@@ -328,6 +328,23 @@ h3 {
   color: #ffffff;
   line-height: 3.333;
 }
+.round .round-1 {
+  width: 25px;
+  height: 25px;
+  border-width: 1px;
+  border-color: #ffc600;
+  border-style: solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.round .round-2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffc600;
+}
 .tech {
   color: #ffffff;
 }
@@ -357,11 +374,53 @@ h3 {
   left: 10px;
   top: 95px;
 }
+.tech .reference-1 {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  top: -3px;
+  left: 230px;
+  width: 223px;
+  height: 32px;
+}
+.tech .reference-1 .line {
+  position: absolute;
+  top: -1px;
+  left: 12px;
+  width: 191px;
+  height: 14px;
+  transform: skew(40deg);
+  border-top: 1px solid #ecc66b;
+  border-right: 1px solid #ecc66b;
+  background: transparent;
+}
 .tech .tech-2 {
   position: absolute;
   width: 270px;
   left: 60px;
   top: 340px;
+}
+.tech .reference-2 {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  top: -29px;
+  left: 245px;
+  width: 121px;
+  height: 32px;
+}
+.tech .reference-2 .line {
+  position: absolute;
+  top: 23px;
+  left: 8px;
+  width: 91px;
+  height: 17px;
+  transform: skew(325deg);
+  border-bottom: 1px solid #ecc66b;
+  border-right: 1px solid #ecc66b;
+  background: transparent;
 }
 .tech .tech-3 {
   position: absolute;
@@ -369,17 +428,80 @@ h3 {
   right: 0;
   top: 120px;
 }
+.tech .reference-3 {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  top: 8px;
+  right: 181px;
+  width: 223px;
+  height: 32px;
+}
+.tech .reference-3 .line {
+  position: absolute;
+  top: 1px;
+  left: 26px;
+  width: 121px;
+  height: 19px;
+  transform: skew(308deg);
+  border-top: 1px solid #ecc66b;
+  border-left: 1px solid #ecc66b;
+  background: transparent;
+}
 .tech .tech-4 {
   position: absolute;
   width: 242px;
   right: 15px;
   top: 320px;
 }
+.tech .reference-4 {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  top: -39px;
+  left: -240px;
+  width: 223px;
+  height: 32px;
+}
+.tech .reference-4 .line {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 199px;
+  height: 30px;
+  transform: skew(27deg);
+  border-bottom: 1px solid #ecc66b;
+  border-left: 1px solid #ecc66b;
+  background: transparent;
+}
 .tech .tech-5 {
   position: absolute;
   width: 230px;
   right: 305px;
   top: 490px;
+}
+.tech .reference-5 {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  top: -23px;
+  left: -128px;
+  width: 223px;
+  height: 32px;
+}
+.tech .reference-5 .line {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 82px;
+  height: 19px;
+  transform: skew(35deg);
+  border-bottom: 1px solid #ecc66b;
+  border-left: 1px solid #ecc66b;
+  background: transparent;
 }
 .steps {
   margin-top: 121px;
@@ -705,6 +827,23 @@ footer .phone {
   .projects-info p {
     font-size: 16px;
     margin-bottom: 30px;
+  }
+  .tech .reference-1 {
+    left: 130px;
+    height: 50px;
+  }
+  .tech .reference-1 .line {
+    left: 84px;
+    top: 18px;
+    width: 120px;
+  }
+  .tech .reference-2 {
+    left: 132px;
+  }
+  .tech .reference-2 .line {
+    left: 71px;
+    top: 23px;
+    width: 32px;
   }
   .consult .container {
     gap: 25px;
