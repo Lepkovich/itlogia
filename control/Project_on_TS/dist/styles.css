@@ -344,6 +344,7 @@ h3 {
   height: 15px;
   border-radius: 50%;
   background-color: #ffc600;
+  box-shadow: 0 0 25.5px 4.5px rgba(0, 0, 0, 0.4);
 }
 .tech {
   color: #ffffff;
@@ -380,7 +381,7 @@ h3 {
   justify-content: end;
   align-items: end;
   top: -3px;
-  left: 230px;
+  left: 210px;
   width: 223px;
   height: 32px;
 }
@@ -407,7 +408,7 @@ h3 {
   justify-content: end;
   align-items: end;
   top: -29px;
-  left: 245px;
+  left: 225px;
   width: 121px;
   height: 32px;
 }
@@ -434,7 +435,7 @@ h3 {
   justify-content: start;
   align-items: end;
   top: 8px;
-  right: 181px;
+  right: 200px;
   width: 223px;
   height: 32px;
 }
@@ -461,7 +462,7 @@ h3 {
   justify-content: start;
   align-items: end;
   top: -39px;
-  left: -240px;
+  left: -260px;
   width: 223px;
   height: 32px;
 }
@@ -488,7 +489,7 @@ h3 {
   justify-content: start;
   align-items: end;
   top: -23px;
-  left: -128px;
+  left: -148px;
   width: 223px;
   height: 32px;
 }
@@ -829,7 +830,7 @@ footer .phone {
     margin-bottom: 30px;
   }
   .tech .reference-1 {
-    left: 130px;
+    left: 110px;
     height: 50px;
   }
   .tech .reference-1 .line {
@@ -838,12 +839,33 @@ footer .phone {
     width: 120px;
   }
   .tech .reference-2 {
-    left: 132px;
+    left: 122px;
   }
   .tech .reference-2 .line {
     left: 71px;
     top: 23px;
     width: 32px;
+  }
+  .tech .reference-3 {
+    right: 95px;
+  }
+  .tech .reference-3 .line {
+    width: 24px;
+  }
+  .tech .reference-4 {
+    left: -150px;
+  }
+  .tech .reference-4 .line {
+    width: 105px;
+  }
+  .tech .tech-5 {
+    right: 250px;
+  }
+  .tech .reference-5 {
+    left: -90px;
+  }
+  .tech .reference-5 .line {
+    width: 60px;
   }
   .consult .container {
     gap: 25px;
@@ -913,6 +935,70 @@ footer .phone {
   }
   .projects-info button {
     width: 385px;
+  }
+  .tech .tech-1 {
+    width: 230px;
+    background-color: rgba(49, 49, 57, 0.7);
+    border-radius: 20px;
+    padding: 15px 10px 15px 10px;
+  }
+  .tech .reference-1 {
+    left: 15px;
+  }
+  .tech .reference-1 .line {
+    display: none;
+  }
+  .tech .tech-2 {
+    width: 250px;
+    background-color: rgba(49, 49, 57, 0.7);
+    border-radius: 20px;
+    padding: 15px 10px 15px 10px;
+    left: 30px;
+  }
+  .tech .reference-2 {
+    left: 120px;
+  }
+  .tech .reference-2 .line {
+    display: none;
+  }
+  .tech .tech-3 {
+    width: 180px;
+    background-color: rgba(49, 49, 57, 0.7);
+    border-radius: 20px;
+    padding: 15px 10px 15px 10px;
+  }
+  .tech .reference-3 {
+    right: -20px;
+  }
+  .tech .reference-3 .line {
+    display: none;
+  }
+  .tech .tech-4 {
+    width: 255px;
+    top: 300px;
+    background-color: rgba(49, 49, 57, 0.7);
+    border-radius: 20px;
+    padding: 15px 10px 15px 10px;
+  }
+  .tech .reference-4 {
+    left: -5px;
+    top: -20px;
+  }
+  .tech .reference-4 .line {
+    display: none;
+  }
+  .tech .tech-5 {
+    width: 255px;
+    right: 170px;
+    background-color: rgba(49, 49, 57, 0.7);
+    border-radius: 20px;
+    padding: 15px 10px 15px 10px;
+  }
+  .tech .reference-5 {
+    left: -20px;
+  }
+  .tech .reference-5 .line {
+    display: none;
   }
   .steps {
     margin-left: 0;
@@ -1073,8 +1159,26 @@ footer .phone {
   .tech .tech-img img {
     max-width: 100%;
   }
-  .tech-1 {
-    display: none;
+  .tech .tech-1 {
+    left: 0;
+    top: 145px;
+    width: 100%;
+    background-color: #313139;
+    padding: 20px 17px;
+    border-radius: 0;
+  }
+  .tech .tech-1::before {
+    content: " ";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #313139;
+    position: absolute;
+    top: -10px;
+    left: 45px;
+  }
+  .tech .tech-1 .reference-1 {
+    left: -155px;
+    top: -75px;
   }
   .tech-2 {
     display: none;
