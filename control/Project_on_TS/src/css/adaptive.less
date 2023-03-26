@@ -37,51 +37,53 @@
   }
 
   .tech {
-    .reference-1 {
-      left: 110px;
-      height: 50px;
-
-      .line {
-        left: 84px;
-        top: 18px;
-        width: 120px;
+    .tech-2 {
+      .reference-2 {
+        .line {
+          width: 5vw;
+        }
       }
     }
 
-    .reference-2 {
-      left: 122px;
+    .tech-2-text {
+      left: 10px;
+    }
 
-      .line {
-        left: 71px;
-        top: 23px;
-        width: 32px;
+    .tech-3 {
+      .reference-3 {
+        .line {
+          width: 5vw;
+        }
       }
     }
 
-    .reference-3 {
-      right: 95px;
+    .tech-3-text {
+      width: 200px;
+    }
 
-      .line {
-        width: 24px;
+    .tech-4 {
+      .reference-4 {
+        .line {
+          width: 15vw;
+        }
       }
     }
 
-    .reference-4 {
-      left: -150px;
-
-      .line {
-        width: 105px;
-      }
+    .tech-4-text {
+      right: 0;
+      width: 200px;
     }
+
     .tech-5 {
-      right: 250px;
-    }
-    .reference-5 {
-      left: -90px;
-
-      .line {
-        width: 60px;
+      .reference-5 {
+        .line {
+          width: 5vw;
+        }
       }
+    }
+
+    .tech-5-text {
+      right: 255px;
     }
   }
 
@@ -188,75 +190,89 @@
   .projects-info button {
     width: 385px;
   }
+
   .tech {
     .tech-1 {
-      width: 230px;
-      background-color: rgb(49 49 57 / 70%);
-      border-radius: 20px;
-      padding: 15px 10px 15px 10px;
-    }
-    .reference-1 {
-      left: 15px;
-      .line {
-        display: none;
+      .reference-1 {
+        .line {
+          display: none;
+        }
       }
     }
+
+    .tech-1-text {
+      padding: 10px;
+      width: 190px;
+      left: calc(50% - 370px);
+      background-color: rgba(37, 37, 45, 0.6);
+      border-radius: 10px;
+    }
+
     .tech-2 {
-      width: 250px;
-      background-color: rgb(49 49 57 / 70%);
-      border-radius: 20px;
-      padding: 15px 10px 15px 10px;
-      left: 30px;
-    }
-    .reference-2 {
-      left: 120px;
-      .line {
-        display: none;
+      .reference-2 {
+        .line {
+          display: none;
+        }
       }
     }
+
+    .tech-2-text {
+      padding: 10px;
+      left: calc(50% - 370px);
+      background-color: rgba(37, 37, 45, 0.6);
+      border-radius: 10px;
+    }
+
     .tech-3 {
-      width: 180px;
-      background-color: rgb(49 49 57 / 70%);
-      border-radius: 20px;
-      padding: 15px 10px 15px 10px;
+      right: calc(50% - 170px);
 
-    }
-    .reference-3 {
-      right: -20px;
-      .line {
-        display: none;
+      .reference-3 {
+        .line {
+          display: none;
+        }
       }
     }
+
+    .tech-3-text {
+      padding: 10px;
+      right: calc(50% - 375px);
+      background-color: rgba(37, 37, 45, 0.6);
+      border-radius: 10px;
+    }
+
     .tech-4 {
-      width: 255px;
-      top: 300px;
-      background-color: rgb(49 49 57 / 70%);
-      border-radius: 20px;
-      padding: 15px 10px 15px 10px;
-
-    }
-    .reference-4 {
-      left: -5px;
-      top: -20px;
-      .line {
-        display: none;
+      .reference-4 {
+        .line {
+          display: none;
+        }
       }
     }
+
+    .tech-4-text {
+      padding: 10px;
+      width: 270px;
+      right: calc(50% - 370px);
+      background-color: rgba(37, 37, 45, 0.6);
+      border-radius: 10px;
+    }
+
     .tech-5 {
-      width: 255px;
-      right: 170px;
-      background-color: rgb(49 49 57 / 70%);
-      border-radius: 20px;
-      padding: 15px 10px 15px 10px;
-
-    }
-    .reference-5 {
-      left: -20px;
-      .line {
-        display: none;
+      .reference-5 {
+        .line {
+          display: none;
+        }
       }
+    }
+
+    .tech-5-text {
+      padding: 10px;
+      width: 270px;
+      right: calc(50% - 200px);
+      background-color: rgba(37, 37, 45, 0.6);
+      border-radius: 10px;
     }
   }
+
   .steps {
     margin-left: 0;
     column-gap: 30px;
@@ -484,55 +500,166 @@
       }
     }
   }
-
+  .round {
+    .round-1 {
+      &::before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid rgb(255, 198, 0);
+        animation: pulse 3s infinite;
+        //z-index: -1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2.5);
+      border-color: transparent;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   .tech {
     .tech-img {
-      max-width: 425px;
-      margin-bottom: 100px;
+      width: 100%;
+      margin-bottom: 250px;
 
       img {
         max-width: 100%;
       }
-    }
-    .tech-1 {
-      left: 0;
-      top: 145px;
-      width: 100%;
-      background-color: rgb(49, 49, 57);
-      padding: 20px 17px;
-      border-radius: 0;
-      &::before {
-        content: " ";
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid rgb(49, 49, 57);
-        position: absolute;
-        top: -10px;
-        left: 45px;
+      .tech-1 {
+        left: 18%;
+        top: 20%;
       }
-      .reference-1 {
-        left: -155px;
-        top: -75px;
+      .tech-1-text {
+        display: none;
+        z-index: 100;
+        background-color: rgb(49, 49, 57);
+        padding: 20px 17px;
+        border-radius: 0;
+        width: 100%;
+        left: 0;
+        top: 36%;
+
+        &::before {
+          content: " ";
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid rgb(49, 49, 57);
+          position: absolute;
+          top: -10px;
+          left: 18%;
+        }
+      }
+      .tech-2 {
+        left: 13%;
+        top: 60%;
+      }
+      .tech-2-text {
+        display: none;
+        background-color: rgb(49, 49, 57);
+        padding: 20px 17px;
+        border-radius: 0;
+        width: 100%;
+        left: 0;
+        top: 76%;
+        z-index: 100;
+
+        &::before {
+          content: " ";
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid rgb(49, 49, 57);
+          position: absolute;
+          top: -10px;
+          left: 14%;
+        }
+      }
+      .tech-3 {
+        right: 19%;
+        top: 27%;
+      }
+      .tech-3-text {
+        display: none;
+        background-color: rgb(49, 49, 57);
+        padding: 20px 17px;
+        border-radius: 0;
+        width: 100%;
+        left: 0;
+        top: 42%;
+        z-index: 100;
+
+        &::before {
+          content: " ";
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid rgb(49, 49, 57);
+          position: absolute;
+          top: -10px;
+          right: 20%;
+        }
+      }
+      .tech-4 {
+        right: 27%;
+        bottom: 39%;
+      }
+      .tech-4-text {
+        display: none;
+        background-color: rgb(49, 49, 57);
+        padding: 20px 17px;
+        border-radius: 0;
+        width: 100%;
+        left: 0;
+        top: 66%;
+        z-index: 100;
+
+        &::before {
+          content: " ";
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid rgb(49, 49, 57);
+          position: absolute;
+          top: -10px;
+          right: 28%;
+        }
+      }
+      .tech-5 {
+        left: 37%;
+        top: 88%;
+      }
+      .tech-5-text {
+        display: none;
+        background-color: rgb(49, 49, 57);
+        padding: 20px 17px;
+        border-radius: 0;
+        width: 100%;
+        left: 0;
+        top: 104%;
+        z-index: 100;
+
+        &::before {
+          content: " ";
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid rgb(49, 49, 57);
+          position: absolute;
+          top: -10px;
+          left: 38%;
+        }
       }
     }
-  }
-
-
-
-  .tech-2 {
-    display: none;
-  }
-
-  .tech-3 {
-    display: none;
-  }
-
-  .tech-4 {
-    display: none;
-  }
-
-  .tech-5 {
-    display: none;
   }
 
 
@@ -754,9 +881,7 @@
       margin-bottom: 42px;
     }
 
-    .tech-img {
-      max-width: 290px;
-    }
+
   }
 
   .warranty {

@@ -371,51 +371,41 @@ h3 {
 }
 .tech .tech-1 {
   position: absolute;
-  width: 270px;
-  left: 10px;
-  top: 95px;
+  left: calc(50% - 180px);
+  top: calc(50% - 165px);
 }
-.tech .reference-1 {
-  position: absolute;
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  top: -3px;
-  left: 210px;
-  width: 223px;
-  height: 32px;
+.tech .tech-1 .reference-1 {
+  position: relative;
 }
-.tech .reference-1 .line {
+.tech .tech-1 .reference-1 .line {
   position: absolute;
-  top: -1px;
-  left: 12px;
-  width: 191px;
+  top: -7px;
+  right: 90%;
+  width: 10vw;
   height: 14px;
   transform: skew(40deg);
   border-top: 1px solid #ecc66b;
   border-right: 1px solid #ecc66b;
   background: transparent;
 }
-.tech .tech-2 {
+.tech .tech-1-text {
   position: absolute;
   width: 270px;
-  left: 60px;
-  top: 340px;
+  left: 10px;
+  top: 90px;
 }
-.tech .reference-2 {
+.tech .tech-2 {
   position: absolute;
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  top: -29px;
-  left: 225px;
-  width: 121px;
-  height: 32px;
+  left: calc(50% - 220px);
+  top: calc(50% + 60px);
 }
-.tech .reference-2 .line {
+.tech .tech-2 .reference-2 {
+  position: relative;
+}
+.tech .tech-2 .reference-2 .line {
   position: absolute;
-  top: 23px;
-  left: 8px;
+  top: 18px;
+  right: 90%;
   width: 91px;
   height: 17px;
   transform: skew(325deg);
@@ -423,26 +413,24 @@ h3 {
   border-right: 1px solid #ecc66b;
   background: transparent;
 }
+.tech .tech-2-text {
+  position: absolute;
+  width: 240px;
+  left: 60px;
+  top: 345px;
+}
 .tech .tech-3 {
   position: absolute;
-  width: 242px;
-  right: 0;
-  top: 120px;
+  right: calc(50% - 205px);
+  top: calc(50% - 128px);
 }
-.tech .reference-3 {
-  position: absolute;
-  display: flex;
-  justify-content: start;
-  align-items: end;
-  top: 8px;
-  right: 200px;
-  width: 223px;
-  height: 32px;
+.tech .tech-3 .reference-3 {
+  position: relative;
 }
-.tech .reference-3 .line {
+.tech .tech-3 .reference-3 .line {
   position: absolute;
-  top: 1px;
-  left: 26px;
+  top: -8px;
+  left: 100%;
   width: 121px;
   height: 19px;
   transform: skew(308deg);
@@ -450,26 +438,24 @@ h3 {
   border-left: 1px solid #ecc66b;
   background: transparent;
 }
+.tech .tech-3-text {
+  position: absolute;
+  width: 240px;
+  right: 5px;
+  top: 112px;
+}
 .tech .tech-4 {
   position: absolute;
-  width: 242px;
-  right: 15px;
-  top: 320px;
+  right: calc(50% - 115px);
+  bottom: calc(50% - 55px);
 }
-.tech .reference-4 {
-  position: absolute;
-  display: flex;
-  justify-content: start;
-  align-items: end;
-  top: -39px;
-  left: -260px;
-  width: 223px;
-  height: 32px;
+.tech .tech-4 .reference-4 {
+  position: relative;
 }
-.tech .reference-4 .line {
+.tech .tech-4 .reference-4 .line {
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 18px;
+  left: 20px;
   width: 199px;
   height: 30px;
   transform: skew(27deg);
@@ -477,32 +463,36 @@ h3 {
   border-left: 1px solid #ecc66b;
   background: transparent;
 }
+.tech .tech-4-text {
+  position: absolute;
+  width: 240px;
+  right: 30px;
+  top: 330px;
+}
 .tech .tech-5 {
   position: absolute;
-  width: 230px;
-  right: 305px;
-  top: 490px;
+  left: calc(50% - 78px);
+  top: calc(50% + 210px);
 }
-.tech .reference-5 {
-  position: absolute;
-  display: flex;
-  justify-content: start;
-  align-items: end;
-  top: -23px;
-  left: -148px;
-  width: 223px;
-  height: 32px;
+.tech .tech-5 .reference-5 {
+  position: relative;
 }
-.tech .reference-5 .line {
+.tech .tech-5 .reference-5 .line {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 17px;
+  left: 22px;
   width: 82px;
   height: 19px;
   transform: skew(35deg);
   border-bottom: 1px solid #ecc66b;
   border-left: 1px solid #ecc66b;
   background: transparent;
+}
+.tech .tech-5-text {
+  position: absolute;
+  width: 230px;
+  right: 325px;
+  top: 495px;
 }
 .steps {
   margin-top: 121px;
@@ -829,43 +819,30 @@ footer .phone {
     font-size: 16px;
     margin-bottom: 30px;
   }
-  .tech .reference-1 {
-    left: 110px;
-    height: 50px;
+  .tech .tech-2 .reference-2 .line {
+    width: 5vw;
   }
-  .tech .reference-1 .line {
-    left: 84px;
-    top: 18px;
-    width: 120px;
+  .tech .tech-2-text {
+    left: 10px;
   }
-  .tech .reference-2 {
-    left: 122px;
+  .tech .tech-3 .reference-3 .line {
+    width: 5vw;
   }
-  .tech .reference-2 .line {
-    left: 71px;
-    top: 23px;
-    width: 32px;
+  .tech .tech-3-text {
+    width: 200px;
   }
-  .tech .reference-3 {
-    right: 95px;
+  .tech .tech-4 .reference-4 .line {
+    width: 15vw;
   }
-  .tech .reference-3 .line {
-    width: 24px;
+  .tech .tech-4-text {
+    right: 0;
+    width: 200px;
   }
-  .tech .reference-4 {
-    left: -150px;
+  .tech .tech-5 .reference-5 .line {
+    width: 5vw;
   }
-  .tech .reference-4 .line {
-    width: 105px;
-  }
-  .tech .tech-5 {
-    right: 250px;
-  }
-  .tech .reference-5 {
-    left: -90px;
-  }
-  .tech .reference-5 .line {
-    width: 60px;
+  .tech .tech-5-text {
+    right: 255px;
   }
   .consult .container {
     gap: 25px;
@@ -936,69 +913,56 @@ footer .phone {
   .projects-info button {
     width: 385px;
   }
-  .tech .tech-1 {
-    width: 230px;
-    background-color: rgba(49, 49, 57, 0.7);
-    border-radius: 20px;
-    padding: 15px 10px 15px 10px;
-  }
-  .tech .reference-1 {
-    left: 15px;
-  }
-  .tech .reference-1 .line {
+  .tech .tech-1 .reference-1 .line {
     display: none;
   }
-  .tech .tech-2 {
-    width: 250px;
-    background-color: rgba(49, 49, 57, 0.7);
-    border-radius: 20px;
-    padding: 15px 10px 15px 10px;
-    left: 30px;
+  .tech .tech-1-text {
+    padding: 10px;
+    width: 190px;
+    left: calc(50% - 370px);
+    background-color: rgba(37, 37, 45, 0.6);
+    border-radius: 10px;
   }
-  .tech .reference-2 {
-    left: 120px;
-  }
-  .tech .reference-2 .line {
+  .tech .tech-2 .reference-2 .line {
     display: none;
+  }
+  .tech .tech-2-text {
+    padding: 10px;
+    left: calc(50% - 370px);
+    background-color: rgba(37, 37, 45, 0.6);
+    border-radius: 10px;
   }
   .tech .tech-3 {
-    width: 180px;
-    background-color: rgba(49, 49, 57, 0.7);
-    border-radius: 20px;
-    padding: 15px 10px 15px 10px;
+    right: calc(50% - 170px);
   }
-  .tech .reference-3 {
-    right: -20px;
-  }
-  .tech .reference-3 .line {
+  .tech .tech-3 .reference-3 .line {
     display: none;
   }
-  .tech .tech-4 {
-    width: 255px;
-    top: 300px;
-    background-color: rgba(49, 49, 57, 0.7);
-    border-radius: 20px;
-    padding: 15px 10px 15px 10px;
+  .tech .tech-3-text {
+    padding: 10px;
+    right: calc(50% - 375px);
+    background-color: rgba(37, 37, 45, 0.6);
+    border-radius: 10px;
   }
-  .tech .reference-4 {
-    left: -5px;
-    top: -20px;
-  }
-  .tech .reference-4 .line {
+  .tech .tech-4 .reference-4 .line {
     display: none;
   }
-  .tech .tech-5 {
-    width: 255px;
-    right: 170px;
-    background-color: rgba(49, 49, 57, 0.7);
-    border-radius: 20px;
-    padding: 15px 10px 15px 10px;
+  .tech .tech-4-text {
+    padding: 10px;
+    width: 270px;
+    right: calc(50% - 370px);
+    background-color: rgba(37, 37, 45, 0.6);
+    border-radius: 10px;
   }
-  .tech .reference-5 {
-    left: -20px;
-  }
-  .tech .reference-5 .line {
+  .tech .tech-5 .reference-5 .line {
     display: none;
+  }
+  .tech .tech-5-text {
+    padding: 10px;
+    width: 270px;
+    right: calc(50% - 200px);
+    background-color: rgba(37, 37, 45, 0.6);
+    border-radius: 10px;
   }
   .steps {
     margin-left: 0;
@@ -1152,45 +1116,153 @@ footer .phone {
   .projects-img-gallery .projects-img-gallery-item a img {
     max-width: 100%;
   }
+  .round .round-1::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #ffc600;
+    animation: pulse 3s infinite;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2.5);
+      border-color: transparent;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   .tech .tech-img {
-    max-width: 425px;
-    margin-bottom: 100px;
+    width: 100%;
+    margin-bottom: 250px;
   }
   .tech .tech-img img {
     max-width: 100%;
   }
-  .tech .tech-1 {
-    left: 0;
-    top: 145px;
-    width: 100%;
+  .tech .tech-img .tech-1 {
+    left: 18%;
+    top: 20%;
+  }
+  .tech .tech-img .tech-1-text {
+    display: none;
+    z-index: 100;
     background-color: #313139;
     padding: 20px 17px;
     border-radius: 0;
+    width: 100%;
+    left: 0;
+    top: 36%;
   }
-  .tech .tech-1::before {
+  .tech .tech-img .tech-1-text::before {
     content: " ";
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #313139;
     position: absolute;
     top: -10px;
-    left: 45px;
+    left: 18%;
   }
-  .tech .tech-1 .reference-1 {
-    left: -155px;
-    top: -75px;
+  .tech .tech-img .tech-2 {
+    left: 13%;
+    top: 60%;
   }
-  .tech-2 {
+  .tech .tech-img .tech-2-text {
     display: none;
+    background-color: #313139;
+    padding: 20px 17px;
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+    top: 76%;
+    z-index: 100;
   }
-  .tech-3 {
-    display: none;
+  .tech .tech-img .tech-2-text::before {
+    content: " ";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #313139;
+    position: absolute;
+    top: -10px;
+    left: 14%;
   }
-  .tech-4 {
-    display: none;
+  .tech .tech-img .tech-3 {
+    right: 19%;
+    top: 27%;
   }
-  .tech-5 {
+  .tech .tech-img .tech-3-text {
     display: none;
+    background-color: #313139;
+    padding: 20px 17px;
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+    top: 42%;
+    z-index: 100;
+  }
+  .tech .tech-img .tech-3-text::before {
+    content: " ";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #313139;
+    position: absolute;
+    top: -10px;
+    right: 20%;
+  }
+  .tech .tech-img .tech-4 {
+    right: 27%;
+    bottom: 39%;
+  }
+  .tech .tech-img .tech-4-text {
+    display: none;
+    background-color: #313139;
+    padding: 20px 17px;
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+    top: 66%;
+    z-index: 100;
+  }
+  .tech .tech-img .tech-4-text::before {
+    content: " ";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #313139;
+    position: absolute;
+    top: -10px;
+    right: 28%;
+  }
+  .tech .tech-img .tech-5 {
+    left: 37%;
+    top: 88%;
+  }
+  .tech .tech-img .tech-5-text {
+    display: none;
+    background-color: #313139;
+    padding: 20px 17px;
+    border-radius: 0;
+    width: 100%;
+    left: 0;
+    top: 104%;
+    z-index: 100;
+  }
+  .tech .tech-img .tech-5-text::before {
+    content: " ";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #313139;
+    position: absolute;
+    top: -10px;
+    left: 38%;
   }
   .carousel-items {
     max-width: 425px;
@@ -1340,9 +1412,6 @@ footer .phone {
   }
   .tech h2 {
     margin-bottom: 42px;
-  }
-  .tech .tech-img {
-    max-width: 290px;
   }
   .warranty button {
     max-width: 290px;
