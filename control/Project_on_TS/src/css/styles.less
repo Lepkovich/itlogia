@@ -16,6 +16,9 @@ body {
   font-family: Museo Sans Cyrl;
 
 }
+a {
+  text-decoration: none;
+}
 
 .main {
   background-image: url("../src/images/main-house.jpg");
@@ -41,9 +44,12 @@ header {
     .burger {
       padding-right: 140px;
     }
+    .menu.open {
+      display: flex;
+    }
     .menu {
       position: fixed;
-      width: 252px;
+      width: 302px;
       background-color: #25252d;
       display: none;
       flex-direction: column;
@@ -51,6 +57,7 @@ header {
       top: 0;
       left: 0;
       z-index: 99;
+      padding-left: 50px;
 
       .menu-close {
         img {
@@ -71,7 +78,6 @@ header {
               font-size: 18px;
               font-weight: 300;
               color: rgb(255, 255, 255);
-              text-decoration: none;
               &:hover {
                 color: @main-color;
               }
@@ -126,7 +132,6 @@ header {
       font-size: 16px;
       font-weight: bold;
       color: @main-color;
-      text-decoration: none;
     }
     &:hover {
       img {
@@ -146,11 +151,7 @@ header {
     }
   }
 }
-button {
-  &:hover {
-  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
-  }
-}
+
 .save-pdf {
   &:hover {
     box-shadow: 0 5px 9px 1px rgba(255, 255, 255, 0.5);
@@ -180,9 +181,7 @@ button {
     color: rgb(255, 255, 255);
     text-align: center;
   }
-  a {
-    text-decoration: none;
-  }
+
   button {
     display: block;
     margin: 40px auto;
@@ -202,6 +201,9 @@ button {
   color: rgb(37, 37, 45);
   font-weight: bold;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
+  }
 }
 
 .arrow-down {
@@ -221,9 +223,7 @@ button {
       top: 240px;
     }
   }
-  a {
-    text-decoration: none;
-     }
+
 
   .arrow-down-text {
     writing-mode: vertical-lr;
@@ -289,7 +289,6 @@ h2 {
     a {
       display: flex;
       flex-direction: row;
-      text-decoration: none;
     }
 
     .arrow-more-text {
@@ -426,32 +425,7 @@ h3 {
       margin: 0 auto;
     }
   }
-  //.test-round {
-  //  position: absolute;
-  //  top: calc(50% - 42px);
-  //  left: calc(50% - 175px);
-  //  .test-round-container {
-  //    position: relative;
-  //    .line {
-  //      position: absolute;
-  //      top: -6px;
-  //      right: 100%;
-  //      width: 191px;
-  //      height: 14px;
-  //      transform: skew(40deg);
-  //      border-top: 1px solid #5edb34;
-  //      border-right: 1px solid #5edb34;
-  //      background: transparent;
-  //    }
-  //  }
-  //}
-  //.test-text {
-  //  position: absolute;
-  //  width: 270px;
-  //  left: 10px;
-  //  top: 220px;
-  //  color: #5edb34;
-  //}
+
   .tech-1 {
     position: absolute;
     left: calc(50% - 180px);

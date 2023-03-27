@@ -154,7 +154,15 @@
 
     .project {
       grid-template-columns: 1fr;
+      .change-order {
+        .projects-img {
+          order: 1;
+        }
 
+        .projects-info {
+          order: 2;
+        }
+      }
       .projects-img {
         margin: 0 auto;
 
@@ -176,6 +184,15 @@
           justify-content: space-around;
         }
       }
+    }
+  }
+  .project.change-order {
+    .projects-img {
+      order: 1;
+    }
+
+    .projects-info {
+      order: 2;
     }
   }
 
@@ -568,7 +585,7 @@
         top: 60%;
       }
       .tech-2-text {
-        display: none;
+        //display: none;
         background-color: rgb(49, 49, 57);
         padding: 20px 17px;
         border-radius: 0;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Home Care</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/magnific-popup.css">
     <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body>
@@ -11,16 +12,16 @@
     <header>
         <div class="container">
             <div class="header">
-                <div class="burger">
-                    <a href="#"><img src="src/images/menu-burger.png" alt="Меню"></a>
+                <div class="burger" id="burger">
+                    <img src="src/images/menu-burger.png" alt="Меню">
                 </div>
-                <div class="menu">
-                    <div class="menu-close"><img src="src/images/menu-close.png" alt="Закрыть меню"></div>
+                <div class="menu" id="menu">
+                    <div class="menu-close" id="close"><img src="src/images/menu-close.png" alt="Закрыть меню"></div>
                     <div class="menu-h">Меню</div>
                     <div class="menu-items">
                         <ul>
-                            <li class="active"><a href="#">Каталог</a></li>
-                            <li><a href="#">Технологии</a></li>
+                            <li class="active"><a href="#projects">Каталог</a></li>
+                            <li><a href="#tech">Технологии</a></li>
                             <li><a href="#projects">Наши проекты</a></li>
                             <li><a href="#tech">Производство</a></li>
                             <li><a href="#warranty">Гарантия</a></li>
@@ -51,7 +52,7 @@
                     <div class="phone-no">+380 (96) 73-67-281</div>
                     <div class="phone-order">
                         <img src="src/images/phone-order-1.png" alt="Заказать звонок">
-                        <a href="#">Заказать звонок</a>
+                        <a href="#consult">Заказать звонок</a>
                     </div>
                 </div>
             </div>
@@ -88,13 +89,13 @@
             <div class="project">
                 <div class="projects-img">
                     <h3 class="hidden">Modern house 003</h3>
-                    <div class="projects-img-big"><img src="src/images/project-1.jpg" alt="Проект 003"></div>
+                    <div class="projects-img-big"><a href="src/images/project-1.jpg" class="popup-link"><img src="src/images/project-1.jpg" alt="Проект 003"></a></div>
                     <div class="projects-img-gallery">
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-1.jpg"
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-1.jpg" class="popup-link"><img src="src/images/project-small-1.jpg"
                                                                                 alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-2.jpg"
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-2.jpg" class="popup-link"><img src="src/images/project-small-2.jpg"
                                                                                 alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-3.jpg"
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-3.jpg" class="popup-link"><img src="src/images/project-small-3.jpg"
                                                                                 alt="Проект 003 фото"></a></div>
                     </div>
                 </div>
@@ -111,7 +112,7 @@
                     <a href="#consult">
                         <button>Получить консультацию</button>
                     </a>
-                    <a href="#">
+                    <a href="https://domgroup.pro/img/projects/home-pdf/nwdom8.pdf">
                         <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
                     </a>
                 </div>
@@ -130,41 +131,38 @@
                     <a href="#consult">
                         <button>Получить консультацию</button>
                     </a>
-                    <a href="#">
+                    <a href="https://domgroup.pro/img/projects/home-pdf/nwdom8.pdf">
                         <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
                     </a>
                 </div>
                 <div class="projects-img">
                     <h3 class="hidden">Modern house 004</h3>
-                    <div class="projects-img-big"><img src="src/images/project-1.jpg" alt="Проект 003"></div>
+                    <div class="projects-img-big"><a href="src/images/project-1.jpg" class="popup-link"><img src="src/images/project-1.jpg" alt="Проект 003"></a></div>
                     <div class="projects-img-gallery">
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-1.jpg"
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-1.jpg" class="popup-link"><img src="src/images/project-small-1.jpg"
                                                                                 alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-2.jpg"
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-2.jpg" class="popup-link"><img src="src/images/project-small-2.jpg"
                                                                                 alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-3.jpg"
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-3.jpg" class="popup-link"><img src="src/images/project-small-3.jpg"
                                                                                 alt="Проект 003 фото"></a></div>
                     </div>
                 </div>
             </div>
             <div class="projects-more" id="trigger">
-                <a href="#">
                     <div class="arrow-more-text">Посмотреть ещё 3 проекта</div>
                     <div class="arrow-more"><img src="src/images/next-arrow.png" alt="Посмотреть ещё"></div>
-                </a>
             </div>
-            <!--            заново скопировать проекты, т.к. были внесены изменения-->
             <div class="project" style="display: none">
                 <div class="projects-img">
                     <h3 class="hidden">Modern house 005</h3>
-                    <div class="projects-img-big"><img src="src/images/project-1.jpg" alt="Проект 003"></div>
+                    <div class="projects-img-big"><a href="src/images/project-1.jpg" class="popup-link"><img src="src/images/project-1.jpg" alt="Проект 003"></a></div>
                     <div class="projects-img-gallery">
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-1.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-2.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-3.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-1.jpg" class="popup-link"><img src="src/images/project-small-1.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-2.jpg" class="popup-link"><img src="src/images/project-small-2.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-3.jpg" class="popup-link"><img src="src/images/project-small-3.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
                     </div>
                 </div>
                 <div class="projects-info">
@@ -177,11 +175,15 @@
                         <div class="projects-info-bullet">4 <br> спальни</div>
                         <div class="projects-info-bullet">2 <br> санузла</div>
                     </div>
-                    <button>Получить консультацию</button>
-                    <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                    <a href="#consult">
+                        <button>Получить консультацию</button>
+                    </a>
+                    <a href="https://domgroup.pro/img/projects/home-pdf/nwdom8.pdf">
+                        <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                    </a>
                 </div>
             </div>
-            <div class="project" style="display: none">
+            <div class="project change-order" style="display: none">
                 <div class="projects-info">
                     <h3>Modern house 006</h3>
                     <p>Компактный и функциональный дом подкупает простотой решений. Простая форма и двухскатная кровля
@@ -192,33 +194,37 @@
                         <div class="projects-info-bullet">3 спальни</div>
                         <div class="projects-info-bullet">2 санузла</div>
                     </div>
-                    <button>Получить консультацию</button>
-                    <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                    <a href="#consult">
+                        <button>Получить консультацию</button>
+                    </a>
+                    <a href="https://domgroup.pro/img/projects/home-pdf/nwdom8.pdf">
+                        <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                    </a>
                 </div>
                 <div class="projects-img">
                     <h3 class="hidden">Modern house 006</h3>
-                    <div class="projects-img-big"><img src="src/images/project-1.jpg" alt="Проект 003"></div>
+                    <div class="projects-img-big"><a href="src/images/project-1.jpg" class="popup-link"><img src="src/images/project-1.jpg" alt="Проект 003"></a></div>
                     <div class="projects-img-gallery">
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-1.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-2.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-3.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-1.jpg" class="popup-link"><img src="src/images/project-small-1.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-2.jpg" class="popup-link"><img src="src/images/project-small-2.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-3.jpg" class="popup-link"><img src="src/images/project-small-3.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
                     </div>
                 </div>
             </div>
             <div class="project" style="display: none">
                 <div class="projects-img">
                     <h3 class="hidden">Modern house 007</h3>
-                    <div class="projects-img-big"><img src="src/images/project-1.jpg" alt="Проект 003"></div>
+                    <div class="projects-img-big"><a href="src/images/project-1.jpg" class="popup-link"><img src="src/images/project-1.jpg" alt="Проект 003"></a></div>
                     <div class="projects-img-gallery">
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-1.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-2.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
-                        <div class="projects-img-gallery-item"><a href="#"><img src="src/images/project-small-3.jpg"
-                                                                                alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-1.jpg" class="popup-link"><img src="src/images/project-small-1.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-2.jpg" class="popup-link"><img src="src/images/project-small-2.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
+                        <div class="projects-img-gallery-item"><a href="src/images/project-big-3.jpg" class="popup-link"><img src="src/images/project-small-3.jpg"
+                                                                                                                              alt="Проект 003 фото"></a></div>
                     </div>
                 </div>
                 <div class="projects-info">
@@ -231,8 +237,12 @@
                         <div class="projects-info-bullet">4 <br> спальни</div>
                         <div class="projects-info-bullet">2 <br> санузла</div>
                     </div>
-                    <button>Получить консультацию</button>
-                    <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                    <a href="#consult">
+                        <button>Получить консультацию</button>
+                    </a>
+                    <a href="https://domgroup.pro/img/projects/home-pdf/nwdom8.pdf">
+                        <button class="save-pdf">Скачать PDF-план проекта (2,5 мб)</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -243,13 +253,12 @@
         <h2>Технологии строительства</h2>
         <div class="tech-img">
             <img src="src/images/tehno-house-2.png" alt="Технологии строительства">
-            <div class="tech-1">
+            <div class="tech-1 active-round" id="tech-1">
                 <div class="reference-1">
                     <div class="line"></div>
-                    <div class="round">
+                    <div class="round" id="round-1">
                         <div class="round-1">
                             <div class="round-2"></div>
-<!--                            <div class="round-3"></div>-->
                         </div>
                     </div>
                 </div>
@@ -428,7 +437,9 @@
                 <div class="warranty-medal-p">Оплата всех работ по факту их выполнения</div>
             </div>
         </div>
+        <a href="https://domgroup.pro/img/projects/home-pdf/nwdom8.pdf">
         <button class="save-pdf">Скачать PDF-пример договора (1,3 мб)</button>
+        </a>
     </div>
 </section>
 <section class="consult" id="consult">
@@ -467,7 +478,7 @@
             <div class="map-items">
                 <h2>Запишитесь на экскурсию</h2>
                 <p>В готовые дома, чтобы лично убедиться в качестве нашей работы</p>
-                <button>Записаться</button>
+                <a href="#consult"><button>Записаться</button></a>
             </div>
             <div class="spacer-bottom"></div>
         </div>
@@ -495,11 +506,16 @@
                 <div class="phone-no">+380 (96) 73-67-281</div>
                 <div class="phone-order">
                     <img src="src/images/phone-order-1.png" alt="Заказать звонок">
-                    <a href="#">Заказать звонок</a>
+                    <a href="#consult">Заказать звонок</a>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="scripts/wow.min.js"></script>
+<script src="scripts/jquery.magnific-popup.min.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>

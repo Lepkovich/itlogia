@@ -31,6 +31,9 @@ body {
   background-color: #25252d;
   font-family: Museo Sans Cyrl;
 }
+a {
+  text-decoration: none;
+}
 .main {
   background-image: url("../src/images/main-house.jpg");
   background-position: center;
@@ -53,9 +56,12 @@ header .header {
 header .header .burger {
   padding-right: 140px;
 }
+header .header .menu.open {
+  display: flex;
+}
 header .header .menu {
   position: fixed;
-  width: 252px;
+  width: 302px;
   background-color: #25252d;
   display: none;
   flex-direction: column;
@@ -63,6 +69,7 @@ header .header .menu {
   top: 0;
   left: 0;
   z-index: 99;
+  padding-left: 50px;
 }
 header .header .menu .menu-close img {
   margin: 35px auto 55px 0;
@@ -80,7 +87,6 @@ header .header .menu .menu-items ul li a {
   font-size: 18px;
   font-weight: 300;
   color: #ffffff;
-  text-decoration: none;
 }
 header .header .menu .menu-items ul li a:hover {
   color: #ecc66b;
@@ -125,7 +131,6 @@ header .header .logo {
   font-size: 16px;
   font-weight: bold;
   color: #ecc66b;
-  text-decoration: none;
 }
 .phone .phone-order:hover img {
   filter: drop-shadow(0 0 15px #ecc66b);
@@ -135,9 +140,6 @@ header .header .logo {
 }
 .social .social-item:hover {
   filter: drop-shadow(0 0 15px #ffffff);
-}
-button:hover {
-  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
 }
 .save-pdf:hover {
   box-shadow: 0 5px 9px 1px rgba(255, 255, 255, 0.5);
@@ -162,9 +164,6 @@ button:hover {
   color: #ffffff;
   text-align: center;
 }
-.main-info a {
-  text-decoration: none;
-}
 .main-info button {
   display: block;
   margin: 40px auto;
@@ -183,6 +182,9 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
+button:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
+}
 .arrow-down {
   position: absolute;
   left: 0;
@@ -199,9 +201,6 @@ button {
   100% {
     top: 240px;
   }
-}
-.arrow-down a {
-  text-decoration: none;
 }
 .arrow-down .arrow-down-text {
   writing-mode: vertical-lr;
@@ -254,7 +253,6 @@ h2 {
 .projects .projects-more a {
   display: flex;
   flex-direction: row;
-  text-decoration: none;
 }
 .projects .projects-more .arrow-more-text {
   font-size: 18px;
@@ -888,6 +886,12 @@ footer .phone {
   .projects .project {
     grid-template-columns: 1fr;
   }
+  .projects .project .change-order .projects-img {
+    order: 1;
+  }
+  .projects .project .change-order .projects-info {
+    order: 2;
+  }
   .projects .project .projects-img {
     margin: 0 auto;
   }
@@ -904,6 +908,12 @@ footer .phone {
   }
   .projects .project .projects-info .projects-info-bullets {
     justify-content: space-around;
+  }
+  .project.change-order .projects-img {
+    order: 1;
+  }
+  .project.change-order .projects-info {
+    order: 2;
   }
   .projects-info p {
     text-align: center;
@@ -1177,7 +1187,6 @@ footer .phone {
     top: 60%;
   }
   .tech .tech-img .tech-2-text {
-    display: none;
     background-color: #313139;
     padding: 20px 17px;
     border-radius: 0;
