@@ -548,6 +548,18 @@
       transform: scale(1);
     }
   }
+  .round.active-round {
+    .round-1 {
+      border-color: #fcedcb;
+      &::before {
+        border: 1px solid transparent;
+        animation: none;
+      }
+    }
+    .round-2 {
+      background-color: #fcedcb;
+    }
+  }
   .tech {
     .tech-img {
       width: 100%;
@@ -585,7 +597,7 @@
         top: 60%;
       }
       .tech-2-text {
-        //display: none;
+        display: none;
         background-color: rgb(49, 49, 57);
         padding: 20px 17px;
         border-radius: 0;

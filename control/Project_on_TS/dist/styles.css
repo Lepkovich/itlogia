@@ -1152,6 +1152,16 @@ footer .phone {
       transform: scale(1);
     }
   }
+  .round.active-round .round-1 {
+    border-color: #fcedcb;
+  }
+  .round.active-round .round-1::before {
+    border: 1px solid transparent;
+    animation: none;
+  }
+  .round.active-round .round-2 {
+    background-color: #fcedcb;
+  }
   .tech .tech-img {
     width: 100%;
     margin-bottom: 250px;
@@ -1187,6 +1197,7 @@ footer .phone {
     top: 60%;
   }
   .tech .tech-img .tech-2-text {
+    display: none;
     background-color: #313139;
     padding: 20px 17px;
     border-radius: 0;
