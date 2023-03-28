@@ -91,6 +91,13 @@ header .header .menu .menu-items ul li a {
 header .header .menu .menu-items ul li a:hover {
   color: #ecc66b;
 }
+header .header .menu .menu-items ul li.active {
+  list-style-type: disc;
+  color: #ecc66b;
+}
+header .header .menu .menu-items ul li.active a {
+  color: #ecc66b;
+}
 header .header .menu .menu-items .menu-items-social {
   display: flex;
   flex-direction: row;
@@ -137,9 +144,6 @@ header .header .logo {
 }
 .phone .phone-order:hover a {
   text-decoration: underline;
-}
-.social .social-item:hover {
-  filter: drop-shadow(0 0 15px #ffffff);
 }
 .save-pdf:hover {
   box-shadow: 0 5px 9px 1px rgba(255, 255, 255, 0.5);
@@ -677,7 +681,8 @@ h3 {
   font-weight: 300;
 }
 .consult form .error-input {
-  margin-top: 5px;
+  margin-top: -15px;
+  margin-bottom: 5px;
   color: #bababa;
   padding-left: 30px;
   display: none;

@@ -83,8 +83,14 @@ header {
               }
             }
           }
+          li.active {
+            list-style-type: disc;
+            color: @main-color;
+            a {
+              color: @main-color;
+            }
+          }
         }
-
         .menu-items-social {
           display: flex;
           flex-direction: row;
@@ -94,7 +100,7 @@ header {
           .menu-items-social-link {
             a {
               &:hover {
-                filter: drop-shadow(0 0 1px rgb(255, 255, 255))
+                filter: drop-shadow(0 0 1px rgb(255, 255, 255));
               }
             }
           }
@@ -144,13 +150,6 @@ header {
   }
 }
 
-.social {
-  .social-item {
-    &:hover {
-      filter: drop-shadow(0 0 15px rgb(255, 255, 255))
-    }
-  }
-}
 
 .save-pdf {
   &:hover {
@@ -780,7 +779,8 @@ h3 {
     }
 
     .error-input {
-      margin-top: 5px;
+      margin-top: -15px;
+      margin-bottom: 5px;
       color: @second-color;
       padding-left: 30px;
       display: none;

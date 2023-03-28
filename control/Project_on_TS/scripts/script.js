@@ -8,7 +8,7 @@ $(document).ready(function() {
     $('.popup-link').magnificPopup({  //подключили плагин magnificPopup
         type: 'image'                 // a с классом popup-link будут открываться на весь экран
     });
-
+    // --------- обработка меню
     $('#burger').on('click', function () { // по клику на бургер откроется меню
         $('#menu').addClass('open');
     })
@@ -16,10 +16,18 @@ $(document).ready(function() {
     $('#close').on('click', function () {  // по клику на крестик меню закроется
         $('#menu').removeClass('open');
     })
+
+    $('li').click(function (event) {  // по клику на li (на самом деле на a)
+        event.stopPropagation();
+        $('li').removeClass('active'); // удалим у всех li класс active
+        $(event.target).parent().addClass('active'); // // добавим класс active родителю a (li)
+    })
+    //   ---------- "Посмотреть ещё 3 проекта"
     $('#trigger').on('click', function () { // раскроем проекты по клику на "Посмотреть ещё 3 проекта"
         $('.project').css('display', 'grid');
         $('#trigger').css('display', 'none'); // и уберем саму надпись
     })
+
     //----------------- отслеживаем клики на кружочки по дому
 
     $('.tech-img').on('click', function () {  //отследим клик на любую область дома
@@ -29,30 +37,31 @@ $(document).ready(function() {
       }
     })
 
-    $('#round-1').click(function( event ) { // отслеживаем клик по кружочку
-        event.stopPropagation();
-        $('#round-1').addClass('active-round');  // добавили класс (изменить цвет кружка и убрать анимацию)
-        $('.tech-1-text').css('display', 'block'); // отобразить тестовый блок с описанием
-    });
-    $('#round-2').click(function( event ) {
-        event.stopPropagation();
-        $('#tech-2').addClass('active-round');
-        $('.tech-2-text').css('display', 'block');
-    });
-    $('#round-3').click(function( event ) {
-        event.stopPropagation();
-        $('#tech-3').addClass('active-round');
-        $('.tech-3-text').css('display', 'block');
-    });
-    $('#round-4').click(function( event ) {
-        event.stopPropagation();
-        $('#tech-4').addClass('active-round');
-        $('.tech-4-text').css('display', 'block');
-    });
-    $('#round-5').click(function( event ) {
-        event.stopPropagation();
-        $('#tech-5').addClass('active-round');
-        $('.tech-5-text').css('display', 'block');
-    });
-    // и попробовать все их в цикл засунуть с i
+    for (let a = 1; a < 6; a++) {
+        $('#round-' + a).click(function( event ) { // отслеживаем клик по кружочку
+            event.stopPropagation();
+            $('#tech-' + a).addClass('active-round'); // добавили класс (изменить цвет кружка и убрать анимацию)
+            $('.tech-' + a + '-text').css('display', 'block'); // отобразить тестовый блок с описанием
+        });
+    }
+
+    // -------- валидация формы Заказать консультацию
+
+    $('#submit').click(function () {
+        let name = $('#name');
+        let phone = $('#phone');
+        let hasError = false; // флаг наличия ошибки
+        $('.error-input').hide(); // все сообщения об ошибке скрываем
+
+        if (!name.val()) {
+            name.next().show();
+            hasError = true;
+        }
+        if (!phone.val()) {
+            name.next().show();
+            hasError = true;
+        }
+
+
+    })
 });
