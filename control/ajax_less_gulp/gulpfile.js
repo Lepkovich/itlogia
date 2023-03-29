@@ -7,7 +7,7 @@ const rename = require('gulp-rename');
 
 
 exports.less = function() {
-    return src('./src/css/css.less') // берем наш объединенный less файл из папки
+    return src('./src/css/styles.less') // берем наш объединенный less файл из папки
         // .pipe(watchLess('./src/css/*.less')) // отслеживаем все изменения в файлах less
         .pipe(less()) // преобразуем его в css ...
         .pipe(cssmin()) // минифицируем наш css

@@ -47,21 +47,47 @@ $(document).ready(function() {
 
     // -------- валидация формы Заказать консультацию
 
-    $('#submit').click(function () {
+    $('#submit').click(function (event) {
         let name = $('#name');
         let phone = $('#phone');
         let hasError = false; // флаг наличия ошибки
         $('.error-input').hide(); // все сообщения об ошибке скрываем
+        $('input').css('border-color', '#ffffff')
 
         if (!name.val()) {
             name.next().show();
+            name.css('border-color', 'red')
             hasError = true;
         }
         if (!phone.val()) {
-            name.next().show();
+            phone.next().show();
+            phone.css('border-color', 'red')
+            hasError = true;
+        }
+        if (phone.val() && isNaN(parseInt(phone.val()))) { //если phone заполнен, но в нем не цифры
+            phone.css('border-color', 'red');
+            phone.next().show();
+            phone.next().text('В телефоне должны быть только цифры'); //меняем сообщение об ошибке
             hasError = true;
         }
 
+        if (!hasError) {  // если ошибки не было
+            loader.css('display', 'flex');  // - добавить loader
+            $.ajax({
+                method: "POST",
+                url: "https://testologia.site/checkout ",
+                data: { product: product.val(), name: name.val(), phone: phone.val() } // - проверить данные
+            })
+                .done(function( msg ) {
+                    loader.hide();
+                    if (msg.success) {
+                        $('form').hide();
+                        $('.order-done').css('display', 'flex'); // - сделать блок order-done
+                    } else {
+                        alert('Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ!')
+                    }
+                });
+        }
 
     })
 });

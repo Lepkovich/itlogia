@@ -683,8 +683,7 @@ h3 {
 .consult form .error-input {
   margin-top: -15px;
   margin-bottom: 5px;
-  color: #bababa;
-  padding-left: 30px;
+  color: red;
   display: none;
 }
 .consult form .agreement {
