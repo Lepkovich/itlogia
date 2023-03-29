@@ -8,6 +8,20 @@ $(document).ready(function() {
     $('.popup-link').magnificPopup({  //подключили плагин magnificPopup
         type: 'image'                 // a с классом popup-link будут открываться на весь экран
     });
+
+    $(function () {
+        $('.popup').magnificPopup({  // обработчик popup окна от magnificPopup
+            type: 'inline',
+            preloader: false,
+            focus: '#username',
+            modal: true
+        });
+        $(document).on('click', '.popup-modal-dismiss', function (e) {
+            e.preventDefault();
+            $.magnificPopup.close();
+        });
+    });
+
     // --------- обработка меню
     $('#burger').on('click', function () { // по клику на бургер откроется меню
         $('#menu').addClass('open');
@@ -47,9 +61,33 @@ $(document).ready(function() {
 
     // -------- валидация формы Заказать консультацию
 
-    $('#submit').click(function (event) {
+
+    let checkbox = $('#checkbox');
+    function checkCheckbox() {  // отрисовка галочки по состоянию чекбокса
+    if (checkbox.is(':checked')) {
+        $('.custom-checkbox-tick').css('display', 'inline-block');
+    } else {
+        $('.custom-checkbox-tick').css('display', 'none');
+    }
+    }
+    checkCheckbox(); // вызов функции
+
+    $('#custom-checkbox').click(function () { //отработка клика по квадратику чекбокса
+        checkbox.trigger('click'); // вкл/выкл чекбокса
+        checkCheckbox(); // перерисовываем галочку
+        return false;
+    })
+    $('#custom-checkbox-text').click(function () { // отработка клика по тексту соглашения
+        checkbox.trigger('click');
+        checkCheckbox();
+        return false;
+    })
+
+    $('#submit').click(function (event) { // клик по кнопке "Нужна консультация"
+        event.preventDefault();
         let name = $('#name');
         let phone = $('#phone');
+        let checkboxError = $('#checkbox-error');
         let hasError = false; // флаг наличия ошибки
         $('.error-input').hide(); // все сообщения об ошибке скрываем
         $('input').css('border-color', '#ffffff')
@@ -70,21 +108,103 @@ $(document).ready(function() {
             phone.next().text('В телефоне должны быть только цифры'); //меняем сообщение об ошибке
             hasError = true;
         }
+        if (!checkbox.prop('checked')) {
+            checkboxError.show();
+            checkboxError.css('margin-top', '10px');
+            hasError = true;
+        }
 
         if (!hasError) {  // если ошибки не было
-            loader.css('display', 'flex');  // - добавить loader
+            // loader.css('display', 'flex');  // - добавить loader
             $.ajax({
                 method: "POST",
-                url: "https://testologia.site/checkout ",
-                data: { product: product.val(), name: name.val(), phone: phone.val() } // - проверить данные
+                url: "https://testologia.site/checkout",
+                data: { name: name.val(), phone: phone.val() }
             })
                 .done(function( msg ) {
-                    loader.hide();
+                    // loader.hide();
                     if (msg.success) {
-                        $('form').hide();
-                        $('.order-done').css('display', 'flex'); // - сделать блок order-done
+                        alert('Возникла ошибка при отправке формы')
                     } else {
-                        alert('Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ!')
+                        $('#consult-form').hide();
+                        $('.order-done').css('display', 'flex');
+                    }
+                });
+        }
+
+    })
+
+    // -------- валидация popup формы Записаться на экскурсию
+
+    $('.popup').click(function (){
+        $('#popup-form').css('display', 'flex')
+    })
+
+    let checkbox1 = $('#checkbox-1');
+    function checkCheckbox1() {  // отрисовка галочки по состоянию чекбокса
+        if (checkbox1.is(':checked')) {
+            $('.custom-checkbox-tick').css('display', 'inline-block');
+        } else {
+            $('.custom-checkbox-tick').css('display', 'none');
+        }
+    }
+    checkCheckbox1(); // вызов функции
+
+    $('#custom-checkbox-1').click(function () { //отработка клика по квадратику чекбокса
+        checkbox1.trigger('click'); // вкл/выкл чекбокса
+        checkCheckbox1(); // перерисовываем галочку
+        return false;
+    })
+    $('#custom-checkbox-text-1').click(function () { // отработка клика по тексту соглашения
+        checkbox1.trigger('click');
+        checkCheckbox1();
+        return false;
+    })
+    $('#submit-1').click(function (event) { // клик по кнопке "Нужна консультация"
+        event.preventDefault();
+        let name1 = $('#name-1');
+        let phone1 = $('#phone-1');
+        let checkboxError1 = $('#checkbox-error-1');
+        let hasError1 = false; // флаг наличия ошибки
+        $('.error-input').hide(); // все сообщения об ошибке скрываем
+        $('input').css('border-color', '#ffffff')
+
+        if (!name1.val()) {
+            name1.next().show();
+            name1.css('border-color', 'red')
+            hasError1 = true;
+        }
+        if (!phone1.val()) {
+            phone1.next().show();
+            phone1.css('border-color', 'red')
+            hasError1 = true;
+        }
+        if (phone1.val() && isNaN(parseInt(phone1.val()))) { //если phone заполнен, но в нем не цифры
+            phone1.css('border-color', 'red');
+            phone1.next().show();
+            phone1.next().text('В телефоне должны быть только цифры'); //меняем сообщение об ошибке
+            hasError1 = true;
+        }
+        if (!checkbox1.prop('checked')) {
+            checkboxError1.show();
+            checkboxError1.css('margin-top', '10px');
+            hasError1 = true;
+        }
+
+        if (!hasError1) {  // если ошибки не было
+            // loader.css('display', 'flex');  // - добавить loader
+            $.ajax({
+                method: "POST",
+                url: "https://testologia.site/checkout",
+                data: { name: name1.val(), phone: phone1.val() }
+            })
+                .done(function( msg ) {
+                    // loader.hide();
+                    if (msg.success) {
+                        $('#signup-form').hide();
+                        $('.order-done-1').css('display', 'block');
+                    } else {
+                        alert('Возникла ошибка при отправке формы')
                     }
                 });
         }

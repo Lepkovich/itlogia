@@ -337,7 +337,7 @@
                 <div class="step-icon"><img src="src/images/step-1.png" alt="шаг 1"></div>
                 <div class="step-text">
                     <div class="step-text-h">Заявка на сайте</div>
-                    <div class="step-text-p">Вы <a href="#">оставляете заявку</a> на сайте, или звоните нам <br> +380
+                    <div class="step-text-p">Вы <a href="#consult">оставляете заявку</a> на сайте, или звоните нам <br> +380
                         (96) 73-67-281
                     </div>
                 </div>
@@ -380,7 +380,7 @@
                 <div class="step-icon"><img src="src/images/step-6.png" alt="шаг 6"></div>
                 <div class="step-text">
                     <div class="step-text-h">Ваш дом</div>
-                    <div class="step-text-p">Вы заежаете в свой новый дом!</div>
+                    <div class="step-text-p">Вы заезжаете в свой новый дом!</div>
                 </div>
             </div>
         </div>
@@ -404,8 +404,7 @@
                 <div class="warranty-block-text">
                     <div class="warranty-block-text-h">Гарантия сроков</div>
                     <div class="warranty-block-text-p">Юридическая гарантия сроков. <br> До 0.1 % от суммы за каждый
-                        день
-                        просрочки
+                        день просрочки
                     </div>
                 </div>
             </div>
@@ -445,7 +444,7 @@
 <section class="consult" id="consult">
     <div class="container">
         <div class="consult-img"><img src="src/images/consult-house.jpg" alt="Получить консультацию"></div>
-        <div class="consult-form">
+        <div class="consult-form" id="consult-form">
             <h2>Получите индивидуальную консультацию</h2>
             <form action="" method="get">
                 <input type="text" id="name" placeholder="Ваше имя">
@@ -455,19 +454,24 @@
                 <button id="submit">Нужна консультация</button>
                 <!--                <input class="button" type="button" id="submit" value="Нужна консультация">-->
                 <div class="agreement">
-                    <label for="checkbox">
-                        <div class="custom-checkbox">
+                     <label for="checkbox">
+                        <div class="custom-checkbox" id="custom-checkbox">
                             <img class="custom-checkbox-tick" src="src/images/tick.png" alt="галочка">
                         </div>
                         <input type="checkbox" id="checkbox">
                         <div class="custom-checkbox-text">
-                            <span> Нажимая на кнопку, я даю согласие на обработку персональных данных и
+                            <span id="custom-checkbox-text"> Нажимая на кнопку, я даю согласие на обработку персональных данных и
                             соглашаюсь с </span>
                             <a href="#">политикой конфиденциальности</a>
                         </div>
                     </label>
+                    <div class="error-input" id="checkbox-error">Для отправки формы нужно поставить галочку</div>
                 </div>
             </form>
+        </div>
+        <div class="order-done">
+            <div class="order-done-h">Спасибо!</div>
+            <div class="order-done-p">Мы свяжемся с Вами в ближайшее время.</div>
         </div>
     </div>
 </section>
@@ -478,7 +482,7 @@
             <div class="map-items">
                 <h2>Запишитесь на экскурсию</h2>
                 <p>В готовые дома, чтобы лично убедиться в качестве нашей работы</p>
-                <a href="#consult"><button>Записаться</button></a>
+                <a class="popup" href="#popup-form"><button>Записаться</button></a>
             </div>
             <div class="spacer-bottom"></div>
         </div>
@@ -512,6 +516,39 @@
         </div>
     </div>
 </footer>
+<div class="popup-form" id="popup-form">
+    <div class="signup-form" id="signup-form">
+        <div class="popup-modal-dismiss"><img src="src/images/menu-close.png" alt="Закрыть окно"></div>
+        <h2>Запишитесь на экскурсию</h2>
+        <form action="" method="get">
+            <input type="text" id="name-1" placeholder="Ваше имя">
+            <div class="error-input">Необходимо ввести имя</div>
+            <input type="tel" id="phone-1" placeholder="Ваш телефон">
+            <div class="error-input">Необходимо ввести телефон</div>
+            <button id="submit-1">Записаться</button>
+            <div class="agreement">
+                <label for="checkbox">
+                    <div class="custom-checkbox" id="custom-checkbox-1">
+                        <img class="custom-checkbox-tick" src="src/images/tick.png" alt="галочка">
+                    </div>
+                    <input type="checkbox" id="checkbox-1">
+                    <div class="custom-checkbox-text">
+                            <span id="custom-checkbox-text-1"> Нажимая на кнопку, я даю согласие на обработку персональных данных и
+                            соглашаюсь с </span>
+                        <a href="#">политикой конфиденциальности</a>
+                    </div>
+                </label>
+                <div class="error-input" id="checkbox-error-1">Для отправки формы нужно поставить галочку</div>
+            </div>
+        </form>
+    </div>
+
+    <div class="order-done-1">
+        <div class="popup-modal-dismiss"><img src="src/images/menu-close.png" alt="Закрыть окно"></div>
+        <div class="order-done-h">Спасибо!</div>
+        <div class="order-done-p">Мы свяжемся с Вами в ближайшее время.</div>
+    </div>
+</div>
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="scripts/wow.min.js"></script>

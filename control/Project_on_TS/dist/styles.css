@@ -653,17 +653,17 @@ h3 {
 .consult h2 {
   margin-bottom: 40px;
 }
-.consult form {
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.consult form button {
+form button {
   width: 409px;
   height: 58px;
   margin-bottom: 20px;
 }
-.consult form input {
+form input {
   background: transparent;
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -676,20 +676,20 @@ h3 {
   outline: none;
   margin-bottom: 20px;
 }
-.consult form input::placeholder {
+form input::placeholder {
   color: #ffffff;
   font-weight: 300;
 }
-.consult form .error-input {
+form .error-input {
   margin-top: -15px;
   margin-bottom: 5px;
   color: red;
   display: none;
 }
-.consult form .agreement {
+form .agreement {
   width: 409px;
 }
-.consult form .agreement label {
+form .agreement label {
   display: flex;
   justify-content: left;
   font-size: 14px;
@@ -697,17 +697,18 @@ h3 {
   color: #ffffff;
   line-height: 1.286;
 }
-.consult form .agreement label a {
+form .agreement label a {
   font-weight: 300;
   color: #ffffff;
+  text-decoration: underline;
 }
-.consult form .agreement label input {
+form .agreement label input {
   display: none;
 }
-.consult form .agreement label .custom-checkbox-text {
+form .agreement label .custom-checkbox-text {
   max-width: 310px;
 }
-.consult form .agreement label .custom-checkbox {
+form .agreement label .custom-checkbox {
   display: inline-block;
   content: "\00A0";
   margin-right: 27px;
@@ -720,10 +721,24 @@ h3 {
   flex-shrink: 0;
   flex-grow: 0;
 }
-.consult form .agreement label .custom-checkbox .custom-checkbox-tick {
+form .agreement label .custom-checkbox .custom-checkbox-tick {
   position: absolute;
   top: -5px;
   right: -10px;
+}
+.order-done {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.order-done .order-done-h {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.order-done .order-done-p {
+  font-weight: 100;
 }
 .map {
   background-image: url("../src/images/map.png");
@@ -796,6 +811,31 @@ footer .footer .footer-logo .footer-socials .footer-social:hover {
 footer .phone {
   padding-left: 90px;
 }
+.popup-form {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  border: 1px solid #ecc66b;
+  padding: 30px 10px;
+  margin: auto auto;
+}
+.popup-form h2 {
+  margin-bottom: 30px;
+}
+.popup-modal-dismiss {
+  text-align: end;
+  margin-right: 20px;
+}
+.order-done-1 {
+  display: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+.order-done-1 .popup-modal-dismiss {
+  text-align: right;
+}
 /*1024 - 1999*/
 @media screen and (max-width: 1199px) {
   .container {
@@ -852,6 +892,7 @@ footer .phone {
   }
   .consult .container .consult-img {
     width: 580px;
+    align-self: end;
   }
   .consult .container .consult-img img {
     max-width: 100%;
@@ -859,13 +900,13 @@ footer .phone {
   .consult .container .consult-form {
     max-width: 360px;
   }
-  .consult form input {
+  form input {
     max-width: 360px;
   }
-  .consult form button {
+  form button {
     max-width: 360px;
   }
-  .consult form .agreement {
+  form .agreement {
     width: 360px;
   }
   .map {
@@ -1006,13 +1047,13 @@ footer .phone {
     margin: 0 auto;
     max-width: 600px;
   }
-  .consult form input {
+  form input {
     max-width: 390px;
   }
-  .consult form button {
+  form button {
     max-width: 390px;
   }
-  .consult form .agreement {
+  form .agreement {
     width: 390px;
   }
   .map {
@@ -1356,17 +1397,18 @@ footer .phone {
   }
   .warranty button {
     max-width: 345px;
+    font-size: 15px;
   }
   .consult .container .consult-form {
     max-width: 345px;
   }
-  .consult form button {
+  form button {
     max-width: 345px;
   }
-  .consult form input {
+  form input {
     max-width: 345px;
   }
-  .consult form .agreement {
+  form .agreement {
     width: 345px;
   }
 }
@@ -1462,14 +1504,16 @@ footer .phone {
   .consult .container .consult-form {
     max-width: 290px;
   }
-  .consult form button {
+  form button {
     max-width: 290px;
   }
-  .consult form input {
+  form input {
     max-width: 290px;
   }
-  .consult form .agreement {
+  form .agreement {
     width: 290px;
   }
 }
-/*320*/
+.map .map-items button {
+  width: 290px;
+}
