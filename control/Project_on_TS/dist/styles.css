@@ -106,7 +106,7 @@ header .header .menu .menu-items .menu-items-social {
   padding: 40px 0;
 }
 header .header .menu .menu-items .menu-items-social .menu-items-social-link a:hover {
-  filter: drop-shadow(0 0 1px #ffffff);
+  opacity: 0.1;
 }
 header .header .menu .menu-items .menu-phone {
   display: none;
@@ -224,7 +224,7 @@ button:hover {
   margin-bottom: 30px;
 }
 .social .social-item:hover {
-  filter: drop-shadow(0 0 1px #ffffff);
+  opacity: 0.1;
 }
 .spacer {
   height: 300px;
