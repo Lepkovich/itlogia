@@ -74,6 +74,26 @@ $(document).ready(function() {
     // mediaQuery.addListener(handleTabletChange);
     // handleTabletChange(mediaQuery);
 
+    // ------------------ Слайдер
+    $('.slider').slick({
+        centerMode: true,
+        dots: true,
+        autoplay: false,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                Infinity: true,
+                slidesToShow: 1
+            },
+        }]
+    });
+
     // -------- валидация формы Заказать консультацию
 
 
@@ -175,7 +195,7 @@ $(document).ready(function() {
         checkCheckbox1();
         return false;
     })
-    $('#submit-1').click(function (event) { // клик по кнопке "Нужна консультация"
+    $('#submit-1').click(function (event) { // клик по кнопке "Записаться на экскурсию"
         event.preventDefault();
         let name1 = $('#name-1');
         let phone1 = $('#phone-1');
