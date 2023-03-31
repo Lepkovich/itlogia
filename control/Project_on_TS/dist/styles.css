@@ -3,6 +3,23 @@
   margin: 0;
   box-sizing: border-box;
 }
+#button {
+  background-image: -moz-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -webkit-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -ms-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  font-size: 18px;
+  color: #25252d;
+  font-weight: bold;
+}
+#button:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
+}
 @font-face {
   font-family: "Museo Sans Cyrl";
   src: url("../src/fonts/Museo Sans Cyrl 700.ttf");
@@ -169,8 +186,23 @@ header .header .logo {
   text-align: center;
 }
 .main-info button {
+  background-image: -moz-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -webkit-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -ms-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  font-size: 18px;
+  color: #25252d;
+  font-weight: bold;
   display: block;
   margin: 40px auto;
+}
+.main-info button:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
 }
 .arrow-down {
   position: absolute;
@@ -279,8 +311,23 @@ h3 {
   margin-bottom: 50px;
 }
 .projects-info button {
+  background-image: -moz-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -webkit-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -ms-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  font-size: 18px;
+  color: #25252d;
+  font-weight: bold;
   width: 365px;
   margin-bottom: 20px;
+}
+.projects-info button:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
 }
 .projects-info .projects-info-bullets {
   display: flex;
@@ -306,7 +353,7 @@ h3 {
   transform: scale(1.1);
   transition: all 0.2s ease;
 }
-.save-pdf {
+button.save-pdf {
   background: transparent;
   margin-bottom: 0;
   border: 1px solid #ffffff;
@@ -544,10 +591,30 @@ h3 {
 .warranty {
   margin-bottom: 121px;
 }
-.warranty button {
+.warranty button.save-pdf {
+  background-image: -moz-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -webkit-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -ms-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  font-size: 18px;
+  color: #25252d;
+  font-weight: bold;
+  background: transparent;
+  margin-bottom: 0;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  line-height: 3.333;
   display: block;
   margin: 0 auto;
   width: 384px;
+}
+.warranty button.save-pdf:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
 }
 .warranty h2 {
   margin-bottom: 80px;
@@ -642,9 +709,24 @@ form {
   align-items: center;
 }
 form button {
+  background-image: -moz-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -webkit-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -ms-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  font-size: 18px;
+  color: #25252d;
+  font-weight: bold;
   width: 409px;
   height: 58px;
   margin-bottom: 20px;
+}
+form button:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
 }
 form input {
   background: transparent;
@@ -752,7 +834,22 @@ form .agreement label .custom-checkbox .custom-checkbox-tick {
   margin-bottom: 40px;
 }
 .map .map-items button {
+  background-image: -moz-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -webkit-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  background-image: -ms-linear-gradient(0deg, #fcc372 0%, #f0dbbc 100%);
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  font-size: 18px;
+  color: #25252d;
+  font-weight: bold;
   width: 306px;
+}
+.map .map-items button:hover {
+  box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
 }
 footer {
   border-top: 1px solid #363d51;
@@ -826,7 +923,7 @@ footer .phone {
 .slick-slider button {
   position: absolute;
   top: 32%;
-  outline: "none";
+  outline: none;
   border: none;
   width: 40px;
   height: 40px;
@@ -836,8 +933,10 @@ footer .phone {
   z-index: 99;
 }
 .slick-slider .slider-text {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 15px 55px 20px 55px;
+  background-color: #313139;
 }
 .slick-slider .slider-text .block-left {
   border-right: 1px solid white;
@@ -855,8 +954,11 @@ footer .phone {
 .slick-slider .slider-text .block-right p {
   font-weight: normal;
   font-size: 16px;
-  margin-bottom: 20px;
   padding-left: 45px;
+  text-align: left;
+}
+.slick-slider .slider-text .block-right p:first-child {
+  margin-bottom: 20px;
 }
 .slick-slider .slick-prev {
   color: #ecc66b;
@@ -933,7 +1035,6 @@ footer .phone {
   opacity: 1;
   transform: scale(1.2);
   z-index: 99;
-  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 .slick-current .xyz {
   opacity: 1;
@@ -987,6 +1088,12 @@ footer .phone {
   }
   .tech .tech-5-text {
     right: 255px;
+  }
+  .slick-slider .slick-prev {
+    left: -15px;
+  }
+  .slick-slider .slick-next {
+    right: -15px;
   }
   .consult .container {
     gap: 25px;
@@ -1125,6 +1232,12 @@ footer .phone {
     margin-left: 0;
     column-gap: 30px;
     row-gap: 90px;
+  }
+  .slick-slider .slick-prev {
+    left: 0;
+  }
+  .slick-slider .slick-next {
+    right: 0;
   }
   .warranty .warranty-blocks {
     gap: 20px;
@@ -1431,11 +1544,35 @@ footer .phone {
     top: -10px;
     left: 38%;
   }
-  .carousel-items {
-    max-width: 425px;
+  .slick-slider {
+    padding: 0 0;
   }
-  .carousel-items img {
-    max-width: 100%;
+  .slick-slider .slider-text {
+    padding: 15px 15px 15px 15px;
+  }
+  .slick-slider .slider-text .block-left {
+    border-right: 1px solid white;
+    text-align: right;
+    width: 200px;
+  }
+  .slick-slider .slider-text .block-left h5 {
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+  }
+  .slick-slider .slider-text .block-left p {
+    font-weight: 300;
+    font-size: 14px;
+    padding-right: 15px;
+  }
+  .slick-slider .slider-text .block-right p {
+    font-weight: normal;
+    font-size: 14px;
+    padding-left: 15px;
+  }
+  .slick-slider .slider-text .block-right p span {
+    display: none;
   }
   .steps {
     grid-template-columns: 1fr;

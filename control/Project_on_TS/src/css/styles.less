@@ -8,6 +8,26 @@
 @main-color: rgb(236, 198, 107);
 @second-color: rgb(186, 186, 186);
 
+#button {
+  background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  font-size: 18px;
+  color: rgb(37, 37, 45);
+  font-weight: bold;
+  &:hover {
+    box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
+  }
+}
+
+
+
 
 @import "fonts";
 
@@ -203,29 +223,12 @@ header {
   }
 
   button {
+    #button();
     display: block;
     margin: 40px auto;
   }
 }
 
-//button {
-//  background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
-//  background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
-//  background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
-//  width: 300px;
-//  height: 60px;
-//  text-align: center;
-//  border: 0;
-//  border-radius: 30px;
-//  font-size: 18px;
-//  color: rgb(37, 37, 45);
-//  font-weight: bold;
-//  cursor: pointer;
-//
-//  &:hover {
-//    box-shadow: 0 5px 9px 1px rgba(236, 198, 107, 0.5);
-//  }
-//}
 
 .arrow-down {
   position: absolute;
@@ -364,6 +367,7 @@ h3 {
   }
 
   button {
+    #button();
     width: 365px;
     margin-bottom: 20px;
   }
@@ -396,7 +400,7 @@ h3 {
   }
 }
 
-.save-pdf {
+button.save-pdf {
   background: transparent;
   margin-bottom: 0;
   border: 1px solid rgb(255, 255, 255);
@@ -682,7 +686,13 @@ h3 {
 .warranty {
   margin-bottom: 121px;
 
-  button {
+  button.save-pdf {
+    #button();
+    background: transparent;
+    margin-bottom: 0;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    line-height: 3.333;
     display: block;
     margin: 0 auto;
     width: 384px;
@@ -799,6 +809,7 @@ form {
   align-items: center;
 
   button {
+    #button();
     width: 409px;
     height: 58px;
     margin-bottom: 20px;
@@ -928,6 +939,7 @@ form {
     }
 
     button {
+      #button();
       width: 306px;
     }
   }
@@ -1019,7 +1031,7 @@ footer {
   button {
     position: absolute;
     top: 32%;
-    outline: "none";
+    outline: none;
     border: none;
     width: 40px;
     height: 40px;
@@ -1029,12 +1041,15 @@ footer {
     z-index: 99;
   }
   .slider-text {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 15px 55px 20px 55px;
+    background-color: #313139;
 
     .block-left {
       border-right: 1px solid white;
       text-align: left;
+
 
       h5 {
         font-weight: normal;
@@ -1051,8 +1066,11 @@ footer {
         p {
           font-weight: normal;
           font-size: 16px;
-          margin-bottom: 20px;
           padding-left: 45px;
+          text-align: left;
+          &:first-child {
+            margin-bottom: 20px;
+          }
         }
       }
     }
@@ -1142,7 +1160,7 @@ footer {
     opacity: 1;
     transform: scale(1.2);
     z-index: 99;
-    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    //box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     .xyz{
       opacity: 1;
     }

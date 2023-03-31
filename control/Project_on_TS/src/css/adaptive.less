@@ -87,6 +87,15 @@
     }
   }
 
+  .slick-slider {
+    .slick-prev {
+      left: -15px;
+    }
+    .slick-next {
+      right: -15px;
+    }
+  }
+
   .consult {
 
     .container {
@@ -299,6 +308,14 @@
     row-gap: 90px;
   }
 
+  .slick-slider {
+    .slick-prev {
+      left: 0;
+    }
+    .slick-next {
+      right: 0;
+    }
+  }
   .warranty {
     .warranty-blocks {
       gap: 20px;
@@ -708,12 +725,42 @@
     }
   }
 
+  .slick-slider {
+    padding: 0 0;
 
-  .carousel-items {
-    max-width: 425px;
+    .slider-text {
+      padding: 15px 15px 15px 15px;
 
-    img {
-      max-width: 100%;
+      .block-left {
+        border-right: 1px solid white;
+        text-align: right;
+        width: 200px;
+
+        h5 {
+          font-weight: normal;
+          font-size: 14px;
+          margin-bottom: 15px;
+          padding-right: 15px;
+
+        }
+
+        p {
+          font-weight: 300;
+          font-size: 14px;
+          padding-right: 15px;
+        }
+      }
+
+      .block-right {
+        p {
+          font-weight: normal;
+          font-size: 14px;
+          padding-left: 15px;
+          span {
+            display: none;
+          }
+        }
+      }
     }
   }
 
