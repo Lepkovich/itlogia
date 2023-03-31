@@ -727,6 +727,9 @@
 
   .slick-slider {
     padding: 0 0;
+    img {
+      height: 304px;
+    }
 
     .slider-text {
       padding: 15px 15px 15px 15px;
@@ -734,7 +737,7 @@
       .block-left {
         border-right: 1px solid white;
         text-align: right;
-        width: 200px;
+        //width: 200px;
 
         h5 {
           font-weight: normal;
@@ -757,7 +760,9 @@
           font-size: 14px;
           padding-left: 15px;
           span {
-            display: none;
+            display: inline-block;
+            position: absolute;
+            opacity: 0;
           }
         }
       }

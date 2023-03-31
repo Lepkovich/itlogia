@@ -1547,13 +1547,15 @@ footer .phone {
   .slick-slider {
     padding: 0 0;
   }
+  .slick-slider img {
+    height: 304px;
+  }
   .slick-slider .slider-text {
     padding: 15px 15px 15px 15px;
   }
   .slick-slider .slider-text .block-left {
     border-right: 1px solid white;
     text-align: right;
-    width: 200px;
   }
   .slick-slider .slider-text .block-left h5 {
     font-weight: normal;
@@ -1572,7 +1574,9 @@ footer .phone {
     padding-left: 15px;
   }
   .slick-slider .slider-text .block-right p span {
-    display: none;
+    display: inline-block;
+    position: absolute;
+    opacity: 0;
   }
   .steps {
     grid-template-columns: 1fr;
