@@ -1,10 +1,10 @@
-new WOW({
+new WOW({ // плагин для animate.css (анимация сработает не во время загрузки страницы, а когда мы долистаем до блока
     animateClass: 'animate__animated'
 }).init();
 
-
-
 $(document).ready(function() {
+
+
     $('.popup-link').magnificPopup({  //подключили плагин magnificPopup
         type: 'image'                 // a с классом popup-link будут открываться на весь экран
     });
