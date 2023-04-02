@@ -75,13 +75,17 @@ header .header .burger {
   cursor: pointer;
 }
 header .header .menu.open {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 header .header .menu {
   position: fixed;
   width: 302px;
   background-color: #25252d;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s opacity, 1s visibility;
+  display: flex;
   flex-direction: column;
   color: #ffffff;
   top: 0;
@@ -900,6 +904,7 @@ footer .phone {
   border: 1px solid #ecc66b;
   padding: 30px 10px;
   margin: auto auto;
+  z-index: 999;
 }
 .popup-form h2 {
   margin-bottom: 30px;

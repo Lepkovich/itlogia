@@ -118,8 +118,8 @@ $(document).ready(function() {
         return false;
     })
 
-    $('#phone').mask('+000 (00) 00-00-000'); // маска ввода телефона на странице
-    $('#phone-1').mask('+000 (00) 00-00-000'); // маска ввода телефона на popup форме
+    $('#phone').mask('+380 (00) 00-00-000'); // маска ввода телефона на странице
+    $('#phone-1').mask('+380 (00) 00-00-000'); // маска ввода телефона на popup форме
 
     $('#submit').click(function (event) { // клик по кнопке "Нужна консультация"
         event.preventDefault();
@@ -182,9 +182,12 @@ $(document).ready(function() {
     })
 
     // -------- валидация popup формы Записаться на экскурсию
-
+    let popupForm = $('#popup-form');
     $('.popup').click(function (){
-        $('#popup-form').css('display', 'flex')
+        popupForm.css('display', 'flex');
+        // popupForm.css('opacity', '1');
+        // popupForm.css('visibility', 'visible');
+
     })
 
     let checkbox1 = $('#checkbox-1');
@@ -237,7 +240,7 @@ $(document).ready(function() {
             phone1.css('border-color', 'red');
             phone1.next().show();
             phone1.next().text('В телефоне должно быть 12 цифр'); //меняем сообщение об ошибке
-            hasError = true;
+            hasError1 = true;
         }
 
         if (!checkbox1.prop('checked')) {

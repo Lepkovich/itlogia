@@ -68,14 +68,18 @@ header {
     }
 
     .menu.open {
-      display: flex;
+      opacity: 1;
+      visibility: visible;
     }
 
     .menu {
       position: fixed;
       width: 302px;
       background-color: #25252d;
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transition: 1s opacity, 1s visibility;
+      display: flex;
       flex-direction: column;
       color: rgb(255, 255, 255);
       top: 0;
@@ -1001,6 +1005,7 @@ footer {
 }
 
 .popup-form {
+  //transition: 1s opacity;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -1009,6 +1014,7 @@ footer {
   border: 1px solid @main-color;
   padding: 30px 10px;
   margin: auto auto;
+  z-index: 999;
 
   h2 {
     margin-bottom: 30px;
