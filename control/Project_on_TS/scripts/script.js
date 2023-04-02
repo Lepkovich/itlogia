@@ -118,6 +118,9 @@ $(document).ready(function() {
         return false;
     })
 
+    $('#phone').mask('+000 (00) 00-00-000'); // маска ввода телефона на странице
+    $('#phone-1').mask('+000 (00) 00-00-000'); // маска ввода телефона на popup форме
+
     $('#submit').click(function (event) { // клик по кнопке "Нужна консультация"
         event.preventDefault();
         let name = $('#name');
@@ -137,12 +140,21 @@ $(document).ready(function() {
             phone.css('border-color', 'red')
             hasError = true;
         }
-        if (phone.val() && isNaN(parseInt(phone.val()))) { //если phone заполнен, но в нем не цифры
+        // ----- настроили маску ввода, поэтому следующий блок не актуален:
+        // if (phone.val() && isNaN(parseInt(phone.val()))) { //если phone заполнен, но в нем не цифры
+        //     phone.css('border-color', 'red');
+        //     phone.next().show();
+        //     phone.next().text('В телефоне должны быть только цифры'); //меняем сообщение об ошибке
+        //     hasError = true;
+        // }
+
+        if (phone.val().length < 19) { //если phone заполнен не до конца (19 символов - длина всей маски)
             phone.css('border-color', 'red');
             phone.next().show();
-            phone.next().text('В телефоне должны быть только цифры'); //меняем сообщение об ошибке
+            phone.next().text('В телефоне должно быть 12 цифр'); //меняем сообщение об ошибке
             hasError = true;
         }
+
         if (!checkbox.prop('checked')) {
             checkboxError.show();
             checkboxError.css('margin-top', '10px');
@@ -214,12 +226,20 @@ $(document).ready(function() {
             phone1.css('border-color', 'red')
             hasError1 = true;
         }
-        if (phone1.val() && isNaN(parseInt(phone1.val()))) { //если phone заполнен, но в нем не цифры
+        // if (phone1.val() && isNaN(parseInt(phone1.val()))) { //если phone заполнен, но в нем не цифры
+        //     phone1.css('border-color', 'red');
+        //     phone1.next().show();
+        //     phone1.next().text('В телефоне должны быть только цифры'); //меняем сообщение об ошибке
+        //     hasError1 = true;
+        // }
+
+        if (phone1.val().length < 19) { //если phone заполнен не до конца (19 символов - длина всей маски)
             phone1.css('border-color', 'red');
             phone1.next().show();
-            phone1.next().text('В телефоне должны быть только цифры'); //меняем сообщение об ошибке
-            hasError1 = true;
+            phone1.next().text('В телефоне должно быть 12 цифр'); //меняем сообщение об ошибке
+            hasError = true;
         }
+
         if (!checkbox1.prop('checked')) {
             checkboxError1.show();
             checkboxError1.css('margin-top', '10px');

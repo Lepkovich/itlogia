@@ -72,6 +72,7 @@ header .header {
 }
 header .header .burger {
   padding-right: 140px;
+  cursor: pointer;
 }
 header .header .menu.open {
   display: flex;
@@ -90,6 +91,7 @@ header .header .menu {
 }
 header .header .menu .menu-close img {
   margin: 35px auto 55px 0;
+  cursor: pointer;
 }
 header .header .menu .menu-h {
   font-family: Neumann;
@@ -268,10 +270,7 @@ h2 {
   justify-content: center;
   flex-direction: row;
   margin-bottom: 121px;
-}
-.projects .projects-more a {
-  display: flex;
-  flex-direction: row;
+  cursor: pointer;
 }
 .projects .projects-more .arrow-more-text {
   font-size: 18px;
@@ -785,6 +784,7 @@ form .agreement label .custom-checkbox {
   position: relative;
   flex-shrink: 0;
   flex-grow: 0;
+  cursor: pointer;
 }
 form .agreement label .custom-checkbox .custom-checkbox-tick {
   position: absolute;
@@ -907,6 +907,7 @@ footer .phone {
 .popup-modal-dismiss {
   text-align: end;
   margin-right: 20px;
+  cursor: pointer;
 }
 .order-done-1 {
   display: none;
