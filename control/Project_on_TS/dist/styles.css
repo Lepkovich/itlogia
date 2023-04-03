@@ -956,6 +956,10 @@ footer .phone {
   font-size: 18px;
   margin-bottom: 20px;
 }
+.slick-slider .slider-text .block-left p {
+  font-weight: 300;
+  font-size: 16px;
+}
 .slick-slider .slider-text .block-right p {
   font-weight: normal;
   font-size: 16px;
@@ -1566,27 +1570,34 @@ footer .phone {
   }
   .slick-slider .slider-text {
     padding: 15px 15px 15px 15px;
+    grid-template-columns: 269px 120px;
+    height: 86px;
   }
   .slick-slider .slider-text .block-left {
     border-right: 1px solid white;
-    text-align: right;
-    width: 200px;
+    text-align: left;
+    width: 150px;
+    margin-left: 120px;
   }
   .slick-slider .slider-text .block-left h5 {
     font-weight: normal;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding-right: 15px;
   }
   .slick-slider .slider-text .block-left p {
     font-weight: 300;
     font-size: 14px;
     padding-right: 15px;
+    width: 120px;
   }
   .slick-slider .slider-text .block-right p {
     font-weight: normal;
     font-size: 14px;
     padding-left: 15px;
+  }
+  .slick-slider .slider-text .block-right p:first-child {
+    margin-bottom: 16px;
   }
   .slick-slider .slider-text .block-right p span {
     display: inline-block;
