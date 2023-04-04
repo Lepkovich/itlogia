@@ -1625,14 +1625,24 @@ footer .phone {
   .warranty .warranty-medals .warranty-medal {
     margin-bottom: 50px;
   }
+  .consult {
+    margin-bottom: 0;
+  }
   .consult .consult-img {
     display: none;
   }
+  .excursion {
+    padding-top: 90px;
+    background-image: url("../src/images/map-gray.png");
+    background-position: top;
+    background-size: cover;
+  }
   .map {
-    background: none;
+    background-image: none;
   }
   .map .map-items p {
     margin-bottom: 30px;
+    font-size: 16px;
   }
   .map .spacer-bottom {
     height: 90px;
@@ -1646,10 +1656,17 @@ footer .phone {
   }
   footer .footer .footer-logo .logo {
     padding-bottom: 47px;
+    margin-bottom: 0;
   }
   footer .footer .footer-address {
     align-items: center;
     order: 1;
+  }
+  footer .footer .footer-address p {
+    margin-bottom: 20px;
+  }
+  footer .footer .footer-address p:nth-child(2) {
+    margin-bottom: 10px;
   }
   footer .footer .phone {
     padding-left: 0;
@@ -1667,6 +1684,9 @@ footer .phone {
   .warranty button {
     max-width: 345px;
     font-size: 15px;
+  }
+  .warranty button.save-pdf {
+    font-size: 14px;
   }
   .consult .container .consult-form {
     max-width: 345px;

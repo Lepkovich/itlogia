@@ -53,17 +53,21 @@ $(document).ready(function() {
 
     // function handleTabletChange(e) {if (!e.matches)}
         if (!mediaQuery.matches) {  // отследим клики только на экранах меньше 768px
-
-            $('.tech-img').on('click', function () {  //отследим клик на любую область дома
+            let removeDivs = function ()  {
                 for (let i = 1; i < 6; i++) {
                     $('.' + "tech-" + i + "-text").css('display', 'none'); // уберем все текстовые описания
                     $('#' + "round-" + i).removeClass('active-round'); // уберем оформление нажатого кружка
                 }
+            }
+
+            $('.tech-img').on('click', function () {  //отследим клик на любую область дома
+                removeDivs();
             })
 
             for (let a = 1; a < 6; a++) {
                 $('#round-' + a).click(function (event) { // отслеживаем клик по кружочку
                     event.stopPropagation();
+                    removeDivs();
                     $('#round-' + a).addClass('active-round'); // добавили класс (изменить цвет кружка и убрать анимацию)
                     $('.tech-' + a + '-text').css('display', 'block'); // отобразить тестовый блок с описанием
                 });

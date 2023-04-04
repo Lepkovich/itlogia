@@ -813,17 +813,25 @@
   }
 
   .consult {
+    margin-bottom:0;
     .consult-img {
       display: none;
     }
   }
+  .excursion {
+    padding-top: 90px;
+    background-image: url("../src/images/map-gray.png");
+    background-position: top;
+    background-size: cover;
 
+  }
   .map {
-    background: none;
+    background-image:none;
 
     .map-items {
       p {
         margin-bottom: 30px;
+        font-size: 16px;
       }
     }
 
@@ -843,12 +851,19 @@
       .footer-logo {
         .logo {
           padding-bottom: 47px;
+          margin-bottom: 0;
         }
       }
 
       .footer-address {
         align-items: center;
         order: 1;
+        p {
+        margin-bottom: 20px;
+          &:nth-child(2) {
+            margin-bottom: 10px;
+          }
+        }
       }
 
       .phone {
@@ -873,6 +888,10 @@
     button {
       max-width: 345px;
       font-size: 15px;
+    }
+    button.save-pdf {
+      font-size: 14px;
+
     }
   }
 
