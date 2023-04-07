@@ -801,6 +801,8 @@ form .agreement label .custom-checkbox .custom-checkbox-tick {
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  font-size: 18px;
+  margin: 0 auto;
 }
 .order-done .order-done-h {
   font-weight: normal;
@@ -938,6 +940,7 @@ footer .phone {
   background-color: black;
   color: white;
   z-index: 99;
+  cursor: pointer;
 }
 .slick-slider .slider-text {
   display: grid;
@@ -1011,6 +1014,9 @@ footer .phone {
 }
 .slick-dots {
   text-align: center;
+  position: relative;
+  z-index: 100;
+  margin-top: -90px;
 }
 .slick-dots li {
   display: inline-block;
@@ -1268,7 +1274,7 @@ footer .phone {
     top: -23px;
   }
   .slick-dots {
-    margin-top: -10px;
+    margin-top: -60px;
   }
   .consult {
     margin-bottom: 90px;
@@ -1634,7 +1640,7 @@ footer .phone {
   .excursion {
     padding-top: 90px;
     background-image: url("../src/images/map-gray.png");
-    background-position: top;
+    background-position: center -60px;
     background-size: cover;
   }
   .map {
