@@ -137,7 +137,6 @@ header {
           .menu-items-social-link {
             a {
               &:hover {
-                //filter: drop-shadow(0 0 1px rgb(255, 255, 255));
                 opacity: 0.1;
               }
             }
@@ -276,7 +275,6 @@ header {
 
     &:hover {
       opacity: 0.1;
-      // filter: drop-shadow(0 0 1px rgb(255, 255, 255))
     }
   }
 
@@ -320,10 +318,6 @@ h2 {
     margin-bottom: 121px;
     cursor: pointer;
 
-    //a {
-    //  display: flex;
-    //  flex-direction: row;
-    //}
 
     .arrow-more-text {
       font-size: 18px;
@@ -345,6 +339,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  column-gap: 24px;
 
   .projects-img-gallery-item {
     a img {
@@ -1013,7 +1008,6 @@ footer {
 }
 
 .popup-form {
-  //transition: 1s opacity;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -1187,9 +1181,7 @@ footer {
       height: 342px;
     }
     opacity: 1;
-    // transform: scale(1.2);
     z-index: 99;
-    //box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     .xyz{
       opacity: 1;
     }

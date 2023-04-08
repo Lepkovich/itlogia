@@ -292,6 +292,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  column-gap: 24px;
 }
 .projects-img-gallery .projects-img-gallery-item a img {
   max-width: 100%;
