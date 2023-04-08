@@ -285,10 +285,16 @@ h2 {
 .projects-img-big {
   margin-bottom: 24px;
 }
+.projects-img-big img {
+  max-width: 100%;
+}
 .projects-img-gallery {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.projects-img-gallery .projects-img-gallery-item a img {
+  max-width: 100%;
 }
 .projects-img-gallery .projects-img-gallery-item:hover {
   transform: scale(1.1);
@@ -1395,20 +1401,8 @@ footer .phone {
   h2 {
     font-size: 30px;
   }
-  .projects-img-big {
-    max-width: 425px;
-  }
-  .projects-img-big img {
-    max-width: 100%;
-  }
   .projects-img-gallery {
-    max-width: 425px;
-  }
-  .projects-img-gallery .projects-img-gallery-item {
-    max-width: 125px;
-  }
-  .projects-img-gallery .projects-img-gallery-item a img {
-    max-width: 100%;
+    column-gap: 5px;
   }
   .round .round-1::before {
     content: '';
@@ -1738,15 +1732,6 @@ footer .phone {
   .projects .projects-more {
     font-size: 15px;
     margin-bottom: 90px;
-  }
-  .projects-img-big {
-    max-width: 290px;
-  }
-  .projects-img-gallery {
-    max-width: 290px;
-  }
-  .projects-img-gallery .projects-img-gallery-item {
-    max-width: 90px;
   }
   h3 {
     font-size: 18px;
