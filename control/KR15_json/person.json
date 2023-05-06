@@ -1,0 +1,566 @@
+[
+    {
+        "id": 1,
+        "personal": {
+            "firstName": "Алексей",
+            "lastName": "Чеканов",
+            "locationId": 1,
+            "birthday": "12.07.2000",
+            "specializationId": 1
+        },
+        "skills": [
+            {
+                "name": "HTML",
+                "level": 9
+            },
+            {
+                "name": "CSS",
+                "level": 7
+            },
+            {
+                "name": "JS",
+                "level": 5
+            },
+            {
+                "name": "React",
+                "level": 4
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 170
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Подработка"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "personal": {
+            "firstName": "Оксана",
+            "lastName": "Самойлова",
+            "locationId": 3,
+            "birthday": "09.01.2006",
+            "specializationId": 3
+        },
+        "skills": [
+            {
+                "name": "Figma",
+                "level": 6
+            },
+            {
+                "name": "Photoshop",
+                "level": 3
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 150
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Подработка"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "personal": {
+            "firstName": "Максим",
+            "lastName": "Сергеев",
+            "locationId": 4,
+            "birthday": "19.11.1990",
+            "specializationId": 2
+        },
+        "skills": [
+            {
+                "name": "Go",
+                "level": 9
+            },
+            {
+                "name": "Python",
+                "level": 10
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 5000
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "personal": {
+            "firstName": "Ирина",
+            "lastName": "Рункова",
+            "locationId": 2,
+            "birthday": "20.04.1993",
+            "specializationId": 1
+        },
+        "skills": [
+            {
+                "name": "HTML",
+                "level": 10
+            },
+            {
+                "name": "CSS",
+                "level": 10
+            },
+            {
+                "name": "JS",
+                "level": 10
+            },
+            {
+                "name": "Angular",
+                "level": 9
+            },
+            {
+                "name": "React",
+                "level": 5
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 4500
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 8
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "personal": {
+            "firstName": "Виктор",
+            "lastName": "Онисенко",
+            "locationId": 3,
+            "birthday": "08.05.1997",
+            "specializationId": 2
+        },
+        "skills": [
+            {
+                "name": "Go",
+                "level": 5
+            },
+            {
+                "name": "Python",
+                "level": 7
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 2000
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "personal": {
+            "firstName": "Александр",
+            "lastName": "Татищенко",
+            "locationId": 4,
+            "birthday": "09.01.1995",
+            "specializationId": 3
+        },
+        "skills": [
+            {
+                "name": "Figma",
+                "level": 10
+            },
+            {
+                "name": "Photoshop",
+                "level": 10
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 4000
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 6
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "personal": {
+            "firstName": "Елена",
+            "lastName": "Прилучная",
+            "locationId": 1,
+            "birthday": "17.03.1998",
+            "specializationId": 2
+        },
+        "skills": [
+            {
+                "name": "Phyton",
+                "level": 7
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 2500
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "personal": {
+            "firstName": "Иван",
+            "lastName": "Степаненко",
+            "locationId": 1,
+            "birthday": "17.03.1989",
+            "specializationId": 2
+        },
+        "skills": [
+            {
+                "name": "Go",
+                "level": 5
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 1500
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "personal": {
+            "firstName": "Анна",
+            "lastName": "Петренко",
+            "locationId": 2,
+            "birthday": "14.09.1998",
+            "specializationId": 1
+        },
+        "skills": [
+            {
+                "name": "HTML",
+                "level": 10
+            },
+            {
+                "name": "CSS",
+                "level": 8
+            },
+            {
+                "name": "JS",
+                "level": 7
+            },
+            {
+                "name": "React",
+                "level": 6
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 300
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Подработка"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "personal": {
+            "firstName": "Денис",
+            "lastName": "Кравченко",
+            "locationId": 4,
+            "birthday": "13.05.2000",
+            "specializationId": 3
+        },
+        "skills": [
+            {
+                "name": "Figma",
+                "level": 3
+            },
+            {
+                "name": "Photoshop",
+                "level": 9
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 1000
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 3
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "personal": {
+            "firstName": "Ксения",
+            "lastName": "Крохина",
+            "locationId": 1,
+            "birthday": "10.12.1996",
+            "specializationId": 2
+        },
+        "skills": [
+            {
+                "name": "Go",
+                "level": 4
+            },
+            {
+                "name": "Python",
+                "level": 8
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 3400
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "personal": {
+            "firstName": "Стас",
+            "lastName": "Овчинников",
+            "locationId": 4,
+            "birthday": "25.03.1997",
+            "specializationId": 1
+        },
+        "skills": [
+            {
+                "name": "HTML",
+                "level": 10
+            },
+            {
+                "name": "CSS",
+                "level": 9
+            },
+            {
+                "name": "JS",
+                "level": 9
+            },
+            {
+                "name": "Angular",
+                "level": 7
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 1700
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "personal": {
+            "firstName": "Мария",
+            "lastName": "Галухина",
+            "locationId": 4,
+            "birthday": "16.08.1998",
+            "specializationId": 2
+        },
+        "skills": [
+            {
+                "name": "Python",
+                "level": 7
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 1600
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Подработка"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 4
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "personal": {
+            "firstName": "Юлия",
+            "lastName": "Королева",
+            "locationId": 1,
+            "birthday": "29.04.1992",
+            "specializationId": 3
+        },
+        "skills": [
+            {
+                "name": "Figma",
+                "level": 9
+            },
+            {
+                "name": "Photoshop",
+                "level": 6
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 2400
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 8
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "personal": {
+            "firstName": "Константин",
+            "lastName": "Спирин",
+            "locationId": 1,
+            "birthday": "07.11.1997",
+            "specializationId": 2
+        },
+        "skills": [
+            {
+                "name": "Go",
+                "level": 7
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 2900
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 4
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "personal": {
+            "firstName": "Лев",
+            "lastName": "Крылов",
+            "locationId": 3,
+            "birthday": "16.09.1999",
+            "specializationId": 2
+        },
+        "skills": [
+            {
+                "name": "Phyton",
+                "level": 9
+            },
+            {
+                "name": "Go",
+                "level": 8
+            }
+        ],
+        "request": [
+            {
+                "name": "Зарплата",
+                "value": 2700
+            },
+            {
+                "name": "Тип занятости",
+                "value": "Полная"
+            },
+            {
+                "name": "Опыт работы",
+                "value": 7
+            }
+        ]
+    }
+]
